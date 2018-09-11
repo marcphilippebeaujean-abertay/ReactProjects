@@ -8,6 +8,11 @@ const initialState = {
 
 const addExpenseReducer = (state = initialState, action) => {
   switch (action.type) {
+    case ADD_EXPENSE:
+      return {
+        ...state,
+        items: action.data
+      };
     default:
       return state;
   }

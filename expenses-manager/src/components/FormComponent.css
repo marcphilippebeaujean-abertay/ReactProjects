@@ -45,3 +45,19 @@
   margin: auto;
   text-transform: uppercase;
 }
+
+@media only screen and (max-width: 600px) {
+  .App {
+    display: inline;
+  }
+
+  .form-label {
+    font-size: 12px;
+  }
+
+  .form-element {
+    grid-column: 2;
+    margin: 1em 0;
+    padding: 0.2em 0;
+  }
+}

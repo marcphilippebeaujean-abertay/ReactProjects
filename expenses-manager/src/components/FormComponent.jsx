@@ -48,7 +48,7 @@ class FormComponent extends Component {
           value={this.state.itemQuantity}
           onChange={this.handleItemQuantityInput}
         />
-        <div class="form-buttons-background">
+        <div className="form-buttons-background">
           <button id="income-btn" className="btn btn-outline-success submits">
             Income
           </button>
