@@ -1,5 +1,49 @@
 #form-main {
   grid-column: 2;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   text-align: center;
   background-color: lightcoral;
+}
+
+#item-name-form {
+  width: 80%;
+}
+
+#item-expense-form {
+  width: 30%;
+}
+
+#item-quantity-form {
+  width: 30%;
+}
+
+.form-element {
+  grid-column: 2;
+  margin: 1em 0;
+  padding: 0.5em 0;
+}
+
+.form-label {
+  grid-column: 1;
+  text-align: right;
+  margin: auto 0;
+  margin-right: 10%;
+  color: white;
+  letter-spacing: 0.1rem;
+  text-transform: uppercase;
+}
+
+.submits {
+  width: 50%;
+  margin: 25px auto;
+  text-transform: uppercase;
+}
+
+#income-btn {
+  grid-column: 1;
+}
+
+#expense-btn {
+  grid-column: 2;
 }
