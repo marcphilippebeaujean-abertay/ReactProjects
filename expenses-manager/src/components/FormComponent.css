@@ -3,7 +3,8 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   text-align: center;
-  background-color: lightcoral;
+  background-color: #b2abab;
+  border-radius: 25px;
 }
 
 #item-name-form {
@@ -26,24 +27,21 @@
 
 .form-label {
   grid-column: 1;
-  text-align: right;
+  text-align: left;
   margin: auto 0;
-  margin-right: 10%;
+  margin-left: 10%;
   color: white;
   letter-spacing: 0.1rem;
   text-transform: uppercase;
 }
 
+.form-buttons-background {
+  background-color: white;
+  grid-column: 1 / span 2;
+}
+
 .submits {
   width: 50%;
-  margin: 25px auto;
+  margin: auto;
   text-transform: uppercase;
-}
-
-#income-btn {
-  grid-column: 1;
-}
-
-#expense-btn {
-  grid-column: 2;
 }

@@ -48,12 +48,14 @@ class FormComponent extends Component {
           value={this.state.itemQuantity}
           onChange={this.handleItemQuantityInput}
         />
-        <button id="income-btn" className="btn btn-success submits">
-          Income
-        </button>
-        <button id="expense-btn" className="btn btn-secondary submits">
-          Expense
-        </button>
+        <div class="form-buttons-background">
+          <button id="income-btn" className="btn btn-outline-success submits">
+            Income
+          </button>
+          <button id="expense-btn" className="btn btn-outline-danger submits">
+            Expense
+          </button>
+        </div>
       </div>
     );
   }
