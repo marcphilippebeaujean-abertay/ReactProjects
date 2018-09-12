@@ -1,33 +1,59 @@
 import React, { Component } from "react";
+import { addExpense } from "../actions/ExpenseActions.js";
+import PropTypes from "prop-types";
 import "./FormComponent.css";
 import "bootstrap/dist/css/bootstrap.css";
+import { connect } from "react-redux";
 
 class FormComponent extends Component {
-  state = {
-    itemName: "",
-    itemQuantity: 0,
-    itemExpense: 0
-  };
+  constructor(props) {
+    super(props);
+    this.state = {
+      itemName: " ",
+      itemQuantity: 0,
+      itemExpense: 0
+    };
 
-  handleItemNameInput = event => {
-    this.setState({ itemName: event.value });
-  };
+    this.handleItemExpenseInput = this.handleItemExpenseInput.bind(this);
+    this.handleItemNameInput = this.handleItemNameInput.bind(this);
+    this.handleItemQuantityInput = this.handleItemQuantityInput.bind(this);
+    this.onItemSubmit = this.onItemSubmit.bind(this);
+  }
 
-  handleItemExpenseInput = event => {
-    this.setState({ itemExpense: event.value });
-  };
+  handleItemNameInput(event) {
+    this.setState({ itemName: event.target.value });
+  }
 
-  handleItemQuantityInput = event => {
-    this.setState({ itemQuantity: event.value });
-  };
+  handleItemExpenseInput(event) {
+    this.setState({ itemExpense: event.target.value });
+  }
+
+  handleItemQuantityInput(event) {
+    this.setState({ itemQuantity: event.target.value });
+  }
+
+  onItemSubmit(isIncome) {
+    const item = {
+      itemIsIncome: isIncome,
+      itemName: this.state.itemName,
+      itemQuantity: this.state.itemQuantity,
+      itemExpense: this.state.itemExpense
+    };
+    this.props.addExpense(item);
+    this.setState({
+      itemName: " ",
+      itemQuantity: 0,
+      itemExpense: 0
+    });
+  }
 
   render() {
     return (
       <div id="form-main">
-        <label className="form-label">Item Name</label>
         <input
           id="item-name-form"
           className="form-element"
+          placeholder="Item description..."
           type="text"
           value={this.state.itemName}
           onChange={this.handleItemNameInput}
@@ -49,11 +75,19 @@ class FormComponent extends Component {
           onChange={this.handleItemQuantityInput}
         />
         <div className="form-buttons-background">
-          <button id="income-btn" className="btn btn-outline-success submits">
-            Income
+          <button
+            id="income-btn"
+            className="btn btn-outline-success submits"
+            onClick={() => this.onItemSubmit(true)}
+          >
+            +
           </button>
-          <button id="expense-btn" className="btn btn-outline-danger submits">
-            Expense
+          <button
+            id="expense-btn"
+            className="btn btn-outline-danger submits"
+            onClick={() => this.onItemSubmit(false)}
+          >
+            -
           </button>
         </div>
       </div>
@@ -61,4 +95,11 @@ class FormComponent extends Component {
   }
 }
 
-export default FormComponent;
+FormComponent.propTypes = {
+  addExpense: PropTypes.func.isRequired
+};
+
+export default connect(
+  null,
+  { addExpense }
+)(FormComponent);

@@ -6,7 +6,7 @@ class BalanceDisplayComponent extends Component {
   render() {
     return (
       <div id="cash-display">
-        <h1>Text</h1>
+        <h1>100.0£</h1>
       </div>
     );
   }

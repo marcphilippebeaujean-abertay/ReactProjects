@@ -9,10 +9,12 @@ import { Provider } from "react-redux";
 class App extends Component {
   render() {
     return (
-      <Provider store={store}>
+      <Provider store={store} className="App">
         <div className="App">
           <BalanceDisplayComponent />
-          <FormComponent />
+          <div id="form-background">
+            <FormComponent />
+          </div>
         </div>
       </Provider>
     );

@@ -1,6 +1,6 @@
 import { combineReducers } from "redux";
-import addExpenseReducer from "./UpdateExpensesReducer";
+import expenseReducer from "./UpdateExpensesReducer";
 
 export default combineReducers({
-  addExpense: addExpenseReducer
+  expenses: expenseReducer
 });
