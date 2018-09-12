@@ -1,3 +1,7 @@
+#form-background {
+  background-color: hsla(177, 3%, 61%, 0.47);
+}
+
 #form-main {
   width: 60%;
   display: flex;
@@ -24,7 +28,8 @@
 
 .form-label {
   margin: 30px 10px;
-  padding: 5px 10px;
+  padding: 5px 0;
+  width: 25%;
   background-color: hsla(228, 0%, 61%, 1);
   border-radius: 5px;
   color: white;
@@ -41,6 +46,13 @@
   width: 50%;
   margin: auto;
   text-transform: uppercase;
+}
+
+#warning-message {
+  color: #d9534f;
+  background-color: white;
+  display: inline;
+  text-align: center;
 }
 
 @media only screen and (max-width: 1000px) {

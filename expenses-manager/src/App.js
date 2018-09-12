@@ -12,9 +12,7 @@ class App extends Component {
       <Provider store={store} className="App">
         <div className="App">
           <BalanceDisplayComponent />
-          <div id="form-background">
-            <FormComponent />
-          </div>
+          <FormComponent />
         </div>
       </Provider>
     );
