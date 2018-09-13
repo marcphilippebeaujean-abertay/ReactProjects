@@ -8,7 +8,7 @@ const defaultState = {
 
 let calculateNewBalance = (itemData, previousBalance) => {
   let income = itemData.itemValue * itemData.itemQuantity;
-  console.log(income);
+  console.log(itemData.isExpense);
   if (itemData.isExpense) {
     income *= -1;
   }

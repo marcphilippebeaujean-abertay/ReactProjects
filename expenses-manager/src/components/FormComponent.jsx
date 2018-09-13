@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 import actionTypes from "../actions/actionTypes";
-import "./FormComponent.css";
+import "./formComponent.css";
 import "bootstrap/dist/css/bootstrap.css";
 import { connect } from "react-redux";
 
@@ -40,11 +40,11 @@ class FormComponent extends Component {
     }
   };
 
-  onItemSubmit = isIncome => {
+  onItemSubmit = isExpense => {
     const { itemName, itemQuantity, itemValue } = this.props;
     if (this.validInput(itemName, itemQuantity, itemValue)) {
       const item = {
-        itemIsIncome: isIncome,
+        isExpense: isExpense,
         itemName: itemName,
         itemQuantity: itemQuantity,
         itemValue: itemValue
@@ -88,14 +88,14 @@ class FormComponent extends Component {
               <button
                 id="income-btn"
                 className="btn btn-success submits"
-                onClick={() => this.onItemSubmit(true)}
+                onClick={() => this.onItemSubmit(false)}
               >
                 +
               </button>
               <button
                 id="expense-btn"
                 className="btn btn-danger submits"
-                onClick={() => this.onItemSubmit(false)}
+                onClick={() => this.onItemSubmit(true)}
               >
                 -
               </button>
@@ -114,7 +114,6 @@ FormComponent.propTypes = {
   itemName: PropTypes.string.isRequired,
   itemQuantity: PropTypes.number.isRequired,
   itemValue: PropTypes.number.isRequired,
-  isExpense: PropTypes.bool.isRequired,
   warningMessage: PropTypes.string.isRequired
 };
 
@@ -123,7 +122,6 @@ const mapStateToProps = state => {
     itemName: state.itemName,
     itemQuantity: state.itemQuantity,
     itemValue: state.itemValue,
-    isExpense: state.isExpense,
     warningMessage: state.warningMessage
   };
 };

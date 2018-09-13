@@ -1,15 +1,24 @@
 import React, { Component } from "react";
-import "./BalanceDisplayComponent.css";
+import "./balanceDisplayComponent.css";
+import { connect } from "react-redux";
 
 class BalanceDisplayComponent extends Component {
-  state = {};
   render() {
     return (
       <div id="cash-display">
-        <h1>100.0£</h1>
+        <h1>{this.props.balance}</h1>
       </div>
     );
   }
 }
 
-export default BalanceDisplayComponent;
+const mapStateToProps = state => {
+  return {
+    balance: state.balance
+  };
+};
+
+export default connect(
+  mapStateToProps,
+  null
+)(BalanceDisplayComponent);
