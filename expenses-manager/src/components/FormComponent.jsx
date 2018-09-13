@@ -4,6 +4,7 @@ import actionTypes from "../actions/actionTypes";
 import "./formComponent.css";
 import "bootstrap/dist/css/bootstrap.css";
 import { connect } from "react-redux";
+import { moneyRegex } from "../usefulConstants/regex";
 
 const badInputWarningMessage = "Error: Invalid Input!";
 
@@ -16,6 +17,29 @@ export const initFormState = {
 };
 
 class FormComponent extends Component {
+  isValidItemQuantity = value => {
+    if (value <= 0) {
+      return false;
+    }
+    let valueString = value.toString();
+    let decimalPointMatch = valueString.match(moneyRegex);
+    return decimalPointMatch === null;
+  };
+
+  isValidItemValue = value => {
+    if (value <= 0) {
+      return false;
+    }
+    let valueString = value.toString();
+    let decimalPointMatch = valueString.match(moneyRegex);
+    if (decimalPointMatch !== null) {
+      if (decimalPointMatch[1].length != 2) {
+        return false;
+      }
+    }
+    return true;
+  };
+
   handleItemNameInput = event => {
     this.props.onItemNameUpdated(event.target.value);
   };
@@ -31,9 +55,9 @@ class FormComponent extends Component {
   validInput = (itemName, itemQuantity, itemValue) => {
     if (itemName === "") {
       return false;
-    } else if (itemQuantity <= 0) {
+    } else if (!this.isValidItemQuantity(itemQuantity)) {
       return false;
-    } else if (itemValue <= 0) {
+    } else if (!this.isValidItemValue(itemValue)) {
       return false;
     } else {
       return true;
