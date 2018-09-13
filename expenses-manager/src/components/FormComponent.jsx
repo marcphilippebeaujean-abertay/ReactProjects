@@ -28,12 +28,12 @@ class FormComponent extends Component {
     this.props.onItemQuantityUpdated(Number(event.target.value));
   };
 
-  validInput = (itemName, itemQuantity, itemExpense) => {
+  validInput = (itemName, itemQuantity, itemValue) => {
     if (itemName === "") {
       return false;
     } else if (itemQuantity <= 0) {
       return false;
-    } else if (itemExpense <= 0) {
+    } else if (itemValue <= 0) {
       return false;
     } else {
       return true;
@@ -41,17 +41,17 @@ class FormComponent extends Component {
   };
 
   onItemSubmit = isIncome => {
-    const { itemName, itemQuantity, itemExpense } = this.props;
-    if (this.validInput(itemName, itemQuantity, itemExpense)) {
+    const { itemName, itemQuantity, itemValue } = this.props;
+    if (this.validInput(itemName, itemQuantity, itemValue)) {
       const item = {
         itemIsIncome: isIncome,
-        itemName,
-        itemQuantity,
-        itemExpense
+        itemName: itemName,
+        itemQuantity: itemQuantity,
+        itemValue: itemValue
       };
-      // DISPATCH UPDATE TO STAE
+      this.props.addNewExpense(item);
     } else {
-      // DISPATCH WARNING MESSAGE TO STATE
+      this.props.onInputError();
     }
   };
 
@@ -141,8 +141,8 @@ const mapDispatchToProps = dispatch => {
         type: actionTypes.FORM_WARNING,
         data: badInputWarningMessage
       }),
-    onAddedExpense: formProps =>
-      dispatch({ type: actionTypes.ADD_EXPENSE, data: formProps })
+    addNewExpense: newItem =>
+      dispatch({ type: actionTypes.ADD_EXPENSE, data: newItem })
   };
 };
 
