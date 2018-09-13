@@ -1,5 +1,5 @@
 #form-background {
-  background-color: hsla(177, 3%, 61%, 0.47);
+  background-color: #cccccc;
 }
 
 #form-main {
@@ -61,9 +61,9 @@
   text-align: center;
 }
 
-@media only screen and (max-width: 1000px) {
+@media only screen and (max-width: 1200px) {
   #form-main {
-    width: 90%;
+    width: 80%;
   }
 
   .form-label {

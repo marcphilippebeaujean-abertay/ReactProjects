@@ -33,7 +33,7 @@ class FormComponent extends Component {
     let valueString = value.toString();
     let decimalPointMatch = valueString.match(moneyRegex);
     if (decimalPointMatch !== null) {
-      if (decimalPointMatch[1].length != 2) {
+      if (decimalPointMatch[1].length !== 2) {
         return false;
       }
     }
