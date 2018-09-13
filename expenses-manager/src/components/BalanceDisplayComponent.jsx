@@ -8,7 +8,7 @@ class BalanceDisplayComponent extends Component {
       <div id="cash-display">
         <h1
           style={
-            this.props.balance > 0 ? { color: "#169830" } : { color: "#d9534f" }
+            this.props.balance > 0 ? { color: "#28a745" } : { color: "#dc3545" }
           }
         >
           {this.props.balance}

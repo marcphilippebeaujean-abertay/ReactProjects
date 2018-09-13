@@ -37,14 +37,17 @@
 }
 
 .form-buttons-background {
-  display: flex;
+  padding-left: 10px;
+  display: inline;
+  margin: auto 0;
   flex-direction: column;
-  width: 30%;
 }
 
 .submits {
-  width: 50%;
-  margin: auto;
+  padding: 0 10px;
+  width: 100px;
+  margin: auto 0;
+  margin-left: 10px;
   text-transform: uppercase;
 }
 
@@ -61,11 +64,8 @@
   }
 
   .form-label {
-    font-size: 12px;
   }
 
   .form-element {
-    margin: 1em 0;
-    padding: 0.2em 0;
   }
 }
