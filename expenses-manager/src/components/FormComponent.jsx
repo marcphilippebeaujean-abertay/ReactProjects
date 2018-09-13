@@ -22,7 +22,7 @@ class FormComponent extends Component {
     this.handleItemNameInput = this.handleItemNameInput.bind(this);
   }
   handleItemNameInput = event => {
-    this.props.onItemNameUpdated({ itemName: event.target.value });
+    this.props.onItemNameUpdated(event.target.value);
   };
 
   handleItemExpenseInput = event => {
@@ -133,12 +133,12 @@ const mapStateToProps = state => {
   };
 };
 
-const mapDispatchToProps = (dispatch, actionData) => {
+const mapDispatchToProps = dispatch => {
   return {
-    onItemNameUpdated: () =>
-      dispatch({ type: actionTypes.ITEM_NAME_UPDATE, ...actionData }),
-    onAddedExpense: () =>
-      dispatch({ type: actionTypes.ADD_EXPENSE, ...actionData })
+    onItemNameUpdated: itemName =>
+      dispatch({ type: actionTypes.ITEM_NAME_UPDATE, data: itemName }),
+    onAddedExpense: formProps =>
+      dispatch({ type: actionTypes.ADD_EXPENSE, data: formProps })
   };
 };
 
