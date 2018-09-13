@@ -8,8 +8,9 @@ const defaultState = {
 
 let calculateNewBalance = (newState, previousBalance) => {
   let income = newState.isExpense
-    ? newState.itemExpense * -1 * newState.itemQuantity
-    : newState.itemExpense * newState.itemQuantity;
+    ? newState.itemValue * -1 * newState.itemQuantity
+    : newState.itemValue * newState.itemQuantity;
+  console.log(previousBalance + income);
   return previousBalance + income;
 };
 
@@ -25,6 +26,15 @@ const expenseReducer = (previousState = defaultState, action) => {
       break;
     case actionTypes.ITEM_NAME_UPDATE:
       newState.itemName = action.data;
+      break;
+    case actionTypes.ITEM_QUANTITY_UPDATE:
+      newState.itemQuantity = action.data;
+      break;
+    case actionTypes.ITEM_VALUE_UPDATE:
+      newState.itemValue = action.data;
+      break;
+    case actionTypes.FORM_WARNING:
+      newState.warningMessage = action.data;
       break;
     default:
       break;

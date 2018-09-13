@@ -10,27 +10,22 @@ const badInputWarningMessage = "Error: Invalid Input!";
 export const initFormState = {
   itemName: "",
   itemQuantity: 0,
-  itemExpense: 0,
+  itemValue: 0,
   isExpense: false,
   warningMessage: ""
 };
 
 class FormComponent extends Component {
-  constructor(props) {
-    super(props);
-
-    this.handleItemNameInput = this.handleItemNameInput.bind(this);
-  }
   handleItemNameInput = event => {
     this.props.onItemNameUpdated(event.target.value);
   };
 
   handleItemExpenseInput = event => {
-    //this.setState({ itemExpense: event.target.value });
+    this.props.onItemValueUpdated(Number(event.target.value));
   };
 
   handleItemQuantityInput = event => {
-    //this.setState({ itemQuantity: event.target.value });
+    this.props.onItemQuantityUpdated(Number(event.target.value));
   };
 
   validInput = (itemName, itemQuantity, itemExpense) => {
@@ -50,9 +45,9 @@ class FormComponent extends Component {
     if (this.validInput(itemName, itemQuantity, itemExpense)) {
       const item = {
         itemIsIncome: isIncome,
-        itemName: itemName,
-        itemQuantity: itemQuantity,
-        itemExpense: itemExpense
+        itemName,
+        itemQuantity,
+        itemExpense
       };
       // DISPATCH UPDATE TO STAE
     } else {
@@ -78,7 +73,7 @@ class FormComponent extends Component {
               id="item-expense-form"
               className="form-element"
               type="number"
-              value={this.props.itemExpense}
+              value={this.props.itemValue}
               onChange={this.handleItemExpenseInput}
             />
             <label className="form-label">Quantity</label>
@@ -118,7 +113,7 @@ class FormComponent extends Component {
 FormComponent.propTypes = {
   itemName: PropTypes.string.isRequired,
   itemQuantity: PropTypes.number.isRequired,
-  itemExpense: PropTypes.number.isRequired,
+  itemValue: PropTypes.number.isRequired,
   isExpense: PropTypes.bool.isRequired,
   warningMessage: PropTypes.string.isRequired
 };
@@ -127,7 +122,7 @@ const mapStateToProps = state => {
   return {
     itemName: state.itemName,
     itemQuantity: state.itemQuantity,
-    itemExpense: state.itemExpense,
+    itemValue: state.itemValue,
     isExpense: state.isExpense,
     warningMessage: state.warningMessage
   };
@@ -137,6 +132,15 @@ const mapDispatchToProps = dispatch => {
   return {
     onItemNameUpdated: itemName =>
       dispatch({ type: actionTypes.ITEM_NAME_UPDATE, data: itemName }),
+    onItemValueUpdated: itemValue =>
+      dispatch({ type: actionTypes.ITEM_VALUE_UPDATE, data: itemValue }),
+    onItemQuantityUpdated: itemQuantity =>
+      dispatch({ type: actionTypes.ITEM_QUANTITY_UPDATE, data: itemQuantity }),
+    onInputError: () =>
+      dispatch({
+        type: actionTypes.FORM_WARNING,
+        data: badInputWarningMessage
+      }),
     onAddedExpense: formProps =>
       dispatch({ type: actionTypes.ADD_EXPENSE, data: formProps })
   };
