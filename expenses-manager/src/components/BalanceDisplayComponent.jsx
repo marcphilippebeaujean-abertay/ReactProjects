@@ -6,7 +6,13 @@ class BalanceDisplayComponent extends Component {
   render() {
     return (
       <div id="cash-display">
-        <h1>{this.props.balance}</h1>
+        <h1
+          style={
+            this.props.balance > 0 ? { color: "#169830" } : { color: "#d9534f" }
+          }
+        >
+          {this.props.balance}
+        </h1>
       </div>
     );
   }
