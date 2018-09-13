@@ -11,7 +11,7 @@ class BalanceDisplayComponent extends Component {
             this.props.balance > 0 ? { color: "#28a745" } : { color: "#dc3545" }
           }
         >
-          {this.props.balance}
+          {this.props.balance}£
         </h1>
       </div>
     );
