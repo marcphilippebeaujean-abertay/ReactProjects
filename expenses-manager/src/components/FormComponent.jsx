@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-import { addExpense } from "../actions/expenseActions.js";
 import PropTypes from "prop-types";
+import actionTypes from "../actions/actionTypes";
 import "./FormComponent.css";
 import "bootstrap/dist/css/bootstrap.css";
 import { connect } from "react-redux";
@@ -18,27 +18,20 @@ export const initFormState = {
 class FormComponent extends Component {
   constructor(props) {
     super(props);
-    //this.state = initFormState;
 
-    this.warningMessage = "";
-
-    this.handleItemExpenseInput = this.handleItemExpenseInput.bind(this);
     this.handleItemNameInput = this.handleItemNameInput.bind(this);
-    this.handleItemQuantityInput = this.handleItemQuantityInput.bind(this);
-    this.onItemSubmit = this.onItemSubmit.bind(this);
   }
+  handleItemNameInput = event => {
+    this.props.onItemNameUpdated({ itemName: event.target.value });
+  };
 
-  handleItemNameInput(event) {
-    this.setState({ itemName: event.target.value });
-  }
+  handleItemExpenseInput = event => {
+    //this.setState({ itemExpense: event.target.value });
+  };
 
-  handleItemExpenseInput(event) {
-    this.setState({ itemExpense: event.target.value });
-  }
-
-  handleItemQuantityInput(event) {
-    this.setState({ itemQuantity: event.target.value });
-  }
+  handleItemQuantityInput = event => {
+    //this.setState({ itemQuantity: event.target.value });
+  };
 
   validInput = (itemName, itemQuantity, itemExpense) => {
     if (itemName === "") {
@@ -52,7 +45,7 @@ class FormComponent extends Component {
     }
   };
 
-  onItemSubmit(isIncome) {
+  onItemSubmit = isIncome => {
     const { itemName, itemQuantity, itemExpense } = this.props;
     if (this.validInput(itemName, itemQuantity, itemExpense)) {
       const item = {
@@ -61,12 +54,11 @@ class FormComponent extends Component {
         itemQuantity: itemQuantity,
         itemExpense: itemExpense
       };
-      this.props.addExpense(item);
-      this.setState(initFormState);
+      // DISPATCH UPDATE TO STAE
     } else {
-      this.setState({ warningMessage: badInputWarningMessage });
+      // DISPATCH WARNING MESSAGE TO STATE
     }
-  }
+  };
 
   render() {
     return (
@@ -141,13 +133,16 @@ const mapStateToProps = state => {
   };
 };
 
-const mapDispachToProps = dispatch => {
+const mapDispatchToProps = (dispatch, actionData) => {
   return {
-    onAddedExpense: () => dispatch({ type: "ADD_EXPENSE" })
+    onItemNameUpdated: () =>
+      dispatch({ type: actionTypes.ITEM_NAME_UPDATE, ...actionData }),
+    onAddedExpense: () =>
+      dispatch({ type: actionTypes.ADD_EXPENSE, ...actionData })
   };
 };
 
 export default connect(
   mapStateToProps,
-  mapDispachToProps
+  mapDispatchToProps
 )(FormComponent);
