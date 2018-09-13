@@ -1,13 +1,17 @@
 import { createStore, applyMiddleware, compose } from "redux";
 import thunk from "redux-thunk";
-import rootReducer from "./reducers";
+import expenseReducer from "./reducers/updateExpensesReducer";
+import { initFormState } from "./components/formComponent";
 
-const initialState = {};
+const initialState = {
+  ...initFormState,
+  balance: 100
+};
 
 const middleware = [thunk];
 
 const store = createStore(
-  rootReducer,
+  expenseReducer,
   initialState,
   compose(
     applyMiddleware(...middleware),

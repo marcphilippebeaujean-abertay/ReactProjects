@@ -1,18 +1,24 @@
-import { ADD_EXPENSE, REMOVE_EXPENSE } from "../actions/Types";
+import { ADD_EXPENSE, REMOVE_EXPENSE } from "../actions/actionTypes";
+import { initFormState } from "../components/formComponent";
 
-const initialState = {
-  itemIsIncome: false,
-  itemName: "",
-  itemQuantity: 0,
-  itemExpense: 0
+const defaultState = {
+  ...initFormState,
+  balance: 100
 };
 
-const expenseReducer = (state = initialState, action) => {
+let calculateNewBalance = previousState => {
+  let income = previousState.isExpense
+    ? previousState.itemExpense * -1 * previousState.itemQuantity
+    : previousState.itemExpense * previousState.itemQuantity;
+  return previousState.balance + income;
+};
+
+const expenseReducer = (previousState = defaultState, action) => {
   switch (action.type) {
     case ADD_EXPENSE:
-      return action.data;
+      return { ...action.data, balance: calculateNewBalance(previousState) }; // return added expense
     default:
-      return state;
+      return previousState;
   }
 };
 

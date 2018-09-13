@@ -1,24 +1,24 @@
 import React, { Component } from "react";
-import { addExpense } from "../actions/ExpenseActions.js";
+import { addExpense } from "../actions/expenseActions.js";
 import PropTypes from "prop-types";
 import "./FormComponent.css";
 import "bootstrap/dist/css/bootstrap.css";
 import { connect } from "react-redux";
 
-const badInputWarningMessage =
-  "Please make sure that you have entered all fields!";
+const badInputWarningMessage = "Error: Invalid Input!";
 
-const initFormState = {
+export const initFormState = {
   itemName: "",
   itemQuantity: 0,
   itemExpense: 0,
+  isExpense: false,
   warningMessage: ""
 };
 
 class FormComponent extends Component {
   constructor(props) {
     super(props);
-    this.state = initFormState;
+    //this.state = initFormState;
 
     this.warningMessage = "";
 
@@ -43,9 +43,9 @@ class FormComponent extends Component {
   validInput = (itemName, itemQuantity, itemExpense) => {
     if (itemName === "") {
       return false;
-    } else if (itemQuantity === 0) {
+    } else if (itemQuantity <= 0) {
       return false;
-    } else if (itemExpense === 0) {
+    } else if (itemExpense <= 0) {
       return false;
     } else {
       return true;
@@ -53,7 +53,7 @@ class FormComponent extends Component {
   };
 
   onItemSubmit(isIncome) {
-    const { itemName, itemQuantity, itemExpense } = this.state;
+    const { itemName, itemQuantity, itemExpense } = this.props;
     if (this.validInput(itemName, itemQuantity, itemExpense)) {
       const item = {
         itemIsIncome: isIncome,
@@ -78,7 +78,7 @@ class FormComponent extends Component {
               className="form-element"
               placeholder="Item description..."
               type="text"
-              value={this.state.itemName}
+              value={this.props.itemName}
               onChange={this.handleItemNameInput}
             />
             <label className="form-label">Value</label>
@@ -86,7 +86,7 @@ class FormComponent extends Component {
               id="item-expense-form"
               className="form-element"
               type="number"
-              value={this.state.itemExpense}
+              value={this.props.itemExpense}
               onChange={this.handleItemExpenseInput}
             />
             <label className="form-label">Quantity</label>
@@ -94,7 +94,7 @@ class FormComponent extends Component {
               id="item-quantity-form"
               className="form-element"
               type="number"
-              value={this.state.itemQuantity}
+              value={this.props.itemQuantity}
               onChange={this.handleItemQuantityInput}
             />
             <div className="form-buttons-background">
@@ -116,7 +116,7 @@ class FormComponent extends Component {
           </div>
         </div>
         <div id="warning-message">
-          <p>{this.state.warningMessage}</p>
+          <p>{this.props.warningMessage}</p>
         </div>
       </React.Fragment>
     );
@@ -124,10 +124,30 @@ class FormComponent extends Component {
 }
 
 FormComponent.propTypes = {
-  addExpense: PropTypes.func.isRequired
+  itemName: PropTypes.string.isRequired,
+  itemQuantity: PropTypes.number.isRequired,
+  itemExpense: PropTypes.number.isRequired,
+  isExpense: PropTypes.bool.isRequired,
+  warningMessage: PropTypes.string.isRequired
+};
+
+const mapStateToProps = state => {
+  return {
+    itemName: state.itemName,
+    itemQuantity: state.itemQuantity,
+    itemExpense: state.itemExpense,
+    isExpense: state.isExpense,
+    warningMessage: state.warningMessage
+  };
+};
+
+const mapDispachToProps = dispatch => {
+  return {
+    onAddedExpense: () => dispatch({ type: "ADD_EXPENSE" })
+  };
 };
 
 export default connect(
-  null,
-  { addExpense }
+  mapStateToProps,
+  mapDispachToProps
 )(FormComponent);
