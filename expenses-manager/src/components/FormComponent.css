@@ -63,12 +63,6 @@
 
 @media only screen and (max-width: 1200px) {
   #form-main {
-    width: 80%;
-  }
-
-  .form-label {
-  }
-
-  .form-element {
+    width: 95%;
   }
 }
