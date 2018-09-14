@@ -1,5 +1,5 @@
 :root {
-  --phone-form-element-width: 60%;
+  --phone-form-element-width: 90%;
 }
 
 #form-background {
@@ -76,8 +76,12 @@
     width: 95%;
   }
 }
-
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 700px) {
+  .submits {
+    width: 40px;
+  }
+}
+@media only screen and (max-width: 550px) {
   #form-main {
     width: 100%;
     display: flex;
@@ -112,5 +116,9 @@
   #buttons-div {
     display: inline;
     padding-bottom: 5px;
+  }
+
+  .submits {
+    width: 60px;
   }
 }
