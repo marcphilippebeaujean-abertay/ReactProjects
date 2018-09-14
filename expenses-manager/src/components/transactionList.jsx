@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
+import { convertNumToBalance } from "../usefulConstants/balanceManagement";
 
 class TransactionList extends Component {
   generateTransactionList = isExpensesList => {
@@ -11,7 +12,7 @@ class TransactionList extends Component {
     const listElements = incomeList.map(elem => (
       <li key={elem.uniqueTransactionID} style={style}>
         {elem.itemName}
-        {elem.itemValue}
+        {convertNumToBalance(elem.itemValue)}
       </li>
     ));
     return listElements;

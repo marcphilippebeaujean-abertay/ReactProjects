@@ -4,7 +4,7 @@ import actionTypes from "../actions/actionTypes";
 import "./formComponent.css";
 import "bootstrap/dist/css/bootstrap.css";
 import { connect } from "react-redux";
-import { moneyRegex } from "../usefulConstants/regex";
+import { moneyRegex } from "../usefulConstants/balanceManagement";
 
 const badInputWarningMessage = "Error: Invalid Input!";
 

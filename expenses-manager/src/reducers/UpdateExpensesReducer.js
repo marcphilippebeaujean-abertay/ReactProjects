@@ -15,12 +15,12 @@ const defaultState = {
   uniqueTransactionID: 0
 };
 
-let calculateNewBalance = (itemData, previousBalance) => {
+let calculateIncome = itemData => {
   let income = itemData.itemValue * itemData.itemQuantity;
   if (itemData.isExpense) {
     income *= -1;
   }
-  return previousBalance + income;
+  return income;
 };
 
 const expenseReducer = (previousState = defaultState, action) => {
@@ -30,7 +30,7 @@ const expenseReducer = (previousState = defaultState, action) => {
     case actionTypes.ADD_EXPENSE:
       newState = {
         ...initFormState,
-        balance: calculateNewBalance(action.data, previousState.balance),
+        balance: calculateIncome(action.data) + previousState.balance,
         transactionHistory: previousState.transactionHistory.concat({
           ...action.data,
           uniqueTransactionID: previousState.uniqueTransactionID
