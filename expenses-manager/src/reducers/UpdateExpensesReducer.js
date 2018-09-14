@@ -38,6 +38,13 @@ const expenseReducer = (previousState = defaultState, action) => {
         uniqueTransactionID: previousState.uniqueTransactionID + 1
       };
       break;
+    case actionTypes.REMOVE_EXPENSE:
+      newState.transactionHistory = previousState.transactionHistory.filter(
+        elem => elem.uniqueTransactionID !== action.data
+      );
+      //console.log(removedItemIncome);
+      //newState.balance = previousState.balance - removedItemIncome;
+      break;
     case actionTypes.ITEM_NAME_UPDATE:
       newState.itemName = action.data;
       break;

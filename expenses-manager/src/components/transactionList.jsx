@@ -17,7 +17,12 @@ class TransactionList extends Component {
           {convertNumToBalance(elem.itemValue * elem.itemQuantity)}
         </p>
         <div className="list-item">
-          <button className="removal-btn list-item btn btn-danger">-</button>
+          <button
+            className="removal-btn list-item btn btn-danger"
+            onClick={() => this.props.onItemRemoved(elem.uniqueTransactionID)}
+          >
+            -
+          </button>
         </div>
       </li>
     ));
@@ -38,7 +43,13 @@ const mapStateToProps = state => {
   };
 };
 
+const mapDispatchToProps = dispatch => {
+  return {
+    onItemRemoved: itemId => dispatch({ type: "REMOVE_EXPENSE", data: itemId })
+  };
+};
+
 export default connect(
   mapStateToProps,
-  null
+  mapDispatchToProps
 )(TransactionList);
