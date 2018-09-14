@@ -4,6 +4,7 @@ import store from "./reduxStore";
 import "./components/formComponent";
 import BalanceDisplayComponent from "./components/balanceDisplayComponent";
 import FormComponent from "./components/formComponent";
+import TransactionList from "./components/transactionList";
 import { Provider } from "react-redux";
 
 class App extends Component {
@@ -13,6 +14,7 @@ class App extends Component {
         <div className="App">
           <BalanceDisplayComponent />
           <FormComponent />
+          <TransactionList />
         </div>
       </Provider>
     );

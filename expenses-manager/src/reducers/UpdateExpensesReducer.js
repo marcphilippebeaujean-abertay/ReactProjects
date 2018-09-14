@@ -1,9 +1,18 @@
 import actionTypes from "../actions/actionTypes";
-import { initFormState } from "../components/formComponent";
+
+const initFormState = {
+  itemName: "",
+  itemQuantity: 0,
+  itemValue: 0,
+  isExpense: false,
+  warningMessage: ""
+};
 
 const defaultState = {
   ...initFormState,
-  balance: 100
+  balance: 100,
+  transactionHistory: [],
+  uniqueTransactionID: 0
 };
 
 let calculateNewBalance = (itemData, previousBalance) => {
@@ -21,7 +30,12 @@ const expenseReducer = (previousState = defaultState, action) => {
     case actionTypes.ADD_EXPENSE:
       newState = {
         ...initFormState,
-        balance: calculateNewBalance(action.data, previousState.balance)
+        balance: calculateNewBalance(action.data, previousState.balance),
+        transactionHistory: previousState.transactionHistory.concat({
+          ...action.data,
+          uniqueTransactionID: previousState.uniqueTransactionID
+        }),
+        uniqueTransactionID: previousState.uniqueTransactionID + 1
       };
       break;
     case actionTypes.ITEM_NAME_UPDATE:

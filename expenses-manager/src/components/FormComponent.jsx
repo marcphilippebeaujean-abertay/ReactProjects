@@ -8,14 +8,6 @@ import { moneyRegex } from "../usefulConstants/regex";
 
 const badInputWarningMessage = "Error: Invalid Input!";
 
-export const initFormState = {
-  itemName: "",
-  itemQuantity: 0,
-  itemValue: 0,
-  isExpense: false,
-  warningMessage: ""
-};
-
 class FormComponent extends Component {
   isValidItemQuantity = value => {
     if (value <= 0) {
