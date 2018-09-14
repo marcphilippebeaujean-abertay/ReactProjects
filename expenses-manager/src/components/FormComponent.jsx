@@ -24,7 +24,6 @@ class FormComponent extends Component {
     }
     let valueString = value.toString();
     let decimalPointMatch = valueString.match(moneyRegex);
-    console.log(decimalPointMatch);
     if (decimalPointMatch !== null) {
       if (decimalPointMatch[1].length > 2) {
         return false;

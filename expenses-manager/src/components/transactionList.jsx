@@ -19,7 +19,7 @@ class TransactionList extends Component {
         <div className="list-item">
           <button
             className="removal-btn list-item btn btn-danger"
-            onClick={() => this.props.onItemRemoved(elem.uniqueTransactionID)}
+            onClick={() => this.props.onItemRemoved(elem)}
           >
             -
           </button>
@@ -45,7 +45,7 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => {
   return {
-    onItemRemoved: itemId => dispatch({ type: "REMOVE_EXPENSE", data: itemId })
+    onItemRemoved: item => dispatch({ type: "REMOVE_EXPENSE", data: item })
   };
 };
 

@@ -15,9 +15,9 @@ const defaultState = {
   uniqueTransactionID: 0
 };
 
-let calculateIncome = itemData => {
-  let income = itemData.itemValue * itemData.itemQuantity;
-  if (itemData.isExpense) {
+let calculateIncome = item => {
+  let income = Number(item.itemValue) * Number(item.itemQuantity);
+  if (item.isExpense) {
     income *= -1;
   }
   return income;
@@ -40,10 +40,9 @@ const expenseReducer = (previousState = defaultState, action) => {
       break;
     case actionTypes.REMOVE_EXPENSE:
       newState.transactionHistory = previousState.transactionHistory.filter(
-        elem => elem.uniqueTransactionID !== action.data
+        elem => elem.uniqueTransactionID !== action.data.uniqueTransactionID
       );
-      //console.log(removedItemIncome);
-      //newState.balance = previousState.balance - removedItemIncome;
+      newState.balance = previousState.balance - calculateIncome(action.data);
       break;
     case actionTypes.ITEM_NAME_UPDATE:
       newState.itemName = action.data;
