@@ -1,4 +1,5 @@
 #cash-display {
+  display: block;
   grid-column: 2;
   text-align: center;
   color: #169830;

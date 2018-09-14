@@ -2,28 +2,29 @@ import React, { Component } from "react";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import { convertNumToBalance } from "../usefulConstants/balanceManagement";
+import "./transactionList.css";
 
 class TransactionList extends Component {
-  generateTransactionList = isExpensesList => {
-    const style = isExpensesList ? { color: "#dc3545" } : { color: "#28a745" };
-    const incomeList = this.props.transactionHistory.filter(
-      elem => elem.isExpense === isExpensesList
-    );
-    const listElements = incomeList.map(elem => (
-      <li key={elem.uniqueTransactionID} style={style}>
-        {elem.itemName}
-        {convertNumToBalance(elem.itemValue)}
+  generateTransactionList = () => {
+    return this.props.transactionHistory.map(elem => (
+      <li
+        key={elem.uniqueTransactionID}
+        style={elem.isExpense ? { color: "#dc3545" } : { color: "#28a745" }}
+        className="transaction-list-item"
+      >
+        <p className="list-item">{elem.itemName}</p>
+        <p className="list-item">
+          {convertNumToBalance(elem.itemValue * elem.itemQuantity)}
+        </p>
+        <div className="list-item">
+          <button className="removal-btn list-item btn btn-danger">-</button>
+        </div>
       </li>
     ));
-    return listElements;
   };
 
   render() {
-    return (
-      <div>
-        <ul className="income-list">{this.generateTransactionList(false)}</ul>
-      </div>
-    );
+    return <ul className="income-list">{this.generateTransactionList()}</ul>;
   }
 }
 
