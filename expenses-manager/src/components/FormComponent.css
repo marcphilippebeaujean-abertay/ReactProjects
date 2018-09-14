@@ -1,3 +1,7 @@
+:root {
+  --phone-form-element-width: 60%;
+}
+
 #form-background {
   background-color: #cccccc;
 }
@@ -24,6 +28,7 @@
 
 .form-element {
   margin: 1.8em 0;
+  border-radius: 5px;
 }
 
 .form-label {
@@ -61,8 +66,51 @@
   text-align: center;
 }
 
+#buttons-div {
+  display: flex;
+  flex-direction: row;
+}
+
 @media only screen and (max-width: 1200px) {
   #form-main {
     width: 95%;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  #form-main {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    border-radius: 25px;
+  }
+  .form-element {
+    padding: 0.4rem 0;
+    margin: 0.3rem auto;
+  }
+  .form-label {
+    width: var(--phone-form-element-width);
+    padding-top: 1px;
+    padding-bottom: 1px;
+    margin: 0 auto;
+  }
+
+  #item-name-form {
+    width: var(--phone-form-element-width);
+  }
+
+  #item-expense-form {
+    width: var(--phone-form-element-width);
+  }
+
+  #item-quantity-form {
+    width: var(--phone-form-element-width);
+  }
+
+  #buttons-div {
+    display: inline;
+    padding-bottom: 5px;
   }
 }

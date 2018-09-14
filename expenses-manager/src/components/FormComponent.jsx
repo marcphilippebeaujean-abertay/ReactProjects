@@ -100,20 +100,22 @@ class FormComponent extends Component {
               value={this.props.itemQuantity}
               onChange={this.handleItemQuantityInput}
             />
-            <button
-              id="income-btn"
-              className="btn btn-success submits"
-              onClick={() => this.onItemSubmit(false)}
-            >
-              +
-            </button>
-            <button
-              id="expense-btn"
-              className="btn btn-danger submits"
-              onClick={() => this.onItemSubmit(true)}
-            >
-              -
-            </button>
+            <div id="buttons-div">
+              <button
+                id="income-btn"
+                className="btn btn-success submits"
+                onClick={() => this.onItemSubmit(false)}
+              >
+                +
+              </button>
+              <button
+                id="expense-btn"
+                className="btn btn-danger submits"
+                onClick={() => this.onItemSubmit(true)}
+              >
+                -
+              </button>
+            </div>
           </div>
         </div>
         <div id="warning-message">
