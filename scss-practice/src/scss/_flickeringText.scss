@@ -1,7 +1,8 @@
 $letter-color: #a0a3a5;
-$letter-width: 50px;
-$letter-height: 50px;
-$component-thickness: 20%;
+$letter-width: 70px;
+$letter-height: 70px;
+$component-thickness: 10px;
+$component-margin: 5px;
 
 .frame {
   display: table;
@@ -40,8 +41,8 @@ $component-thickness: 20%;
 }
 
 #letter-H-middle {
-  margin: auto 0;
-  width: 80%;
+  margin: auto $component-margin;
+  width: 100%;
   height: $component-thickness;
 }
 
@@ -55,8 +56,8 @@ $component-thickness: 20%;
   justify-content: center;
 }
 
-#letter-I-base {
-  margin: 0 auto;
+#letter-I-middle {
+  margin: $component-margin auto;
   height: 100%;
   width: $component-thickness;
 }

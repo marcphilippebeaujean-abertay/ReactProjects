@@ -14,7 +14,7 @@ class FlickeringTextComponent extends Component {
             </div>
             <div className="letter" id="letter-I">
               <div className="letter-component letter-I-top" />
-              <div className="letter-component" id="letter-I-base" />
+              <div className="letter-component" id="letter-I-middle" />
               <div className="letter-component letter-I-top" />
             </div>
           </div>
