@@ -121,43 +121,28 @@ $component-margin: 5px;
 }
 
 @keyframes light-2 {
-  0%,
-  67%,
-  73%,
-  79% {
-    @include on-component-unlit();
-  }
-  37%,
-  70%,
-  73%,
-  76% {
-    @include on-component-lit();
-  }
 }
 
 @keyframes light-3 {
-  60% {
-    @include on-component-lit();
-  }
-  65% {
-    @include on-component-unlit();
-  }
 }
 
 @keyframes light-4 {
 }
 
 @keyframes light-5 {
+  8%,
   30%,
-  70% {
+  50% {
     @include on-component-lit();
   }
-  74% {
+  74%,
+  77% {
     @include on-component-unlit();
   }
 }
 
 @keyframes light-6 {
+  0%,
   30%,
   60%,
   66% {

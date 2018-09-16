@@ -154,38 +154,19 @@
     background-color: #1e2429;
     box-shadow: 0px 0px 6px 0px #1e2429; } }
 
-@keyframes light-2 {
-  0%,
-  67%,
-  73%,
-  79% {
-    background-color: #dce1e5;
-    box-shadow: 0px 0px 6px 0px #dce1e5; }
-  37%,
-  70%,
-  73%,
-  76% {
-    background-color: #1e2429;
-    box-shadow: 0px 0px 6px 0px #1e2429; } }
-
-@keyframes light-3 {
-  60% {
-    background-color: #1e2429;
-    box-shadow: 0px 0px 6px 0px #1e2429; }
-  65% {
-    background-color: #dce1e5;
-    box-shadow: 0px 0px 6px 0px #dce1e5; } }
-
-@keyframes light-4 {}@keyframes light-5 {
+@keyframes light-2 {}@keyframes light-3 {}@keyframes light-4 {}@keyframes light-5 {
+  8%,
   30%,
-  70% {
+  50% {
     background-color: #1e2429;
     box-shadow: 0px 0px 6px 0px #1e2429; }
-  74% {
+  74%,
+  77% {
     background-color: #dce1e5;
     box-shadow: 0px 0px 6px 0px #dce1e5; } }
 
 @keyframes light-6 {
+  0%,
   30%,
   60%,
   66% {
