@@ -33,6 +33,7 @@ $component-margin: 5px;
   display: flex;
   height: $letter-height;
   width: $letter-width;
+  padding: 0 10px;
 }
 
 .letter-H {
@@ -42,7 +43,7 @@ $component-margin: 5px;
 
 #letter-H-middle {
   margin: auto $component-margin;
-  width: 100%;
+  width: 60%;
   height: $component-thickness;
 }
 
@@ -58,7 +59,7 @@ $component-margin: 5px;
 
 #letter-I-middle {
   margin: $component-margin auto;
-  height: 100%;
+  height: 60%;
   width: $component-thickness;
 }
 
