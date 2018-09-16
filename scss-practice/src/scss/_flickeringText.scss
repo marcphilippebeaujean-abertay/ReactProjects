@@ -1,6 +1,9 @@
-$letter-color: #a0a3a5;
+$letter-color: #dce1e5;
+$letter-light-color: #a0a3a5;
 $letter-width: 70px;
 $letter-height: 70px;
+$letter-middle-component-extent: 60%;
+$letter-flicker-speed: 10%;
 $component-thickness: 10px;
 $component-margin: 5px;
 
@@ -13,7 +16,7 @@ $component-margin: 5px;
 
 #hi-frame {
   position: relative;
-  background-color: gray;
+  background-color: #38434c;
 }
 
 #word-vertical-center {
@@ -43,7 +46,7 @@ $component-margin: 5px;
 
 #letter-H-middle {
   margin: auto $component-margin;
-  width: 60%;
+  width: $letter-middle-component-extent;
   height: $component-thickness;
 }
 
@@ -59,7 +62,7 @@ $component-margin: 5px;
 
 #letter-I-middle {
   margin: $component-margin auto;
-  height: 60%;
+  height: $letter-middle-component-extent;
   width: $component-thickness;
 }
 
@@ -72,4 +75,111 @@ $component-margin: 5px;
 .letter-component {
   border-radius: 5px;
   background-color: $letter-color;
+}
+
+@for $i from 1 through 6 {
+  .letter-component-#{$i} {
+    animation-name: light-#{$i};
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+  }
+}
+
+@keyframes light-1 {
+  0% {
+    background-color: $letter-color;
+  }
+  10% {
+    background-color: $letter-light-color;
+  }
+  20% {
+    background-color: $letter-color;
+  }
+  30% {
+    background-color: $letter-light-color;
+  }
+  40% {
+    background-color: $letter-color;
+  }
+  50% {
+    background-color: $letter-light-color;
+  }
+  70% {
+    background-color: $letter-color;
+  }
+  80% {
+    background-color: $letter-light-color;
+  }
+  90% {
+    background-color: $letter-color;
+  }
+}
+
+@keyframes light-2 {
+  0% {
+    background-color: $letter-color;
+  }
+  37% {
+    background-color: $letter-light-color;
+  }
+  67% {
+    background-color: $letter-color;
+  }
+  70% {
+    background-color: $letter-light-color;
+  }
+  73% {
+    background-color: $letter-color;
+  }
+  76% {
+    background-color: $letter-light-color;
+  }
+  79% {
+    background-color: $letter-color;
+  }
+}
+
+@keyframes light-3 {
+  60% {
+    background-color: $letter-light-color;
+  }
+  65% {
+    background-color: $letter-color;
+  }
+}
+
+@keyframes light-4 {
+}
+
+@keyframes light-5 {
+  30% {
+    background-color: $letter-light-color;
+  }
+  70% {
+    background-color: $letter-color;
+  }
+  74% {
+    background: $letter-light-color;
+  }
+}
+
+@keyframes light-6 {
+  30% {
+    background-color: $letter-light-color;
+  }
+  50% {
+    background-color: $letter-color;
+  }
+  60% {
+    background-color: $letter-light-color;
+  }
+  63% {
+    background-color: $letter-color;
+  }
+  66% {
+    background-color: $letter-light-color;
+  }
+  69% {
+    background-color: $letter-color;
+  }
 }

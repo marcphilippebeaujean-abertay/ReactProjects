@@ -31,7 +31,7 @@
 
 #hi-frame {
   position: relative;
-  background-color: gray; }
+  background-color: #38434c; }
 
 #word-vertical-center {
   position: absolute;
@@ -79,4 +79,98 @@
 
 .letter-component {
   border-radius: 5px;
-  background-color: #a0a3a5; }
+  background-color: #dce1e5; }
+
+.letter-component-1 {
+  animation-name: light-1;
+  animation-duration: 4s;
+  animation-iteration-count: infinite; }
+
+.letter-component-2 {
+  animation-name: light-2;
+  animation-duration: 4s;
+  animation-iteration-count: infinite; }
+
+.letter-component-3 {
+  animation-name: light-3;
+  animation-duration: 4s;
+  animation-iteration-count: infinite; }
+
+.letter-component-4 {
+  animation-name: light-4;
+  animation-duration: 4s;
+  animation-iteration-count: infinite; }
+
+.letter-component-5 {
+  animation-name: light-5;
+  animation-duration: 4s;
+  animation-iteration-count: infinite; }
+
+.letter-component-6 {
+  animation-name: light-6;
+  animation-duration: 4s;
+  animation-iteration-count: infinite; }
+
+@keyframes light-1 {
+  0% {
+    background-color: #dce1e5; }
+  10% {
+    background-color: #a0a3a5; }
+  20% {
+    background-color: #dce1e5; }
+  30% {
+    background-color: #a0a3a5; }
+  40% {
+    background-color: #dce1e5; }
+  50% {
+    background-color: #a0a3a5; }
+  70% {
+    background-color: #dce1e5; }
+  80% {
+    background-color: #a0a3a5; }
+  90% {
+    background-color: #dce1e5; } }
+
+@keyframes light-2 {
+  0% {
+    background-color: #dce1e5; }
+  37% {
+    background-color: #a0a3a5; }
+  67% {
+    background-color: #dce1e5; }
+  70% {
+    background-color: #a0a3a5; }
+  73% {
+    background-color: #dce1e5; }
+  76% {
+    background-color: #a0a3a5; }
+  79% {
+    background-color: #dce1e5; } }
+
+@keyframes light-3 {
+  60% {
+    background-color: #a0a3a5; }
+  65% {
+    background-color: #dce1e5; } }
+
+@keyframes light-4 {}@keyframes light-5 {
+  30% {
+    background-color: #a0a3a5; }
+  70% {
+    background-color: #dce1e5; }
+  74% {
+    background: #a0a3a5; } }
+
+@keyframes light-6 {
+  30% {
+    background-color: #a0a3a5; }
+  50% {
+    background-color: #dce1e5; }
+  60% {
+    background-color: #a0a3a5; }
+  63% {
+    background-color: #dce1e5; }
+  66% {
+    background-color: #a0a3a5; }
+  69% {
+    background-color: #dce1e5; } }
