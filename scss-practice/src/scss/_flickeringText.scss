@@ -11,13 +11,20 @@ $component-thickness: 20%;
 }
 
 #hi-frame {
+  position: relative;
   background-color: gray;
 }
 
+#word-vertical-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
 #word {
-  margin: auto 0;
   display: flex;
-  flex-direction: margin;
+  flex-direction: row;
   justify-content: center;
 }
 
