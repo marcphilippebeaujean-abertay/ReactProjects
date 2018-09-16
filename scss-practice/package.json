@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "gulp": "^3.9.1",
+    "gulp-plumber": "^1.2.0",
     "gulp-sass": "^4.0.1",
     "node-sass": "^4.9.3",
     "react": "^16.5.1",

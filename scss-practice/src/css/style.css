@@ -23,11 +23,53 @@
   to {
     transform: rotate(360deg); } }
 
-.App {
-  text-align: center; }
+.frame {
+  display: table;
+  width: 200px;
+  height: 200px;
+  margin: 0 auto; }
 
-#id-test {
-  text-align: center; }
+#hi-frame {
+  background-color: gray; }
 
-#defaul-test {
-  font-size: 12px; }
+#word {
+  margin: auto 0;
+  display: flex;
+  flex-direction: margin;
+  justify-content: center; }
+
+.letter {
+  display: flex;
+  height: 50px;
+  width: 50px; }
+
+.letter-H {
+  flex-direction: row;
+  justify-content: center; }
+
+#letter-H-middle {
+  margin: auto 0;
+  width: 80%;
+  height: 20%; }
+
+.letter-H-side {
+  height: 100%;
+  width: 20%; }
+
+#letter-I {
+  flex-direction: column;
+  justify-content: center; }
+
+#letter-I-base {
+  margin: 0 auto;
+  height: 100%;
+  width: 20%; }
+
+.letter-I-top {
+  margin: 0 auto;
+  height: 20%;
+  width: 80%; }
+
+.letter-component {
+  border-radius: 5px;
+  background-color: #a0a3a5; }

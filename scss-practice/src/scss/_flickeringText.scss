@@ -1,0 +1,66 @@
+$letter-color: #a0a3a5;
+$letter-width: 50px;
+$letter-height: 50px;
+$component-thickness: 20%;
+
+.frame {
+  display: table;
+  width: 200px;
+  height: 200px;
+  margin: 0 auto;
+}
+
+#hi-frame {
+  background-color: gray;
+}
+
+#word {
+  margin: auto 0;
+  display: flex;
+  flex-direction: margin;
+  justify-content: center;
+}
+
+.letter {
+  display: flex;
+  height: $letter-height;
+  width: $letter-width;
+}
+
+.letter-H {
+  flex-direction: row;
+  justify-content: center;
+}
+
+#letter-H-middle {
+  margin: auto 0;
+  width: 80%;
+  height: $component-thickness;
+}
+
+.letter-H-side {
+  height: 100%;
+  width: $component-thickness;
+}
+
+#letter-I {
+  flex-direction: column;
+  justify-content: center;
+}
+
+#letter-I-base {
+  margin: 0 auto;
+  height: 100%;
+  width: $component-thickness;
+}
+
+.letter-I-top {
+  margin: 0 auto;
+  height: $component-thickness;
+  width: 80%;
+}
+
+.letter-component {
+  border-radius: 5px;
+  background-color: $letter-color;
+}
