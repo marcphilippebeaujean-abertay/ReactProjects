@@ -27,7 +27,10 @@
   display: table;
   width: 200px;
   height: 200px;
-  margin: 0 auto; }
+  margin: 0 auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow: hidden; }
 
 #hi-frame {
   position: relative;
@@ -79,98 +82,117 @@
 
 .letter-component {
   border-radius: 5px;
-  background-color: #dce1e5; }
+  background-color: #dce1e5;
+  box-shadow: 0px 0px 6px 0px #dce1e5; }
 
 .letter-component-1 {
   animation-name: light-1;
   animation-duration: 4s;
-  animation-iteration-count: infinite; }
+  animation-iteration-count: infinite;
+  -webkit-transition-timing-function: ease-in-out;
+  -moz-transition-timing-function: ease-in-out;
+  -o-transition-timing-function: ease-in-out;
+  transition-timing-function: ease-in-out; }
 
 .letter-component-2 {
   animation-name: light-2;
   animation-duration: 4s;
-  animation-iteration-count: infinite; }
+  animation-iteration-count: infinite;
+  -webkit-transition-timing-function: ease-in-out;
+  -moz-transition-timing-function: ease-in-out;
+  -o-transition-timing-function: ease-in-out;
+  transition-timing-function: ease-in-out; }
 
 .letter-component-3 {
   animation-name: light-3;
   animation-duration: 4s;
-  animation-iteration-count: infinite; }
+  animation-iteration-count: infinite;
+  -webkit-transition-timing-function: ease-in-out;
+  -moz-transition-timing-function: ease-in-out;
+  -o-transition-timing-function: ease-in-out;
+  transition-timing-function: ease-in-out; }
 
 .letter-component-4 {
   animation-name: light-4;
   animation-duration: 4s;
-  animation-iteration-count: infinite; }
+  animation-iteration-count: infinite;
+  -webkit-transition-timing-function: ease-in-out;
+  -moz-transition-timing-function: ease-in-out;
+  -o-transition-timing-function: ease-in-out;
+  transition-timing-function: ease-in-out; }
 
 .letter-component-5 {
   animation-name: light-5;
   animation-duration: 4s;
-  animation-iteration-count: infinite; }
+  animation-iteration-count: infinite;
+  -webkit-transition-timing-function: ease-in-out;
+  -moz-transition-timing-function: ease-in-out;
+  -o-transition-timing-function: ease-in-out;
+  transition-timing-function: ease-in-out; }
 
 .letter-component-6 {
   animation-name: light-6;
   animation-duration: 4s;
-  animation-iteration-count: infinite; }
+  animation-iteration-count: infinite;
+  -webkit-transition-timing-function: ease-in-out;
+  -moz-transition-timing-function: ease-in-out;
+  -o-transition-timing-function: ease-in-out;
+  transition-timing-function: ease-in-out; }
 
 @keyframes light-1 {
-  0% {
-    background-color: #dce1e5; }
-  10% {
-    background-color: #a0a3a5; }
-  20% {
-    background-color: #dce1e5; }
-  30% {
-    background-color: #a0a3a5; }
-  40% {
-    background-color: #dce1e5; }
-  50% {
-    background-color: #a0a3a5; }
-  70% {
-    background-color: #dce1e5; }
-  80% {
-    background-color: #a0a3a5; }
+  0%,
+  20%,
+  40%,
+  70%,
   90% {
-    background-color: #dce1e5; } }
+    background-color: #dce1e5;
+    box-shadow: 0px 0px 6px 0px #dce1e5; }
+  10%,
+  30%,
+  50%,
+  80% {
+    background-color: #1e2429;
+    box-shadow: 0px 0px 6px 0px #1e2429; } }
 
 @keyframes light-2 {
-  0% {
-    background-color: #dce1e5; }
-  37% {
-    background-color: #a0a3a5; }
-  67% {
-    background-color: #dce1e5; }
-  70% {
-    background-color: #a0a3a5; }
-  73% {
-    background-color: #dce1e5; }
-  76% {
-    background-color: #a0a3a5; }
+  0%,
+  67%,
+  73%,
   79% {
-    background-color: #dce1e5; } }
+    background-color: #dce1e5;
+    box-shadow: 0px 0px 6px 0px #dce1e5; }
+  37%,
+  70%,
+  73%,
+  76% {
+    background-color: #1e2429;
+    box-shadow: 0px 0px 6px 0px #1e2429; } }
 
 @keyframes light-3 {
   60% {
-    background-color: #a0a3a5; }
+    background-color: #1e2429;
+    box-shadow: 0px 0px 6px 0px #1e2429; }
   65% {
-    background-color: #dce1e5; } }
+    background-color: #dce1e5;
+    box-shadow: 0px 0px 6px 0px #dce1e5; } }
 
 @keyframes light-4 {}@keyframes light-5 {
-  30% {
-    background-color: #a0a3a5; }
+  30%,
   70% {
-    background-color: #dce1e5; }
+    background-color: #1e2429;
+    box-shadow: 0px 0px 6px 0px #1e2429; }
   74% {
-    background: #a0a3a5; } }
+    background-color: #dce1e5;
+    box-shadow: 0px 0px 6px 0px #dce1e5; } }
 
 @keyframes light-6 {
-  30% {
-    background-color: #a0a3a5; }
-  50% {
-    background-color: #dce1e5; }
-  60% {
-    background-color: #a0a3a5; }
-  63% {
-    background-color: #dce1e5; }
+  30%,
+  60%,
   66% {
-    background-color: #a0a3a5; }
+    background-color: #1e2429;
+    box-shadow: 0px 0px 6px 0px #1e2429; }
+  50%,
+  63%,
   69% {
-    background-color: #dce1e5; } }
+    background-color: #dce1e5;
+    box-shadow: 0px 0px 6px 0px #dce1e5; } }
