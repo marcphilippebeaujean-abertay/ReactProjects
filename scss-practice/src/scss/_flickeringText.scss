@@ -9,16 +9,6 @@ $letter-flicker-speed: 10%;
 $component-thickness: 10px;
 $component-margin: 5px;
 
-.frame {
-  display: table;
-  width: 200px;
-  height: 200px;
-  margin: 0 auto;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  overflow: hidden;
-}
-
 #hi-frame {
   position: relative;
   background-color: #38434c;
