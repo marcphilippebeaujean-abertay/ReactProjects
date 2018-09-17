@@ -1,9 +1,22 @@
 #calculator {
   width: 300px;
-  height: 400px;
+  height: 391px;
   background-color: black;
   border-radius: 5px;
-  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.4); }
+  border-style: solid;
+  border-width: 2px;
+  border-color: #cccccc;
+  box-shadow: 2px 4px 3px 1px rgba(0, 0, 0, 0.4);
+  margin: 0px;
+  padding: 0px; }
+
+.calculation-display {
+  text-align: right;
+  margin: 7px 5px; }
+
+#prev-cal-display {
+  font-size: 1rem;
+  color: #f4853f; }
 
 #button-grid {
   display: grid;
@@ -11,7 +24,6 @@
   grid-template-rows: repeat(6, 1fr); }
 
 .button-text {
-  text-align: center;
   color: white;
   font-family: "Press Start 2P", Arial, Helvetica, sans-serif;
   font-size: 1.5rem; }
@@ -23,5 +35,5 @@
 .btn-calc:hover {
   border: 1px solid white; }
 
-.calculation-display {
-  text-align: right; }
+.interface-btn {
+  text-align: center; }
