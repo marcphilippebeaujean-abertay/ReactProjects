@@ -1,2 +1,13 @@
 @import "app";
 @import "flickeringText";
+@import "animatedCircle";
+
+.frame {
+  display: table;
+  width: 200px;
+  height: 200px;
+  margin: 0 auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow: hidden;
+}

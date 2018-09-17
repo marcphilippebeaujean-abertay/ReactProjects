@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import logo from "./logo.svg";
 import "./css/style.css";
 import FlickeringTextComponent from "./components/flickeringText";
+import AnimatedCircle from "./components/animatedCircle";
 
 class App extends Component {
   render() {
@@ -12,6 +13,7 @@ class App extends Component {
           <h1 className="App-title">CSS Demo Projects</h1>
         </header>
         <FlickeringTextComponent />
+        <AnimatedCircle />
       </div>
     );
   }
