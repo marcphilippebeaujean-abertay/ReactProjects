@@ -53,7 +53,6 @@ const handleCalculationOperation = (numA, numB, operator) => {
 
 const handleOperatorInput = (previousState, operator) => {
   let newState = { ...previousState };
-  let madeCalculation = false;
   newState.lastInputWasOperation = true;
   newState.currentInputDisplay = operator;
   newState.currentOperator = operator;
@@ -68,9 +67,18 @@ const handleOperatorInput = (previousState, operator) => {
     );
     newState.currentSum = curSum;
     newState.calcDisplay = curSum;
-    madeCalculation = true;
   }
   newState.calcDisplay = newState.calcDisplay + operator;
+  return newState;
+};
+
+const handleSpecialInput = (previousState, sign) => {
+  let newState = { ...previousState };
+  switch (sign) {
+    case "AC":
+      newState = defaultState;
+      break;
+  }
   return newState;
 };
 
@@ -81,6 +89,7 @@ const rootReducer = (previousState = defaultState, action) => {
     } else if (operatorInput.includes(action.data)) {
       return handleOperatorInput(previousState, action.data);
     } else if (specialInput.includes(action.data)) {
+      return handleSpecialInput(previousState, action.data);
     } else {
       console.log("strang btn type: " + action.data);
     }
