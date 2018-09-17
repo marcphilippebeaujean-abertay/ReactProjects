@@ -1,8 +1,6 @@
 @import "calculator";
+@import "buttonInterface";
 
-.digit-display {
-  color: white;
+.calculation-display {
   text-align: right;
-  font-family: "Press Start 2P", Arial, Helvetica, sans-serif;
-  font-size: 1.5rem;
 }
