@@ -9,7 +9,7 @@ class Calculator extends Component {
     return (
       <div id="calculator">
         <p className="button-text calculation-display" id="prev-cal-display">
-          {this.props.previousCalcDisplay}
+          {this.props.calcDisplay}
         </p>
         <p className="button-text calculation-display">
           {this.props.currentInputDisplay}
@@ -21,13 +21,13 @@ class Calculator extends Component {
 }
 
 Calculator.propTypes = {
-  previousCalcDisplay: PropTypes.string.isRequired,
+  calcDisplay: PropTypes.string.isRequired,
   currentInputDisplay: PropTypes.string.isRequired
 };
 
 const mapStateToProps = state => {
   return {
-    previousCalcDisplay: state.previousCalcDisplay,
+    calcDisplay: state.calcDisplay,
     currentInputDisplay: state.currentInputDisplay
   };
 };
