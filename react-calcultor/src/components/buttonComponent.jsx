@@ -8,7 +8,7 @@ class ButtonComponent extends Component {
     return (
       <button
         style={this.props.bgStyle}
-        onClick={() => this.props.onBtnPressed(this)}
+        onClick={() => this.props.onButtonPressed(this)}
         className="btn-calc button-text interface-btn"
       >
         {this.props.btnText}
@@ -20,12 +20,12 @@ class ButtonComponent extends Component {
 ButtonComponent.propTypes = {
   btnText: PropTypes.string.isRequired,
   bgStyle: PropTypes.object.isRequired,
-  onBtnPressed: PropTypes.func.isRequired
+  onButtonPressed: PropTypes.func.isRequired
 };
 
 const mapDispatchToProps = dispatch => {
   return {
-    onBtnPressed: button =>
+    onButtonPressed: button =>
       dispatch({
         type: "BUTTON_PRESSED",
         data: button.props.btnText

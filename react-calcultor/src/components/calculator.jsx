@@ -20,11 +20,6 @@ class Calculator extends Component {
   }
 }
 
-Calculator.propTypes = {
-  calcDisplay: PropTypes.string.isRequired,
-  currentInputDisplay: PropTypes.string.isRequired
-};
-
 const mapStateToProps = state => {
   return {
     calcDisplay: state.calcDisplay,

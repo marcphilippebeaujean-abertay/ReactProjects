@@ -32,6 +32,7 @@ const rootReducer = (previousState = defaultState, action) => {
   } else {
     console.log("strange action type");
   }
+  return previousState;
 };
 
 export default rootReducer;
