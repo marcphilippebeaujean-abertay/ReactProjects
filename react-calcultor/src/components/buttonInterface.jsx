@@ -29,7 +29,7 @@ export default class ButtonInterface extends Component {
       <div id="button-grid">
         <ButtonComponent btnText="AC" bgStyle={redBtnStyle} />
         <ButtonComponent btnText="/" bgStyle={operatorBtnStyle} />
-        <ButtonComponent btnText="x" bgStyle={operatorBtnStyle} />
+        <ButtonComponent btnText="*" bgStyle={operatorBtnStyle} />
         <ButtonComponent btnText="7" bgStyle={numberBtnStyle} />
         <ButtonComponent btnText="8" bgStyle={numberBtnStyle} />
         <ButtonComponent btnText="9" bgStyle={numberBtnStyle} />
