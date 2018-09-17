@@ -18,7 +18,7 @@ const handleNumericInput = (previousState, number) => {
   } else {
     newState.currentInputDisplay = previousState.currentInputDisplay + number;
   }
-  if (previousState.calcDisplay === "0") {
+  if (previousState.calcDisplay === "0" || previousState.currentSum === "") {
     newState.calcDisplay = number;
   } else {
     newState.calcDisplay = previousState.calcDisplay + number;
@@ -53,22 +53,25 @@ const handleCalculationOperation = (numA, numB, operator) => {
 
 const handleOperatorInput = (previousState, operator) => {
   let newState = { ...previousState };
-  newState.lastInputWasOperation = true;
-  newState.currentInputDisplay = operator;
-  newState.currentOperator = operator;
-  // Assign number state variables used for calculations
-  if (previousState.currentSum === "") {
-    newState.currentSum = previousState.currentInputDisplay;
-  } else {
-    let curSum = handleCalculationOperation(
-      previousState.currentSum,
-      previousState.currentInputDisplay,
-      previousState.currentOperator
-    );
-    newState.currentSum = curSum;
-    newState.calcDisplay = curSum;
+  if (previousState.lastInputWasOperation === false) {
+    // dont allow consecutive operators
+    newState.lastInputWasOperation = true;
+    newState.currentInputDisplay = operator;
+    newState.currentOperator = operator;
+    // Assign number state variables used for calculations
+    if (previousState.currentSum === "") {
+      newState.currentSum = previousState.currentInputDisplay;
+    } else {
+      let curSum = handleCalculationOperation(
+        previousState.currentSum,
+        previousState.currentInputDisplay,
+        previousState.currentOperator
+      );
+      newState.currentSum = curSum;
+      newState.calcDisplay = curSum;
+    }
+    newState.calcDisplay = newState.calcDisplay + operator;
   }
-  newState.calcDisplay = newState.calcDisplay + operator;
   return newState;
 };
 
@@ -77,6 +80,25 @@ const handleSpecialInput = (previousState, sign) => {
   switch (sign) {
     case "AC":
       newState = defaultState;
+      break;
+    case "=":
+      if (
+        previousState.lastInputWasOperation === false &&
+        previousState.currentOperator !== ""
+      ) {
+        let finalSum = handleCalculationOperation(
+          previousState.currentSum,
+          previousState.currentInputDisplay,
+          previousState.currentOperator
+        );
+        newState.currentSum = "";
+        newState.calcDisplay = previousState.calcDisplay + sign + finalSum;
+        newState.currentInputDisplay = finalSum;
+        newState.lastInputWasOperation = true;
+      }
+      break;
+    default:
+      console.log("strange special input provided");
       break;
   }
   return newState;
