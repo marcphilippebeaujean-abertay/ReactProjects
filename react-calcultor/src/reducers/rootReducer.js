@@ -3,7 +3,8 @@ const defaultState = {
   currentInputDisplay: "0", // displays the current input (an operation or a number in string form)
   currentOperator: "",
   lastInputWasOperation: true, // input should be cleared when an operation is used
-  currentSum: ""
+  currentSum: "",
+  resetPending: false
 };
 
 const numericInput = [1, 2, 3, 4, 5, 6, 7, 8, 9].map(elem => elem.toString()); // these are types that are ALWAYS valid input
@@ -18,8 +19,9 @@ const handleNumericInput = (previousState, number) => {
   } else {
     newState.currentInputDisplay = previousState.currentInputDisplay + number;
   }
-  if (previousState.calcDisplay === "0") {
+  if (previousState.calcDisplay === "0" || previousState.resetPending) {
     newState.calcDisplay = number;
+    newState.resetPending = false;
   } else {
     newState.calcDisplay = previousState.calcDisplay + number;
   }
@@ -95,6 +97,7 @@ const handleSpecialInput = (previousState, sign) => {
         newState.calcDisplay = previousState.calcDisplay + sign + finalSum;
         newState.currentInputDisplay = finalSum;
         newState.lastInputWasOperation = true;
+        newState.resetPending = true;
       }
       break;
     case "0":
