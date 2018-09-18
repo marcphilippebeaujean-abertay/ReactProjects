@@ -109,6 +109,7 @@ const handleSpecialInput = (previousState, sign) => {
       if (!previousState.currentInputDisplay.includes(".")) {
         newState = handleNumericInput(previousState, ".");
       }
+      break;
     default:
       console.log("strange special input provided");
       break;
@@ -125,10 +126,8 @@ const rootReducer = (previousState = defaultState, action) => {
     } else if (specialInput.includes(action.data)) {
       return handleSpecialInput(previousState, action.data);
     } else {
-      console.log("strang btn type: " + action.data);
+      console.log("strange btn type: " + action.data);
     }
-  } else {
-    console.log("strange action type");
   }
   return previousState;
 };
