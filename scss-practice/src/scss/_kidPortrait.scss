@@ -1,0 +1,49 @@
+$kid-head-size: 60%;
+
+#kid-p-background {
+  background-color: #c481fb;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.kid-black-border {
+  border-color: black;
+  border-style: solid;
+  border-width: medium;
+}
+
+#kid-main {
+  height: 140px;
+  width: 68%;
+  margin: 0 auto;
+  padding-top: 120px;
+}
+
+#kid-face {
+  background-color: pink;
+  border-radius: 45px;
+  height: $kid-head-size;
+  width: $kid-head-size;
+  margin: 0 auto;
+}
+
+#kid-face-features {
+  height: 50px;
+  width: 50px;
+}
+
+.kid-eye {
+  background-color: white;
+  width: 20%;
+  height: 20%;
+}
+
+#kid-shirt {
+  border-radius: 30px 30px 0 0;
+  background-color: #ace9e7;
+  width: $kid-head-size;
+  height: 20%;
+  margin: 0 auto;
+}
