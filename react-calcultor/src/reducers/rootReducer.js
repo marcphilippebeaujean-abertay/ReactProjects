@@ -18,7 +18,7 @@ const handleNumericInput = (previousState, number) => {
   } else {
     newState.currentInputDisplay = previousState.currentInputDisplay + number;
   }
-  if (previousState.calcDisplay === "0" || previousState.currentSum === "") {
+  if (previousState.calcDisplay === "0") {
     newState.calcDisplay = number;
   } else {
     newState.calcDisplay = previousState.calcDisplay + number;
@@ -97,6 +97,15 @@ const handleSpecialInput = (previousState, sign) => {
         newState.lastInputWasOperation = true;
       }
       break;
+    case "0":
+      if (previousState.currentInputDisplay[0] !== "0") {
+        newState = handleNumericInput(previousState, "0");
+      }
+      break;
+    case ".":
+      if (!previousState.currentInputDisplay.includes(".")) {
+        newState = handleNumericInput(previousState, ".");
+      }
     default:
       console.log("strange special input provided");
       break;
