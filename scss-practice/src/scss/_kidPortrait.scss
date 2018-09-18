@@ -1,4 +1,4 @@
-$kid-head-size: 60%;
+$kid-head-size: 82px;
 $skin-color: pink;
 
 #kid-p-background {
@@ -22,30 +22,44 @@ $skin-color: pink;
   padding-top: 120px;
 }
 
+#eyes {
+  height: 60%;
+  width: 100%;
+  background-color: black;
+  border-radius: 15px;
+  display: flex;
+  direction: row;
+}
+
 #kid-face {
   background-color: $skin-color;
-  border-radius: 50px;
+  border-radius: 40px;
   height: $kid-head-size;
   width: $kid-head-size;
   margin: 0 auto;
 }
 
 #kid-face-features {
-  height: 50px;
-  width: 50px;
+  height: 30px;
+  width: 80px;
+  border-radius: 20px;
   position: absolute;
-  transform: translate(75px, 43px);
+  transform: translate(60px, 32px);
   background-color: $skin-color;
 }
 
-.kid-eye {
-  background-color: white;
-  width: 30%;
-  height: 30%;
+#kid-eye-1 {
+  background-color: red;
+  width: 100%;
+  height: 100%;
   border-radius: 50px;
   border-style: solid;
   border-width: 2px;
   border-color: black;
+  #kid-eye-2 {
+    width: 80%;
+    height: 100%;
+  }
 }
 
 #kid-shirt {

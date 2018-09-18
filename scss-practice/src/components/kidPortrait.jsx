@@ -6,7 +6,10 @@ export default class KidPortrait extends Component {
     return (
       <div className="frame" id="kid-p-background">
         <div id="kid-face-features">
-          <div className="kid-eye" />
+          <div id="eyes">
+            <div id="kid-eye-1" />
+            <div id="kid-eye-2" />
+          </div>
         </div>
         <div id="kid-main">
           <div id="kid-face" className="kid-black-border" />
