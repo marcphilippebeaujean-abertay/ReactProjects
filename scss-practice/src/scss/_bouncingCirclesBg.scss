@@ -1,0 +1,50 @@
+#bouncing-circles-bg {
+  background-color: aquamarine;
+  display: flex;
+  justify-content: center;
+}
+
+#bouncing-crcl-div {
+  height: 50px;
+  width: 80%;
+  margin: auto 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.bouncing-crcl {
+  background-color: white;
+  margin: 20px 10px;
+  border-radius: 50px;
+  height: 20px;
+  width: 30px;
+  border-width: 2px;
+  border-color: black;
+  border-style: solid;
+}
+
+@for $i from 1 through 4 {
+  #bouncing-crcl-#{$i} {
+    animation-name: bounce-#{$i};
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    -webkit-transition-timing-function: ease-in-out;
+    -moz-transition-timing-function: ease-in-out;
+    -o-transition-timing-function: ease-in-out;
+    transition-timing-function: ease-in-out;
+  }
+
+  @keyframes bounce-#{$i} {
+    #{$i * 6%} {
+      margin: 0px 10px;
+      height: 30px;
+      width: 40px;
+    }
+    #{$i * 19%} {
+      margin: 20px 10px;
+      height: 40px;
+      width: 30px;
+    }
+  }
+}

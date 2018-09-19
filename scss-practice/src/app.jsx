@@ -4,6 +4,7 @@ import "./css/style.css";
 import FlickeringTextComponent from "./components/flickeringText";
 import AnimatedCircle from "./components/animatedCircle";
 import KidPortrait from "./components/kidPortrait";
+import BouncingCircles from "./components/bouncingCircleLoader";
 
 class App extends Component {
   render() {
@@ -16,6 +17,7 @@ class App extends Component {
         <FlickeringTextComponent />
         <AnimatedCircle />
         <KidPortrait />
+        <BouncingCircles />
       </div>
     );
   }

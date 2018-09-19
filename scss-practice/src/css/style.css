@@ -306,7 +306,7 @@
   height: 60%;
   width: 100%;
   background-color: black;
-  border-radius: 15px;
+  border-radius: 25px;
   display: flex;
   direction: row; }
 
@@ -359,6 +359,105 @@
   40% {
     box-shadow: 0px 0px 10px 0px #fc1105;
     background-color: #fc1105; } }
+
+#bouncing-circles-bg {
+  background-color: aquamarine;
+  display: flex;
+  justify-content: center; }
+
+#bouncing-crcl-div {
+  height: 50px;
+  width: 80%;
+  margin: auto 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center; }
+
+.bouncing-crcl {
+  background-color: white;
+  margin: 20px 10px;
+  border-radius: 50px;
+  height: 20px;
+  width: 30px;
+  border-width: 2px;
+  border-color: black;
+  border-style: solid; }
+
+#bouncing-crcl-1 {
+  animation-name: bounce-1;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  -webkit-transition-timing-function: ease-in-out;
+  -moz-transition-timing-function: ease-in-out;
+  -o-transition-timing-function: ease-in-out;
+  transition-timing-function: ease-in-out; }
+
+@keyframes bounce-1 {
+  6% {
+    margin: 0px 10px;
+    height: 30px;
+    width: 40px; }
+  19% {
+    margin: 20px 10px;
+    height: 40px;
+    width: 30px; } }
+
+#bouncing-crcl-2 {
+  animation-name: bounce-2;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  -webkit-transition-timing-function: ease-in-out;
+  -moz-transition-timing-function: ease-in-out;
+  -o-transition-timing-function: ease-in-out;
+  transition-timing-function: ease-in-out; }
+
+@keyframes bounce-2 {
+  12% {
+    margin: 0px 10px;
+    height: 30px;
+    width: 40px; }
+  38% {
+    margin: 20px 10px;
+    height: 40px;
+    width: 30px; } }
+
+#bouncing-crcl-3 {
+  animation-name: bounce-3;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  -webkit-transition-timing-function: ease-in-out;
+  -moz-transition-timing-function: ease-in-out;
+  -o-transition-timing-function: ease-in-out;
+  transition-timing-function: ease-in-out; }
+
+@keyframes bounce-3 {
+  18% {
+    margin: 0px 10px;
+    height: 30px;
+    width: 40px; }
+  57% {
+    margin: 20px 10px;
+    height: 40px;
+    width: 30px; } }
+
+#bouncing-crcl-4 {
+  animation-name: bounce-4;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  -webkit-transition-timing-function: ease-in-out;
+  -moz-transition-timing-function: ease-in-out;
+  -o-transition-timing-function: ease-in-out;
+  transition-timing-function: ease-in-out; }
+
+@keyframes bounce-4 {
+  24% {
+    margin: 0px 10px;
+    height: 30px;
+    width: 40px; }
+  76% {
+    margin: 20px 10px;
+    height: 40px;
+    width: 30px; } }
 
 .frame {
   display: table;
