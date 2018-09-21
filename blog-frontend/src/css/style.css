@@ -1,7 +1,29 @@
+#nav-div {
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  justify-content: center;
+  width: 100%;
+  overflow: hidden;
+  border-radius: 25px; }
+
+.nav-element {
+  padding: 20px 0;
+  width: 20%;
+  text-align: center;
+  color: white;
+  background-color: #83e1fb;
+  letter-spacing: 0.2rem; }
+
+.nav-element:hover {
+  background-color: white;
+  color: #83e1fb; }
+
+.App {
+  width: 80%;
+  margin: 0 auto; }
+
 body {
   margin: 0;
   padding: 0;
   font-family: sans-serif; }
-
-#sass-compile {
-  margin: 0; }
