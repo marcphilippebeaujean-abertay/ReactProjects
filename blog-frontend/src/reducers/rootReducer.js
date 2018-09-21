@@ -1,5 +1,8 @@
-const defaultState = {};
+import navigationReducer from "./navigationReducer";
+import { combineReducers } from "redux";
 
-const rootReducer = (previousState = defaultState, action) => {};
+const rootReducer = combineReducers({
+  navReducer: navigationReducer
+});
 
 export default rootReducer;
