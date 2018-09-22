@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import "../css/style.css";
+
 export default class BlogPost extends Component {
   render() {
     return (

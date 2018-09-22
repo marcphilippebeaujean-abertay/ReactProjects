@@ -1,5 +1,6 @@
 const defaultState = {
-  currentURL: "home"
+  currentURL: "home",
+  showProjectDropDown: false
 };
 
 const navigationReducer = (previousState = defaultState, action) => {
