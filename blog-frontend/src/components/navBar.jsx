@@ -6,22 +6,22 @@ export default class NavBar extends Component {
   render() {
     return (
       <div id="nav-div">
-        <nav className="nav-element nav-element-main" id="nav-left-element">
+        <button className="nav-element nav-element-main" id="nav-left-element">
           <p>home</p>
-        </nav>
-        <nav className="nav-element nav-element-main">
+        </button>
+        <button className="nav-element nav-element-main">
           <p>archive</p>
-        </nav>
-        <nav className="nav-element nav-element-main">
+        </button>
+        <button className="nav-element nav-element-main">
           <p>projects</p>
-        </nav>
+        </button>
         <NavDropdown dropDownElements={["games", "websites", "software"]} />
-        <nav className="nav-element nav-element-main">
+        <button className="nav-element nav-element-main">
           <p>resume</p>
-        </nav>
-        <nav className="nav-element nav-element-main" id="nav-right-element">
+        </button>
+        <button className="nav-element nav-element-main" id="nav-right-element">
           <p>contact</p>
-        </nav>
+        </button>
       </div>
     );
   }

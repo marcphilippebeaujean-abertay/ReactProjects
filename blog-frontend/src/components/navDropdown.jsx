@@ -4,9 +4,9 @@ import "../css/style.css";
 
 export default class NavDropDown extends Component {
   dropdownList = this.props.dropDownElements.map((dropdownName, index) => (
-    <nav key={index} className="nav-element nav-element-dropdown">
+    <button key={index} className="nav-element nav-element-dropdown">
       <p key={index}>{dropdownName}</p>
-    </nav>
+    </button>
   ));
   render() {
     return <div className="nav-dropdown-vertical">{this.dropdownList}</div>;
