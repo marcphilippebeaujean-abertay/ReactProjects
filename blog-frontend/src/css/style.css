@@ -18,8 +18,7 @@
   border-bottom-right-radius: 25px; }
 
 .nav-element {
-  margin: 0;
-  padding: 0px;
+  margin: auto 0;
   height: 100%;
   border: none;
   font-size: 12px;
@@ -31,6 +30,7 @@
   transition: background-color 0.5s, color 0.5s; }
 
 .nav-element-main {
+  height: 100%;
   color: white;
   background-color: #3bb5d6; }
 
@@ -38,23 +38,29 @@
   background-color: white;
   color: #3bb5d6; }
 
-.nav-dropdown-vertical {
-  padding: 10px 0;
-  position: absolute;
-  top: 50px;
-  width: 20%;
-  height: 150px;
-  display: flex;
-  flex-direction: column;
-  letter-spacing: 0.2rem; }
-
 .nav-element-dropdown {
   width: 100%;
+  height: 150px;
   color: white;
   background-color: #1ac4f3; }
 
 .nav-element-dropdown:hover {
   color: #1ac4f3; }
+
+.nav-dropdown-vertical {
+  display: none;
+  padding: 10px 0;
+  position: absolute;
+  width: 20%;
+  letter-spacing: 0.2rem;
+  flex-direction: column; }
+
+#projects-dropdown {
+  top: 50px;
+  height: 150px; }
+
+#nav-element-projects:hover #projects-dropdown {
+  display: flex; }
 
 .App {
   width: 80%;

@@ -1,18 +1,23 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
+import { connect } from "react-redux";
 import "../css/style.css";
 
-export default class NavDropDown extends Component {
+class NavDropDown extends Component {
   dropdownList = this.props.dropDownElements.map((dropdownName, index) => (
     <button key={index} className="nav-element nav-element-dropdown">
       <p key={index}>{dropdownName}</p>
     </button>
   ));
   render() {
-    return <div className="nav-dropdown-vertical">{this.dropdownList}</div>;
+    {
+      return this.dropdownList;
+    }
   }
 }
 
 NavDropDown.propTypes = {
   dropDownElements: PropTypes.array.isRequired
 };
+
+export default NavDropDown;
