@@ -1,4 +1,4 @@
-$nav-bg-colour: #83e1fb;
+$nav-bg-colour: #3bb5d6;
 $nav-text-colour: white;
 $nav-border-radius: 25px;
 
@@ -7,9 +7,9 @@ $nav-border-radius: 25px;
   flex-direction: row;
   align-content: center;
   justify-content: center;
-  width: 100%;
   overflow: hidden;
   border-radius: $nav-border-radius;
+  width: 100%;
 }
 
 .nav-element {

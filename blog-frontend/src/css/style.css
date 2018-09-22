@@ -3,24 +3,32 @@
   flex-direction: row;
   align-content: center;
   justify-content: center;
-  width: 100%;
   overflow: hidden;
-  border-radius: 25px; }
+  border-radius: 25px;
+  width: 100%; }
 
 .nav-element {
   padding: 20px 0;
   width: 20%;
   text-align: center;
   color: white;
-  background-color: #83e1fb;
+  background-color: #3bb5d6;
   letter-spacing: 0.2rem; }
 
 .nav-element:hover {
   background-color: white;
-  color: #83e1fb; }
+  color: #3bb5d6; }
 
 .App {
   width: 80%;
+  margin: 0 auto; }
+
+.blog-date {
+  font-style: italic;
+  color: rgba(105, 105, 105, 0.692); }
+
+.blog-post-div {
+  width: 70%;
   margin: 0 auto; }
 
 body {
