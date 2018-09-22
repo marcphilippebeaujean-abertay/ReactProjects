@@ -18,12 +18,15 @@
   border-bottom-right-radius: 25px; }
 
 .nav-element {
-  margin: auto 0;
+  cursor: default;
+  margin-top: auto 0;
   height: 100%;
   border: none;
   font-size: 12px;
   text-align: center;
   letter-spacing: 0.2rem;
+  align-content: center;
+  align-items: center;
   width: 20%;
   -webkit-transition: background-color 0.5s, color 0.5s;
   /* Safari */
