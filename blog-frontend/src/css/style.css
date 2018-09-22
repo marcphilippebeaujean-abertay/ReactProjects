@@ -19,14 +19,15 @@
 
 .nav-element {
   cursor: default;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
   margin-top: auto 0;
   height: 100%;
   border: none;
   font-size: 12px;
-  text-align: center;
   letter-spacing: 0.2rem;
-  align-content: center;
-  align-items: center;
   width: 20%;
   -webkit-transition: background-color 0.5s, color 0.5s;
   /* Safari */
