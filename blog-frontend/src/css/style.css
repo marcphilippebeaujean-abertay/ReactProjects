@@ -49,7 +49,10 @@
 .nav-element-dropdown {
   width: 100%;
   color: white;
-  background-color: #3bb5d6; }
+  background-color: #1ac4f3; }
+
+.nav-element-dropdown:hover {
+  color: #1ac4f3; }
 
 .App {
   width: 80%;

@@ -1,4 +1,5 @@
 $nav-bg-colour: #3bb5d6;
+$nav-dropdown-colour: #1ac4f3;
 $nav-text-colour: white;
 $nav-border-radius: 25px;
 $hover-transition-speed: 0.5s;
@@ -9,7 +10,6 @@ $nav-element-width: 20%;
 #nav-div {
   position: relative;
   padding: $nav-bar-top-padding 0;
-  //margin-top: $nav-bar-top-margin;
   display: flex;
   flex-direction: row;
   align-content: center;
@@ -66,5 +66,9 @@ $nav-element-width: 20%;
 .nav-element-dropdown {
   width: 100%;
   color: $nav-text-colour;
-  background-color: $nav-bg-colour;
+  background-color: $nav-dropdown-colour;
+}
+
+.nav-element-dropdown:hover {
+  color: $nav-dropdown-colour;
 }
