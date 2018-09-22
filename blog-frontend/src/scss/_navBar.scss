@@ -1,8 +1,10 @@
 $nav-bg-colour: #3bb5d6;
 $nav-text-colour: white;
 $nav-border-radius: 25px;
+$hover-transition-speed: 0.5s;
 
 #nav-div {
+  margin-top: 5px;
   display: flex;
   flex-direction: row;
   align-content: center;
@@ -19,8 +21,15 @@ $nav-border-radius: 25px;
   color: $nav-text-colour;
   background-color: $nav-bg-colour;
   letter-spacing: 0.2rem;
+  -webkit-transition: background-color $hover-transition-speed,
+    color $hover-transition-speed; /* Safari */
+  transition: background-color $hover-transition-speed,
+    color $hover-transition-speed;
 }
 .nav-element:hover {
   background-color: $nav-text-colour;
-  color: $nav-bg-colour;
+  color: $nav-bg-colour; //rgb(139, 139, 139);
+}
+
+@keyframes nav-hover-phase {
 }
