@@ -10,17 +10,11 @@ class NavDropDown extends Component {
           className="nav-element project-dropdown-element"
           id="games-dropdown-div"
         >
-          <p>
-            games
-            <i className="arrow arrow-right" id="games-arrow" />
-          </p>
+          <p>games</p>
         </div>
         <NavGamesDropdown />
         <div className="nav-element project-dropdown-element">
-          <p>
-            web
-            <i className="arrow arrow-right" />
-          </p>
+          <p>web</p>
         </div>
         <div className="nav-element project-dropdown-element">
           <p>software</p>

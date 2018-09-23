@@ -56,10 +56,13 @@
   border-width: 0 3px 3px 0;
   display: inline-block;
   padding: 3px;
-  margin-left: 10px;
   -webkit-transition: border-color 0.5s;
   /* Safari */
   transition: border-color 0.5s; }
+
+.arrow-margin {
+  position: relative;
+  left: 70%; }
 
 #projects-dropdown-container:hover #projects-arrow {
   border-color: #3bb5d6; }

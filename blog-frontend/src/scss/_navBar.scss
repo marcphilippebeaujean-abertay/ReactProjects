@@ -75,9 +75,13 @@ $nr-of-project-dropdowns: 3;
   border-width: 0 3px 3px 0;
   display: inline-block;
   padding: 3px;
-  margin-left: 10px;
   -webkit-transition: border-color $hover-transition-speed; /* Safari */
   transition: border-color $hover-transition-speed;
+}
+
+.arrow-margin {
+  position: relative;
+  left: 70%;
 }
 
 #projects-dropdown-container:hover #projects-arrow {

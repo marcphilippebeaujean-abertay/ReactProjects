@@ -16,10 +16,7 @@ class NavBar extends Component {
           className="nav-element nav-element-main dropdown-container"
           id="projects-dropdown-container"
         >
-          <p>
-            projects
-            <i className="arrow arrow-down" id="projects-arrow" />
-          </p>
+          <p>projects</p>
           <NavDropdown />
         </div>
         <div className="nav-element nav-element-main">
