@@ -164,3 +164,12 @@ $nr-of-project-dropdowns: 3;
   color: #09a83e;
   cursor: pointer;
 }
+
+@media only screen and (max-width: 1000px) {
+  .nav-left-element {
+    border-radius: 0px;
+  }
+  #nav-right-element {
+    border-radius: 0px;
+  }
+}
