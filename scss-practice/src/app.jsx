@@ -5,7 +5,7 @@ import FlickeringTextComponent from "./components/flickeringText";
 import AnimatedCircle from "./components/animatedCircle";
 import KidPortrait from "./components/kidPortrait";
 import BouncingCircles from "./components/bouncingCircleLoader";
-import RippleWaves from "./components/ripples";
+import LoadingScreen_1 from "./components/loadingScreen1";
 
 class App extends Component {
   render() {
@@ -19,7 +19,7 @@ class App extends Component {
         <AnimatedCircle />
         <KidPortrait />
         <BouncingCircles />
-        <RippleWaves />
+        <LoadingScreen_1 />
       </div>
     );
   }

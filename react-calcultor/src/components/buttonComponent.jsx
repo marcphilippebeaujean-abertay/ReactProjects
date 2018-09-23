@@ -23,7 +23,7 @@ ButtonComponent.propTypes = {
   onButtonPressed: PropTypes.func.isRequired
 };
 
-const mapDispatchToProps = dispatch => {
+const mapStateToProps = dispatch => {
   return {
     onButtonPressed: button =>
       dispatch({

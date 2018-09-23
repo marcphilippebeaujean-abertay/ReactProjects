@@ -460,29 +460,39 @@
     width: 30px; } }
 
 #ripples-bg {
-  background-color: brown; }
+  background-color: #f9c2d6; }
 
-.ripple-circle {
-  background-color: #f4ad42;
+#bar-background {
+  width: 130px;
+  height: 40px;
+  margin: 0 auto;
   position: relative;
-  width: 80px;
-  height: 50px;
-  border-radius: 100px;
-  margin: auto 0px; }
-
-.water-circle {
-  background-color: #f44242;
-  width: 15px;
-  height: 15px;
+  top: 80px;
+  overflow: hidden;
   border-radius: 25px;
-  margin: auto; }
+  background-color: white; }
 
-#ripple-container {
-  height: 100%;
+#loading-bar {
   width: 100%;
-  display: flex;
-  align-content: center;
-  justify-content: center; }
+  height: 100%;
+  background-color: aquamarine;
+  position: relative;
+  right: 170px;
+  animation-name: load-bar;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  -webkit-transition-timing-function: ease-in-out;
+  -moz-transition-timing-function: ease-in-out;
+  -o-transition-timing-function: ease-in-out;
+  transition-timing-function: ease-in-out;
+  background: linear-gradient(90deg, #478dff 0%, #00d4ff 35%, aquamarine 100%); }
+
+@keyframes load-bar {
+  99% {
+    right: 0px; }
+  0%,
+  100% {
+    right: 150px; } }
 
 .frame {
   display: table;
