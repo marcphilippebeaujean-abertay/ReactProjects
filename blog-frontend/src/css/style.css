@@ -42,6 +42,24 @@
   background-color: white;
   color: #3bb5d6; }
 
+.arrow-down {
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg); }
+
+.arrow {
+  border-color: white;
+  border-style: solid;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  margin-left: 10px;
+  padding: 3px;
+  -webkit-transition: border-color 0.5s;
+  /* Safari */
+  transition: border-color 0.5s; }
+
+.nav-element-main:hover .arrow {
+  border-color: #3bb5d6; }
+
 .App {
   width: 80%;
   margin: 0 auto; }
@@ -105,6 +123,24 @@
 .nav-element-main:hover {
   background-color: white;
   color: #3bb5d6; }
+
+.arrow-down {
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg); }
+
+.arrow {
+  border-color: white;
+  border-style: solid;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  margin-left: 10px;
+  padding: 3px;
+  -webkit-transition: border-color 0.5s;
+  /* Safari */
+  transition: border-color 0.5s; }
+
+.nav-element-main:hover .arrow {
+  border-color: #3bb5d6; }
 
 .project-dropdown-element {
   width: 50%;
