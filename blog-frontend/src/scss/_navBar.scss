@@ -79,11 +79,6 @@ $nr-of-project-dropdowns: 3;
   transition: border-color $hover-transition-speed;
 }
 
-.arrow-margin {
-  position: relative;
-  left: 70%;
-}
-
 #projects-dropdown-container:hover #projects-arrow {
   border-color: $nav-bg-colour;
 }
@@ -154,6 +149,16 @@ $nr-of-project-dropdowns: 3;
   display: flex;
 }
 
-.secondary-dropdown-elem {
-  width: 100%;
+.scndry-dd {
+  background: #e6e6e6;
+}
+
+#she-town-dropdown {
+  color: #8e35e0;
+  cursor: pointer;
+}
+
+#indestructible-dropdown {
+  color: #09a83e;
+  cursor: pointer;
 }
