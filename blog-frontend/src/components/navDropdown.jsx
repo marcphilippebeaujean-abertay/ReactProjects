@@ -1,23 +1,22 @@
 import React, { Component } from "react";
-import PropTypes from "prop-types";
-import { connect } from "react-redux";
 import "../css/style.css";
 
 class NavDropDown extends Component {
-  dropdownList = this.props.dropDownElements.map((dropdownName, index) => (
-    <button key={index} className="nav-element nav-element-dropdown">
-      <p key={index}>{dropdownName}</p>
-    </button>
-  ));
   render() {
-    {
-      return this.dropdownList;
-    }
+    return (
+      <div className="dropdown-vertical" id="projects-dropdown">
+        <div className="nav-element project-dropdown-element">
+          <p>games</p>
+        </div>
+        <div className="nav-element project-dropdown-element">
+          <p>web</p>
+        </div>
+        <div className="nav-element project-dropdown-element">
+          <p>software</p>
+        </div>
+      </div>
+    );
   }
 }
-
-NavDropDown.propTypes = {
-  dropDownElements: PropTypes.array.isRequired
-};
 
 export default NavDropDown;

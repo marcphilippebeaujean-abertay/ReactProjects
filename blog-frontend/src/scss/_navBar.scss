@@ -3,7 +3,7 @@ $nav-dropdown-colour: #1ac4f3;
 $nav-text-colour: white;
 $nav-border-radius: 25px;
 $hover-transition-speed: 0.5s;
-$nav-bar-height: 50px;
+$nav-bar-height: 60px;
 $nav-bar-top-padding: 10px;
 $nav-element-width: 20%;
 
@@ -53,34 +53,45 @@ $nav-element-width: 20%;
   background-color: $nav-bg-colour;
 }
 
-.nav-element:hover {
+.nav-element-main:hover {
   background-color: $nav-text-colour;
   color: $nav-bg-colour; //rgb(139, 139, 139);
 }
 
-.nav-element-dropdown {
+.project-dropdown-element {
   width: 100%;
-  height: $nav-bar-height * 3;
-  color: $nav-text-colour;
+  height: $nav-bar-height;
   background-color: $nav-dropdown-colour;
+  color: $nav-text-colour;
 }
 
-.nav-element-dropdown:hover {
+.project-dropdown-element:hover {
+  background-color: $nav-text-colour;
   color: $nav-dropdown-colour;
 }
 
-.nav-dropdown-vertical {
+.dropdown-vertical {
   display: none;
-  padding: $nav-bar-top-padding 0;
   position: absolute;
   width: $nav-element-width;
   letter-spacing: 0.2rem;
   flex-direction: column;
 }
 
+#projects-dropdown-div {
+  position: relative;
+  overflow: visible;
+}
+
 #projects-dropdown {
+  color: $nav-text-colour;
   top: $nav-bar-height;
+  width: 100%;
   height: $nav-bar-height * 3; // Adjust nav-dropdown-vertical height when adding elements
+}
+
+#projects-dropdown-div:hover #projects-dropdown {
+  display: flex;
 }
 
 #nav-element-projects:hover #projects-dropdown {

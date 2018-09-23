@@ -12,11 +12,12 @@ class NavBar extends Component {
         <div className="nav-element nav-element-main">
           <p>archive</p>
         </div>
-        <div className="nav-element nav-element-main" id="nav-element-projects">
+        <div
+          className="nav-element nav-element-main"
+          id="projects-dropdown-div"
+        >
           <p>projects</p>
-          <div className="nav-dropdown-vertical" id="projects-dropdown">
-            <NavDropdown dropDownElements={["games", "software", "web"]} />
-          </div>
+          <NavDropdown />
         </div>
         <div className="nav-element nav-element-main">
           <p>resume</p>
