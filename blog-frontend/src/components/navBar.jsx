@@ -7,7 +7,7 @@ class NavBar extends Component {
   render() {
     return (
       <nav id="nav-div">
-        <div className="nav-element nav-element-main" id="nav-left-element">
+        <div className="nav-element nav-element-main nav-left-element">
           <p>home</p>
         </div>
         <div className="nav-element nav-element-main">
