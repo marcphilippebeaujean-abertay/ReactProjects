@@ -18,7 +18,7 @@ class NavBar extends Component {
         >
           <p>
             projects
-            <i className="arrow arrow-down" />
+            <i className="arrow arrow-down" id="projects-arrow" />
           </p>
           <NavDropdown />
         </div>
