@@ -99,26 +99,27 @@
 #secondary-dropdown-container {
   width: 20%; }
 
-#games-dropdown {
+.scndry-dd {
   display: none;
   position: absolute;
   flex-direction: column;
   width: 100%;
-  background-color: black;
   top: 0%;
-  left: 100%;
+  left: 100%; }
+
+#games-dropdown {
   height: 120px; }
 
 #games-dropdown-div:hover ~ #games-dropdown {
   display: flex; }
 
-#games-dropdown:hover {
+.scndry-dd:hover {
   display: flex; }
 
-#games-dropdown:hover #projects-dropdown {
+.scndry-dd:hover #projects-dropdown {
   display: flex; }
 
-.scndry-dd {
+.scndry-dd-elem {
   background: #e6e6e6; }
 
 #she-town-dropdown {

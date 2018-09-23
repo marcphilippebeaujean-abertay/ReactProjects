@@ -126,14 +126,16 @@ $nr-of-project-dropdowns: 3;
   width: $nav-element-width;
 }
 
-#games-dropdown {
+.scndry-dd {
   display: none;
   position: absolute;
   flex-direction: column;
   width: 100%;
-  background-color: black;
   top: 0%;
   left: 100%;
+}
+
+#games-dropdown {
   height: $nav-bar-height * 2;
 }
 
@@ -141,15 +143,15 @@ $nr-of-project-dropdowns: 3;
   display: flex;
 }
 
-#games-dropdown:hover {
+.scndry-dd:hover {
   display: flex;
 }
 
-#games-dropdown:hover #projects-dropdown {
+.scndry-dd:hover #projects-dropdown {
   display: flex;
 }
 
-.scndry-dd {
+.scndry-dd-elem {
   background: #e6e6e6;
 }
 
