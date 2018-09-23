@@ -1,5 +1,5 @@
 $nav-bg-colour: #3bb5d6;
-$nav-dropdown-colour: #1ac4f3;
+$nav-dropdown-colour: #4dd6fc;
 $nav-text-colour: white;
 $nav-border-radius: 25px;
 $hover-transition-speed: 0.5s;
@@ -19,7 +19,7 @@ $nav-element-width: 20%;
   height: $nav-bar-height;
 }
 
-#nav-left-element {
+.nav-left-element {
   border-top-left-radius: $nav-border-radius;
   border-bottom-left-radius: $nav-border-radius;
 }
@@ -59,7 +59,7 @@ $nav-element-width: 20%;
 }
 
 .project-dropdown-element {
-  width: 100%;
+  width: 50%;
   height: $nav-bar-height;
   background-color: $nav-dropdown-colour;
   color: $nav-text-colour;
@@ -71,29 +71,45 @@ $nav-element-width: 20%;
 }
 
 .dropdown-vertical {
-  display: none;
   position: absolute;
+  top: $nav-bar-height;
   width: $nav-element-width;
   letter-spacing: 0.2rem;
   flex-direction: column;
 }
 
-#projects-dropdown-div {
+.dropdown-container {
   position: relative;
   overflow: visible;
 }
 
 #projects-dropdown {
+  display: none;
   color: $nav-text-colour;
-  top: $nav-bar-height;
-  width: 100%;
+  width: 100% * 2;
   height: $nav-bar-height * 3; // Adjust nav-dropdown-vertical height when adding elements
 }
 
-#projects-dropdown-div:hover #projects-dropdown {
+#projects-dropdown-container:hover #projects-dropdown {
   display: flex;
 }
 
-#nav-element-projects:hover #projects-dropdown {
+#secondary-dropdown-container {
+  width: $nav-element-width;
+}
+
+#games-dropdown {
+  display: none;
+  position: absolute;
+  width: 100%;
+  left: 50%;
+  height: $nav-bar-height;
+}
+
+#games-dropdown-div:hover #games-dropdown {
+  display: flex;
+}
+
+#games-dropdown:hover #projects-dropdown {
   display: flex;
 }

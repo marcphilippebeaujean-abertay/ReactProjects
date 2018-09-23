@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import NavDropdown from "./navDropdown";
+import NavGamesDropdown from "./navGamesDropdown";
 import "../css/style.css";
 
 class NavBar extends Component {
@@ -13,8 +14,8 @@ class NavBar extends Component {
           <p>archive</p>
         </div>
         <div
-          className="nav-element nav-element-main"
-          id="projects-dropdown-div"
+          className="nav-element nav-element-main dropdown-container"
+          id="projects-dropdown-container"
         >
           <p>projects</p>
           <NavDropdown />
