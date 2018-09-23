@@ -7,22 +7,22 @@ class NavDropDown extends Component {
     return (
       <div className="dropdown-vertical" id="projects-dropdown">
         <div
-          className="nav-element project-dropdown-element"
+          className="nav-element project-dropdown-element-1"
           id="games-dropdown-div"
         >
           <p>
             games
             <i className="arrow arrow-right" id="games-arrow" />
           </p>
-          <NavGamesDropdown />
         </div>
-        <div className="nav-element project-dropdown-element">
+        <NavGamesDropdown />
+        <div className="nav-element project-dropdown-element-2">
           <p>
             web
             <i className="arrow arrow-right" />
           </p>
         </div>
-        <div className="nav-element project-dropdown-element">
+        <div className="nav-element project-dropdown-element-3">
           <p>software</p>
         </div>
       </div>

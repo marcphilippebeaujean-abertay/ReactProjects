@@ -67,57 +67,155 @@
 #games-dropdown-div:hover #games-arrow {
   border-color: #4dd6fc; }
 
-.project-dropdown-element {
-  width: 50%;
-  height: 60px;
-  background-color: #4dd6fc;
-  color: white; }
-
-.project-dropdown-element:hover {
-  background-color: white;
-  color: #4dd6fc; }
+.dropdown-container {
+  position: relative;
+  overflow: visible; }
 
 .dropdown-vertical {
   position: absolute;
   top: 60px;
   width: 20%;
-  letter-spacing: 0.2rem;
-  flex-direction: column; }
-
-.dropdown-container {
-  position: relative;
-  overflow: visible; }
+  letter-spacing: 0.2rem; }
 
 #projects-dropdown {
   display: none;
   color: white;
   width: 200%;
-  height: 180px; }
+  height: 300px;
+  grid-template-rows: repeat(5, 60px);
+  grid-template-columns: 50% 50%;
+  background-color: purple; }
+
+.project-dropdown-element-1 {
+  grid-row-start: 1;
+  grid-column-start: 1;
+  width: 100%;
+  height: 100%;
+  background-color: #4dd6fc;
+  color: white; }
+
+.project-dropdown-element-1:hover {
+  background-color: white;
+  color: #4dd6fc; }
+
+.secondary-dropdown-elem-1 {
+  width: 100%;
+  height: 100%;
+  background-color: #4dd6fc;
+  color: white; }
+
+.secondary-dropdown-elem-1:hover {
+  background-color: white;
+  color: #4dd6fc; }
+
+.project-dropdown-element-2 {
+  grid-row-start: 2;
+  grid-column-start: 1;
+  width: 100%;
+  height: 100%;
+  background-color: #4dd6fc;
+  color: white; }
+
+.project-dropdown-element-2:hover {
+  background-color: white;
+  color: #4dd6fc; }
+
+.secondary-dropdown-elem-2 {
+  width: 100%;
+  height: 100%;
+  background-color: #4dd6fc;
+  color: white; }
+
+.secondary-dropdown-elem-2:hover {
+  background-color: white;
+  color: #4dd6fc; }
+
+.project-dropdown-element-3 {
+  grid-row-start: 3;
+  grid-column-start: 1;
+  width: 100%;
+  height: 100%;
+  background-color: #4dd6fc;
+  color: white; }
+
+.project-dropdown-element-3:hover {
+  background-color: white;
+  color: #4dd6fc; }
+
+.secondary-dropdown-elem-3 {
+  width: 100%;
+  height: 100%;
+  background-color: #4dd6fc;
+  color: white; }
+
+.secondary-dropdown-elem-3:hover {
+  background-color: white;
+  color: #4dd6fc; }
+
+.project-dropdown-element-4 {
+  grid-row-start: 4;
+  grid-column-start: 1;
+  width: 100%;
+  height: 100%;
+  background-color: #4dd6fc;
+  color: white; }
+
+.project-dropdown-element-4:hover {
+  background-color: white;
+  color: #4dd6fc; }
+
+.secondary-dropdown-elem-4 {
+  width: 100%;
+  height: 100%;
+  background-color: #4dd6fc;
+  color: white; }
+
+.secondary-dropdown-elem-4:hover {
+  background-color: white;
+  color: #4dd6fc; }
+
+.project-dropdown-element-5 {
+  grid-row-start: 5;
+  grid-column-start: 1;
+  width: 100%;
+  height: 100%;
+  background-color: #4dd6fc;
+  color: white; }
+
+.project-dropdown-element-5:hover {
+  background-color: white;
+  color: #4dd6fc; }
+
+.secondary-dropdown-elem-5 {
+  width: 100%;
+  height: 100%;
+  background-color: #4dd6fc;
+  color: white; }
+
+.secondary-dropdown-elem-5:hover {
+  background-color: white;
+  color: #4dd6fc; }
 
 #projects-dropdown-container:hover #projects-dropdown {
-  display: flex; }
+  display: grid; }
 
 #secondary-dropdown-container {
   width: 20%; }
 
 #games-dropdown {
   display: none;
-  position: absolute;
-  flex-direction: column;
-  width: 50%;
-  background-color: black;
-  top: 0%;
-  left: 50%;
-  height: 120px; }
+  grid-row-start: 1;
+  grid-row-end: 2;
+  grid-column-start: 2;
+  width: 100%;
+  height: 100%;
+  background-color: #4dd6fc; }
 
-#games-dropdown-div:hover #games-dropdown {
-  display: flex; }
+#games-dropdown-div:hover ~ #games-dropdown {
+  display: block; }
 
-#games-dropdown:hover #projects-dropdown {
-  display: flex; }
-
-.secondary-dropdown-elem {
-  width: 100%; }
+#games-dropdown:hover {
+  display: block; }
 
 .App {
   width: 80%;

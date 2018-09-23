@@ -6,6 +6,7 @@ $hover-transition-speed: 0.5s;
 $nav-bar-height: 60px;
 $nav-bar-top-padding: 10px;
 $nav-element-width: 20%;
+$projects-dropdown-rows: 5;
 
 #nav-div {
   position: relative;
@@ -87,39 +88,55 @@ $nav-element-width: 20%;
   border-color: $nav-dropdown-colour;
 }
 
-.project-dropdown-element {
-  width: 50%;
-  height: $nav-bar-height;
-  background-color: $nav-dropdown-colour;
-  color: $nav-text-colour;
+.dropdown-container {
+  position: relative;
+  overflow: visible;
 }
 
-.project-dropdown-element:hover {
-  background-color: $nav-text-colour;
-  color: $nav-dropdown-colour;
-}
 .dropdown-vertical {
   position: absolute;
   top: $nav-bar-height;
   width: $nav-element-width;
   letter-spacing: 0.2rem;
-  flex-direction: column;
-}
-
-.dropdown-container {
-  position: relative;
-  overflow: visible;
 }
 
 #projects-dropdown {
   display: none;
   color: $nav-text-colour;
   width: 100% * 2;
-  height: $nav-bar-height * 3; // Adjust nav-dropdown-vertical height when adding elements
+  height: $nav-bar-height * $projects-dropdown-rows; // Adjust nav-dropdown-vertical height when adding elements
+  grid-template-rows: repeat($projects-dropdown-rows, $nav-bar-height);
+  grid-template-columns: 50% 50%;
+  background-color: purple;
+}
+
+@for $i from 1 through $projects-dropdown-rows {
+  .project-dropdown-element-#{$i} {
+    grid-row-start: #{$i};
+    grid-column-start: 1;
+    width: 100%;
+    height: 100%;
+    background-color: $nav-dropdown-colour;
+    color: $nav-text-colour;
+  }
+  .project-dropdown-element-#{$i}:hover {
+    background-color: $nav-text-colour;
+    color: $nav-dropdown-colour;
+  }
+  .secondary-dropdown-elem-#{$i} {
+    width: 100%;
+    height: 100%;
+    background-color: $nav-dropdown-colour;
+    color: $nav-text-colour;
+  }
+  .secondary-dropdown-elem-#{$i}:hover {
+    background-color: $nav-text-colour;
+    color: $nav-dropdown-colour;
+  }
 }
 
 #projects-dropdown-container:hover #projects-dropdown {
-  display: flex;
+  display: grid;
 }
 
 #secondary-dropdown-container {
@@ -128,23 +145,17 @@ $nav-element-width: 20%;
 
 #games-dropdown {
   display: none;
-  position: absolute;
-  flex-direction: column;
-  width: 50%;
-  background-color: black;
-  top: 0%;
-  left: 50%;
-  height: $nav-bar-height * 2;
-}
-
-#games-dropdown-div:hover #games-dropdown {
-  display: flex;
-}
-
-#games-dropdown:hover #projects-dropdown {
-  display: flex;
-}
-
-.secondary-dropdown-elem {
+  grid-row-start: 1;
+  grid-row-end: 2;
+  grid-column-start: 2;
   width: 100%;
+  height: 100%;
+  background-color: $nav-dropdown-colour;
+}
+
+#games-dropdown-div:hover ~ #games-dropdown {
+  display: block;
+}
+#games-dropdown:hover {
+  display: block;
 }
