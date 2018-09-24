@@ -4,6 +4,7 @@ import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import "../css/style.css";
 import { isMobile } from "react-device-detect";
+import { mobileTesting } from "../index";
 
 class NavBar extends Component {
   componentWillUnmount() {}
@@ -21,7 +22,10 @@ class NavBar extends Component {
           id="projects-dropdown-container"
           onClick={() => {
             // && isMobile
-            if (this.props.exitedViaHover === false && isMobile) {
+            if (
+              this.props.exitedViaHover === false &&
+              isMobile === mobileTesting
+            ) {
               this.props.onHover();
             }
           }}

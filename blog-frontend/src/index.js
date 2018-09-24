@@ -4,5 +4,9 @@ import "./css/style.css";
 import App from "./App";
 import registerServiceWorker from "./registerServiceWorker";
 
+const mobileTesting = false;
+
+export { mobileTesting };
+
 ReactDOM.render(<App />, document.getElementById("root"));
 registerServiceWorker();
