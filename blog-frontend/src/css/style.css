@@ -123,8 +123,16 @@
   background: #e6e6e6; }
 
 #she-town-dropdown {
-  color: #8e35e0;
   cursor: pointer; }
+
+#she-town-text {
+  font-family: "Press Start 2P", Arial, Helvetica, sans-serif;
+  font-size: 15px;
+  position: relative;
+  letter-spacing: 0.2rem;
+  left: 5%;
+  text-transform: uppercase;
+  color: #8e35e0; }
 
 #indestructible-dropdown {
   color: #09a83e;

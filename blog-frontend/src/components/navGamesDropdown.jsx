@@ -18,7 +18,7 @@ class NavGamesDropdown extends Component {
             alt="Character from She-Town"
             className="logo-img"
           />
-          <p>she-town</p>
+          <p id="she-town-text">she-town</p>
         </div>
         <div
           className="nav-element project-dropdown-element scndry-dd-elem"
