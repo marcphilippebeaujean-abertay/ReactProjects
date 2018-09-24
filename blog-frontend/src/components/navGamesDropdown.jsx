@@ -41,7 +41,8 @@ const mapDispatchToProps = dispatch => {
   return {
     onBtnClicked: () =>
       dispatch({
-        type: "HIDE_DROPDOWN"
+        type: "HIDE_DROPDOWN",
+        exitedViaHover: false
       })
   };
 };

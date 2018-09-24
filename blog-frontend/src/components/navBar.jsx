@@ -3,8 +3,10 @@ import NavDropdown from "./navDropdown";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import "../css/style.css";
+import { isMobile } from "react-device-detect";
 
 class NavBar extends Component {
+  componentWillUnmount() {}
   render() {
     return (
       <nav id="nav-div">
@@ -17,8 +19,18 @@ class NavBar extends Component {
         <div
           className="nav-element nav-element-main dropdown-container"
           id="projects-dropdown-container"
-          onMouseEnter={() => this.props.onHover()}
-          onMouseLeave={() => this.props.onHoverEnded()}
+          onClick={() => {
+            // && isMobile
+            if (this.props.exitedViaHover === false && isMobile) {
+              this.props.onHover();
+            }
+          }}
+          onMouseEnter={() => {
+            this.props.onHover();
+          }}
+          onMouseLeave={() => {
+            this.props.onHoverEnded();
+          }}
         >
           <p>
             projects
@@ -39,14 +51,22 @@ class NavBar extends Component {
 
 NavBar.propTypes = {
   onHoverEnded: PropTypes.func.isRequired,
-  onHover: PropTypes.func.isRequired
+  onHover: PropTypes.func.isRequired,
+  exitedViaHover: PropTypes.bool.isRequired
+};
+
+const mapStateToProps = state => {
+  return {
+    exitedViaHover: state.navReducer.exitedViaHover
+  };
 };
 
 const mapDispatchToProps = dispatch => {
   return {
     onHoverEnded: () =>
       dispatch({
-        type: "HIDE_DROPDOWN"
+        type: "HIDE_DROPDOWN",
+        exitedViaHover: false
       }),
     onHover: () =>
       dispatch({
@@ -56,6 +76,6 @@ const mapDispatchToProps = dispatch => {
 };
 
 export default connect(
-  null,
+  mapStateToProps,
   mapDispatchToProps
 )(NavBar);

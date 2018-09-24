@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import NavGamesDropdown from "./navGamesDropdown";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
+import { isMobile } from "react-device-detect";
 import "../css/style.css";
 
 class NavDropDown extends Component {
@@ -11,6 +12,11 @@ class NavDropDown extends Component {
         <div
           className="nav-element project-dropdown-element"
           id="games-dropdown-div"
+          onClick={() => {
+            if (isMobile) {
+              this.props.onDropdownElementClicked();
+            }
+          }}
         >
           <p>games</p>
           <i className="arrow arrow-right" />
@@ -28,7 +34,8 @@ class NavDropDown extends Component {
 }
 
 NavDropDown.propTypes = {
-  dropdownShouldShow: PropTypes.bool.isRequired
+  dropdownShouldShow: PropTypes.bool.isRequired,
+  onDropdownElementClicked: PropTypes.func.isRequired
 };
 
 const mapStateToProps = state => {
@@ -37,7 +44,17 @@ const mapStateToProps = state => {
   };
 };
 
+const mapDispatchToProps = dispatch => {
+  return {
+    onDropdownElementClicked: () =>
+      dispatch({
+        type: "ON_DROPDOWN_CLICKED",
+        exitedViaHover: false
+      })
+  };
+};
+
 export default connect(
   mapStateToProps,
-  null
+  mapDispatchToProps
 )(NavDropDown);
