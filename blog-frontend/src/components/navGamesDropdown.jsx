@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import PropTypes from "prop-types";
 import "../css/style.css";
+import SheTownLogo from "../media/she-town-player.png";
 
 class NavGamesDropdown extends Component {
   render() {
@@ -12,6 +13,11 @@ class NavGamesDropdown extends Component {
           id="she-town-dropdown"
           onClick={() => this.props.onBtnClicked()}
         >
+          <img
+            src={SheTownLogo}
+            alt="Character from She-Town"
+            className="logo-img"
+          />
           <p>she-town</p>
         </div>
         <div

@@ -156,6 +156,10 @@
   .blog-post-div {
     width: 80%; } }
 
+.logo-img {
+  position: absolute;
+  left: 0%; }
+
 body {
   margin: 0;
   padding: 0;
