@@ -3,7 +3,7 @@ import NavGamesDropdown from "./navGamesDropdown";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import { isMobile } from "react-device-detect";
-import { mobileTesting } from "../index";
+import { shouldntBeMobile } from "../index";
 import "../css/style.css";
 
 class NavDropDown extends Component {
@@ -14,7 +14,7 @@ class NavDropDown extends Component {
           className="nav-element project-dropdown-element"
           id="games-dropdown-div"
           onClick={() => {
-            if (isMobile === mobileTesting) {
+            if (isMobile === shouldntBeMobile) {
               this.props.onDropdownElementClicked();
             }
           }}
