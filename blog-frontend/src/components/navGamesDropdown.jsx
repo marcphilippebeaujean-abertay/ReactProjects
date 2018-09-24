@@ -17,6 +17,7 @@ class NavGamesDropdown extends Component {
             src={SheTownLogo}
             alt="Character from She-Town"
             className="logo-img"
+            id="she-town-logo"
           />
           <p id="she-town-text">she-town</p>
         </div>

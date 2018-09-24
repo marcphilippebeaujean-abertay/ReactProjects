@@ -152,19 +152,25 @@ $nr-of-project-dropdowns: 3;
 }
 
 .scndry-dd-elem {
-  background: #e6e6e6;
+  background: #f5eaea;
 }
 
 #she-town-dropdown {
   cursor: pointer;
 }
 
+.logo-img {
+  position: absolute;
+  left: 0%;
+}
+
 #she-town-text {
   font-family: "Press Start 2P", Arial, Helvetica, sans-serif;
   font-size: 15px;
   position: relative;
+  line-height: 20px;
   letter-spacing: 0.2rem;
-  left: 5%;
+  margin-left: 35px;
   text-transform: uppercase;
   color: #8e35e0;
 }
@@ -180,5 +186,39 @@ $nr-of-project-dropdowns: 3;
   }
   #nav-right-element {
     border-radius: 0px;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .arrow {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  #she-town-text {
+    font-size: 10px;
+    margin-left: 20px;
+  }
+  #she-town-logo {
+    width: 25px;
+    height: 25px;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  #she-town-text {
+    margin-left: 20px;
+    line-height: 10px;
+    font-size: 6px;
+  }
+  #she-town-logo {
+    width: 25px;
+    height: 25px;
+    left: -5%;
+  }
+  .nav-element {
+    font-size: 12px;
+    letter-spacing: 0px;
   }
 }
