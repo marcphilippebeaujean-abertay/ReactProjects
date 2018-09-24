@@ -155,7 +155,7 @@ $nr-of-project-dropdowns: 3;
   background: #f5eaea;
 }
 
-#she-town-dropdown {
+.btn-div {
   cursor: pointer;
 }
 
@@ -177,7 +177,6 @@ $nr-of-project-dropdowns: 3;
 
 #indestructible-dropdown {
   color: #09a83e;
-  cursor: pointer;
 }
 
 @media only screen and (max-width: 1000px) {

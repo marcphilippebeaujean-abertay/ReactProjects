@@ -4,7 +4,7 @@ import "./css/style.css";
 import App from "./App";
 import registerServiceWorker from "./registerServiceWorker";
 
-const mobileTesting = false;
+const mobileTesting = true;
 
 export { mobileTesting };
 

@@ -122,7 +122,7 @@
 .scndry-dd-elem {
   background: #f5eaea; }
 
-#she-town-dropdown {
+.btn-div {
   cursor: pointer; }
 
 .logo-img {
@@ -140,8 +140,7 @@
   color: #8e35e0; }
 
 #indestructible-dropdown {
-  color: #09a83e;
-  cursor: pointer; }
+  color: #09a83e; }
 
 @media only screen and (max-width: 1000px) {
   .nav-left-element {

@@ -9,7 +9,7 @@ class NavGamesDropdown extends Component {
     return (
       <div className="scndry-dd" id="games-dropdown">
         <div
-          className="nav-element project-dropdown-element scndry-dd-elem"
+          className="nav-element project-dropdown-element scndry-dd-elem btn-div"
           id="she-town-dropdown"
           onClick={() => this.props.onBtnClicked()}
         >
@@ -22,7 +22,7 @@ class NavGamesDropdown extends Component {
           <p id="she-town-text">she-town</p>
         </div>
         <div
-          className="nav-element project-dropdown-element scndry-dd-elem"
+          className="nav-element project-dropdown-element scndry-dd-elem btn-div"
           id="indestructible-dropdown"
           onClick={() => this.props.onBtnClicked()}
         >

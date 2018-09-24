@@ -11,10 +11,10 @@ class NavBar extends Component {
   render() {
     return (
       <nav id="nav-div">
-        <div className="nav-element nav-element-main nav-left-element">
+        <div className="nav-element nav-element-main nav-left-element btn-div">
           <p>home</p>
         </div>
-        <div className="nav-element nav-element-main">
+        <div className="nav-element nav-element-main btn-div">
           <p>archive</p>
         </div>
         <div
@@ -42,10 +42,13 @@ class NavBar extends Component {
           </p>
           <NavDropdown />
         </div>
-        <div className="nav-element nav-element-main">
+        <div className="nav-element nav-element-main btn-div">
           <p>resume</p>
         </div>
-        <div className="nav-element nav-element-main" id="nav-right-element">
+        <div
+          className="nav-element nav-element-main btn-div"
+          id="nav-right-element"
+        >
           <p>contact</p>
         </div>
       </nav>
