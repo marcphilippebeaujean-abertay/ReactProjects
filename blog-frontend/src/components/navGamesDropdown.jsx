@@ -7,20 +7,20 @@ class NavGamesDropdown extends Component {
   render() {
     return (
       <div className="scndry-dd" id="games-dropdown">
-        <button
+        <div
           className="nav-element project-dropdown-element scndry-dd-elem"
           id="she-town-dropdown"
           onClick={() => this.props.onBtnClicked()}
         >
           <p>she-town</p>
-        </button>
-        <button
+        </div>
+        <div
           className="nav-element project-dropdown-element scndry-dd-elem"
           id="indestructible-dropdown"
           onClick={() => this.props.onBtnClicked()}
         >
           <p>indestructible</p>
-        </button>
+        </div>
       </div>
     );
   }
