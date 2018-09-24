@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import NavDropdown from "./navDropdown";
+import { connect } from "react-redux";
 import "../css/style.css";
 
 class NavBar extends Component {
@@ -30,4 +31,7 @@ class NavBar extends Component {
   }
 }
 
-export default NavBar;
+export default connect(
+  null,
+  null
+)(NavBar);

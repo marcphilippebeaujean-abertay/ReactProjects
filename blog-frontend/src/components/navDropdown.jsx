@@ -1,11 +1,21 @@
 import React, { Component } from "react";
 import NavGamesDropdown from "./navGamesDropdown";
+import PropTypes from "prop-types";
+import { connect } from "react-redux";
 import "../css/style.css";
 
 class NavDropDown extends Component {
   render() {
     return (
-      <div className="dropdown-vertical" id="projects-dropdown">
+      <div
+        className="dropdown-vertical"
+        id="projects-dropdown"
+        style={
+          this.props.dropdownShouldShow
+            ? { display: "flex" }
+            : { display: "none" }
+        }
+      >
         <div
           className="nav-element project-dropdown-element"
           id="games-dropdown-div"
@@ -24,4 +34,17 @@ class NavDropDown extends Component {
   }
 }
 
-export default NavDropDown;
+NavDropDown.propTypes = {
+  dropdownShouldShow: PropTypes.bool.isRequired
+};
+
+const mapStateToProps = state => {
+  return {
+    dropdownShouldShow: state.navReducer.dropdownShouldShow
+  };
+};
+
+export default connect(
+  mapStateToProps,
+  null
+)(NavDropDown);
