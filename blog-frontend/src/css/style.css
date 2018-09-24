@@ -116,9 +116,6 @@
 .scndry-dd:hover {
   display: flex; }
 
-.scndry-dd:hover #projects-dropdown {
-  display: flex; }
-
 .scndry-dd-elem {
   background: #e6e6e6; }
 

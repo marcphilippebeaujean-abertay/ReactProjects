@@ -6,16 +6,8 @@ import "../css/style.css";
 
 class NavDropDown extends Component {
   render() {
-    return (
-      <div
-        className="dropdown-vertical"
-        id="projects-dropdown"
-        style={
-          this.props.dropdownShouldShow
-            ? { display: "flex" }
-            : { display: "none" }
-        }
-      >
+    return this.props.dropdownShouldShow ? (
+      <div className="dropdown-vertical" id="projects-dropdown">
         <div
           className="nav-element project-dropdown-element"
           id="games-dropdown-div"
@@ -30,7 +22,7 @@ class NavDropDown extends Component {
           <p>software</p>
         </div>
       </div>
-    );
+    ) : null;
   }
 }
 

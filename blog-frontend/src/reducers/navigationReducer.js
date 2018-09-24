@@ -9,7 +9,7 @@ const navigationReducer = (previousState = defaultState, action) => {
       newState.dropdownShouldShow = false;
       break;
     case "SHOW_DROPDOWN":
-      newState.dropdownShould = true;
+      newState.dropdownShouldShow = true;
       break;
     default:
       break;
