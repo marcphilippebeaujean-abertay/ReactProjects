@@ -1,25 +1,23 @@
 import React, { Component } from "react";
+import { connect } from "react-redux";
+import PropTypes from "prop-types";
 import "../css/style.css";
 
-export default class NavGamesDropdown extends Component {
-  onClickNavBtn = event => {
-    console.log("clicked!");
-  };
-
+class NavGamesDropdown extends Component {
   render() {
     return (
       <div className="scndry-dd" id="games-dropdown">
         <button
           className="nav-element project-dropdown-element scndry-dd-elem"
           id="she-town-dropdown"
-          onClick={this.onClickNavBtn}
+          onClick={() => this.props.onBtnClicked()}
         >
           <p>she-town</p>
         </button>
         <button
           className="nav-element project-dropdown-element scndry-dd-elem"
           id="indestructible-dropdown"
-          onClick={this.onClickNavBtn}
+          onClick={() => this.props.onBtnClicked()}
         >
           <p>indestructible</p>
         </button>
@@ -27,3 +25,21 @@ export default class NavGamesDropdown extends Component {
     );
   }
 }
+
+NavGamesDropdown.propTypes = {
+  onBtnClicked: PropTypes.func.isRequired
+};
+
+const mapDispatchToProps = dispatch => {
+  return {
+    onBtnClicked: () =>
+      dispatch({
+        type: "HIDE_DROPDOWN"
+      })
+  };
+};
+
+export default connect(
+  null,
+  mapDispatchToProps
+)(NavGamesDropdown);
