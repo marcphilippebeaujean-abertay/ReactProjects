@@ -20,7 +20,10 @@ class NavBar extends Component {
           onMouseEnter={() => this.props.onHover()}
           onMouseLeave={() => this.props.onHoverEnded()}
         >
-          <p>projects</p>
+          <p>
+            projects
+            <i class="arrow arrow-down" />
+          </p>
           <NavDropdown />
         </div>
         <div className="nav-element nav-element-main">

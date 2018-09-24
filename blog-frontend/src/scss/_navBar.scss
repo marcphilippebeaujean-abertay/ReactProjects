@@ -1,5 +1,6 @@
 $nav-bg-colour: #3bb5d6;
 $nav-dropdown-colour: #4dd6fc;
+$nav-arrow-colour: #245866;
 $nav-text-colour: white;
 $nav-border-radius: 25px;
 $hover-transition-speed: 0.5s;
@@ -33,6 +34,7 @@ $nr-of-project-dropdowns: 3;
 .nav-element {
   cursor: default;
   display: flex;
+  position: relative;
   flex-direction: column;
   justify-content: center;
   text-align: center;
@@ -70,10 +72,12 @@ $nr-of-project-dropdowns: 3;
 }
 
 .arrow {
-  border-color: $nav-text-colour;
+  border-color: $nav-arrow-colour;
   border-style: solid;
   border-width: 0 3px 3px 0;
   display: inline-block;
+  position: absolute;
+  right: 25%;
   padding: 3px;
   -webkit-transition: border-color $hover-transition-speed; /* Safari */
   transition: border-color $hover-transition-speed;
@@ -146,10 +150,6 @@ $nr-of-project-dropdowns: 3;
 .scndry-dd:hover {
   display: flex;
 }
-
-// .scndry-dd:hover #projects-dropdown {
-//   display: flex;
-// }
 
 .scndry-dd-elem {
   background: #e6e6e6;
