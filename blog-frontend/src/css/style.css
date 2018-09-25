@@ -147,7 +147,8 @@
   letter-spacing: 0.2rem;
   margin-left: 35px;
   text-transform: uppercase;
-  color: #8e35e0; }
+  color: #8e35e0;
+  text-decoration: none; }
 
 #indestructible-dropdown {
   color: #09a83e; }

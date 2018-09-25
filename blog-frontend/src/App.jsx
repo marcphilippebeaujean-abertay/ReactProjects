@@ -7,6 +7,7 @@ import store from "./store";
 import { Provider } from "react-redux";
 import PersistentContentComponent from "./components/persistentContent";
 import MainBlogComponent from "./components/blogMain";
+import SheTown from "./components/Page Content/sheTown";
 
 class App extends Component {
   render() {
@@ -16,6 +17,7 @@ class App extends Component {
           <div className="App">
             <PersistentContentComponent />
             <Route path="/" component={MainBlogComponent} />
+            <Route path="/she-town" component={SheTown} />
           </div>
         </BrowserRouter>
       </Provider>
