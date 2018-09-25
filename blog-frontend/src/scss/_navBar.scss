@@ -8,6 +8,7 @@ $nav-bar-height: 60px;
 $nav-bar-top-padding: 10px;
 $nav-element-width: 20%;
 $nr-of-project-dropdowns: 3;
+$games-dropdown-element-nr: 2;
 
 #nav-div {
   position: relative;
@@ -83,14 +84,6 @@ $nr-of-project-dropdowns: 3;
   transition: border-color $hover-transition-speed;
 }
 
-#projects-dropdown-container:hover #projects-arrow {
-  border-color: $nav-bg-colour;
-}
-
-#games-dropdown-div:hover #games-arrow {
-  border-color: $nav-dropdown-colour;
-}
-
 .project-dropdown-element {
   width: 100%;
   height: $nav-bar-height;
@@ -140,7 +133,12 @@ $nr-of-project-dropdowns: 3;
 }
 
 #games-dropdown {
-  height: $nav-bar-height * 2;
+  height: $nav-bar-height * $games-dropdown-element-nr;
+  width: 100%;
+}
+#games-dropout:hover #games-dropdown-div {
+  background: $nav-text-colour;
+  color: $nav-dropdown-colour;
 }
 
 #games-dropdown-div:hover ~ #games-dropdown {
@@ -152,7 +150,7 @@ $nr-of-project-dropdowns: 3;
 }
 
 .scndry-dd-elem {
-  background: #f5eaea;
+  background: #e9e7e7;
 }
 
 .btn-div {

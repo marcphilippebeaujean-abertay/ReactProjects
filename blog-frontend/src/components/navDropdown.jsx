@@ -7,22 +7,25 @@ import { shouldntBeMobile } from "../index";
 import "../css/style.css";
 
 class NavDropDown extends Component {
+  OnDropElemClicked = () => {
+    if (isMobile === shouldntBeMobile) {
+      this.props.onDropdownElementClicked();
+    }
+  };
   render() {
     return this.props.dropdownShouldShow ? (
       <div className="dropdown-vertical" id="projects-dropdown">
-        <div
-          className="nav-element project-dropdown-element"
-          id="games-dropdown-div"
-          onClick={() => {
-            if (isMobile === shouldntBeMobile) {
-              this.props.onDropdownElementClicked();
-            }
-          }}
-        >
-          <p>games</p>
-          <i className="arrow arrow-right" />
+        <div id="games-dropout">
+          <div
+            className="nav-element project-dropdown-element"
+            id="games-dropdown-div"
+            onClick={this.OnDropElemClicked}
+          >
+            <p>games</p>
+            <i className="arrow arrow-right" />
+          </div>
+          <NavGamesDropdown />
         </div>
-        <NavGamesDropdown />
         <div className="nav-element project-dropdown-element">
           <p>web</p>
         </div>

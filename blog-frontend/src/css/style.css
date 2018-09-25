@@ -63,12 +63,6 @@
   /* Safari */
   transition: border-color 0.5s; }
 
-#projects-dropdown-container:hover #projects-arrow {
-  border-color: #3bb5d6; }
-
-#games-dropdown-div:hover #games-arrow {
-  border-color: #4dd6fc; }
-
 .project-dropdown-element {
   width: 100%;
   height: 60px;
@@ -111,7 +105,12 @@
   left: 100%; }
 
 #games-dropdown {
-  height: 120px; }
+  height: 120px;
+  width: 100%; }
+
+#games-dropout:hover #games-dropdown-div {
+  background: white;
+  color: #4dd6fc; }
 
 #games-dropdown-div:hover ~ #games-dropdown {
   display: flex; }
@@ -120,7 +119,7 @@
   display: flex; }
 
 .scndry-dd-elem {
-  background: #f5eaea; }
+  background: #e9e7e7; }
 
 .btn-div {
   cursor: pointer; }
