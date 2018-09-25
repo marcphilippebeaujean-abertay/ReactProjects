@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import PropTypes from "prop-types";
-import "../css/style.css";
-import SheTownLogo from "../media/she-town-player.png";
+import "../../css/style.css";
+import SheTownLogo from "../../media/she-town-player.png";
 
 class NavGamesDropdown extends Component {
   render() {

@@ -7,15 +7,18 @@
   justify-content: center;
   border-radius: 25px;
   width: 100%;
-  height: 60px; }
+  height: 60px;
+}
 
 .nav-left-element {
   border-top-left-radius: 25px;
-  border-bottom-left-radius: 25px; }
+  border-bottom-left-radius: 25px;
+}
 
 #nav-right-element {
   border-top-right-radius: 25px;
-  border-bottom-right-radius: 25px; }
+  border-bottom-right-radius: 25px;
+}
 
 .nav-element {
   cursor: default;
@@ -32,24 +35,29 @@
   width: 20%;
   -webkit-transition: background-color 0.5s, color 0.5s;
   /* Safari */
-  transition: background-color 0.5s, color 0.5s; }
+  transition: background-color 0.5s, color 0.5s;
+}
 
 .nav-element-main {
   height: 100%;
   color: white;
-  background-color: #3bb5d6; }
+  background-color: #3bb5d6;
+}
 
 .nav-element-main:hover {
   background-color: white;
-  color: #3bb5d6; }
+  color: #3bb5d6;
+}
 
 .arrow-down {
   transform: rotate(45deg);
-  -webkit-transform: rotate(45deg); }
+  -webkit-transform: rotate(45deg);
+}
 
 .arrow-right {
   transform: rotate(-45deg);
-  -webkit-transform: rotate(-45deg); }
+  -webkit-transform: rotate(-45deg);
+}
 
 .arrow {
   border-color: #245866;
@@ -61,40 +69,48 @@
   padding: 3px;
   -webkit-transition: border-color 0.5s;
   /* Safari */
-  transition: border-color 0.5s; }
+  transition: border-color 0.5s;
+}
 
 .project-dropdown-element {
   width: 100%;
   height: 60px;
   background-color: #4dd6fc;
-  color: white; }
+  color: white;
+}
 
 .project-dropdown-element:hover {
   background-color: white;
-  color: #4dd6fc; }
+  color: #4dd6fc;
+}
 
 .dropdown-vertical {
   position: absolute;
   top: 60px;
   width: 20%;
   letter-spacing: 0.2rem;
-  flex-direction: column; }
+  flex-direction: column;
+}
 
 .dropdown-container {
   position: relative;
-  overflow: visible; }
+  overflow: visible;
+}
 
 #projects-dropdown {
   display: none;
   color: white;
   width: 100%;
-  height: 180px; }
+  height: 180px;
+}
 
 #projects-dropdown-container:hover #projects-dropdown {
-  display: flex; }
+  display: flex;
+}
 
 #secondary-dropdown-container {
-  width: 20%; }
+  width: 20%;
+}
 
 .scndry-dd {
   display: none;
@@ -102,31 +118,39 @@
   flex-direction: column;
   width: 100%;
   top: 0%;
-  left: 100%; }
+  left: 100%;
+}
 
 #games-dropdown {
   height: 120px;
-  width: 100%; }
+  width: 100%;
+}
 
 #games-dropout:hover #games-dropdown-div {
   background: white;
-  color: #4dd6fc; }
+  color: #4dd6fc;
+}
 
 #games-dropdown-div:hover ~ #games-dropdown {
-  display: flex; }
+  display: flex;
+}
 
 .scndry-dd:hover {
-  display: flex; }
+  display: flex;
+}
 
 .scndry-dd-elem {
-  background: #e9e7e7; }
+  background: #e9e7e7;
+}
 
 .btn-div {
-  cursor: pointer; }
+  cursor: pointer;
+}
 
 .logo-img {
   position: absolute;
-  left: 0%; }
+  left: 0%;
+}
 
 #she-town-text {
   font-family: "Press Start 2P", Arial, Helvetica, sans-serif;
@@ -136,71 +160,96 @@
   letter-spacing: 0.2rem;
   margin-left: 35px;
   text-transform: uppercase;
-  color: #8e35e0; }
+  color: #8e35e0;
+}
 
 #indestructible-dropdown {
-  color: #09a83e; }
+  color: #09a83e;
+}
 
 @media only screen and (max-width: 1000px) {
   .nav-left-element {
-    border-radius: 0px; }
+    border-radius: 0px;
+  }
   #nav-right-element {
-    border-radius: 0px; } }
+    border-radius: 0px;
+  }
+}
 
 @media only screen and (max-width: 1200px) {
   .arrow {
-    display: none; } }
+    display: none;
+  }
+}
 
 @media only screen and (max-width: 600px) {
   #she-town-text {
     font-size: 10px;
-    margin-left: 20px; } }
+    margin-left: 20px;
+  }
+}
 
 @media only screen and (max-width: 400px) {
   #she-town-text {
     margin-left: 20px;
     line-height: 10px;
-    font-size: 6px; }
+    font-size: 6px;
+  }
   .nav-element {
     font-size: 12px;
-    letter-spacing: 0px; } }
+    letter-spacing: 0px;
+  }
+}
 
 .App {
   width: 80%;
-  margin: 0 auto; }
+  margin: 0 auto;
+}
 
 @media only screen and (max-width: 1000px) {
   .App {
-    width: 100%; } }
+    width: 100%;
+  }
+}
 
 .blog-date {
   font-style: italic;
-  color: rgba(105, 105, 105, 0.692); }
+  color: rgba(105, 105, 105, 0.692);
+}
 
 .blog-post-div {
   width: 60%;
-  margin: 0 auto; }
+  margin: 0 auto;
+}
 
 @media only screen and (max-width: 800px) {
   .blog-post-div {
-    width: 80%; } }
+    width: 80%;
+  }
+}
 
 .logo-img {
   position: absolute;
-  left: 0%; }
+  left: 0%;
+}
 
 @media only screen and (max-width: 600px) {
   #she-town-logo {
     width: 25px;
-    height: 25px; } }
+    height: 25px;
+  }
+}
 
 @media only screen and (max-width: 400px) {
   #she-town-logo {
     width: 25px;
     height: 25px;
-    left: -5%; } }
+    left: -5%;
+  }
+}
 
 body {
   margin: 0;
   padding: 0;
-  font-family: sans-serif; }
+  font-family: sans-serif;
+}

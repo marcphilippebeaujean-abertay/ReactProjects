@@ -2,9 +2,9 @@ import React, { Component } from "react";
 import NavDropdown from "./navDropdown";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
-import "../css/style.css";
+import "../../css/style.css";
 import { isMobile } from "react-device-detect";
-import { shouldntBeMobile } from "../index";
+import { shouldntBeMobile } from "../..";
 
 class NavBar extends Component {
   componentWillUnmount() {}
