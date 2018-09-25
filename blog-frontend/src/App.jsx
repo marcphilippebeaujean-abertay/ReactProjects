@@ -1,20 +1,23 @@
 import React, { Component } from "react";
-import NavBar from "./components/Navigation Bar/navBar";
-
+import { Route } from "react-router";
+import { BrowserRouter } from "react-router-dom";
 import "./css/style.css";
 
 import store from "./store";
 import { Provider } from "react-redux";
-import BlogPost from "./components/blogPost";
+import PersistentContentComponent from "./components/persistentContent";
+import MainBlogComponent from "./components/blogMain";
 
 class App extends Component {
   render() {
     return (
       <Provider store={store}>
-        <div className="App">
-          <NavBar />
-          <BlogPost />
-        </div>
+        <BrowserRouter>
+          <div className="App">
+            <PersistentContentComponent />
+            <Route path="/" component={MainBlogComponent} />
+          </div>
+        </BrowserRouter>
       </Provider>
     );
   }
