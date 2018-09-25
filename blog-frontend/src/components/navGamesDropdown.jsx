@@ -7,26 +7,36 @@ import SheTownLogo from "../media/she-town-player.png";
 class NavGamesDropdown extends Component {
   render() {
     return (
-      <div className="scndry-dd" id="games-dropdown">
+      <div id="games-dropout">
         <div
-          className="nav-element project-dropdown-element scndry-dd-elem btn-div"
-          id="she-town-dropdown"
-          onClick={() => this.props.onBtnClicked()}
+          className="nav-element project-dropdown-element"
+          id="games-dropdown-div"
+          onClick={this.OnDropElemClicked}
         >
-          <img
-            src={SheTownLogo}
-            alt="Character from She-Town"
-            className="logo-img"
-            id="she-town-logo"
-          />
-          <p id="she-town-text">she-town</p>
+          <p>games</p>
+          <i className="arrow arrow-right" />
         </div>
-        <div
-          className="nav-element project-dropdown-element scndry-dd-elem btn-div"
-          id="indestructible-dropdown"
-          onClick={() => this.props.onBtnClicked()}
-        >
-          <p>indestructible</p>
+        <div className="scndry-dd" id="games-dropdown">
+          <div
+            className="nav-element project-dropdown-element scndry-dd-elem btn-div"
+            id="she-town-dropdown"
+            onClick={() => this.props.onBtnClicked()}
+          >
+            <img
+              src={SheTownLogo}
+              alt="Character from She-Town"
+              className="logo-img"
+              id="she-town-logo"
+            />
+            <p id="she-town-text">she-town</p>
+          </div>
+          <div
+            className="nav-element project-dropdown-element scndry-dd-elem btn-div"
+            id="indestructible-dropdown"
+            onClick={() => this.props.onBtnClicked()}
+          >
+            <p>indestructible</p>
+          </div>
         </div>
       </div>
     );

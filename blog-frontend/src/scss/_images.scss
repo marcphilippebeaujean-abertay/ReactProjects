@@ -2,3 +2,18 @@
   position: absolute;
   left: 0%;
 }
+
+@media only screen and (max-width: 600px) {
+  #she-town-logo {
+    width: 25px;
+    height: 25px;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  #she-town-logo {
+    width: 25px;
+    height: 25px;
+    left: -5%;
+  }
+}

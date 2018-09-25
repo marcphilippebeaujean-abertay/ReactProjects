@@ -132,19 +132,6 @@ $games-dropdown-element-nr: 2;
   left: 100%;
 }
 
-#games-dropdown {
-  height: $nav-bar-height * $games-dropdown-element-nr;
-  width: 100%;
-}
-#games-dropout:hover #games-dropdown-div {
-  background: $nav-text-colour;
-  color: $nav-dropdown-colour;
-}
-
-#games-dropdown-div:hover ~ #games-dropdown {
-  display: flex;
-}
-
 .scndry-dd:hover {
   display: flex;
 }
@@ -162,21 +149,6 @@ $games-dropdown-element-nr: 2;
   left: 0%;
 }
 
-#she-town-text {
-  font-family: "Press Start 2P", Arial, Helvetica, sans-serif;
-  font-size: 15px;
-  position: relative;
-  line-height: 20px;
-  letter-spacing: 0.2rem;
-  margin-left: 35px;
-  text-transform: uppercase;
-  color: #8e35e0;
-}
-
-#indestructible-dropdown {
-  color: #09a83e;
-}
-
 @media only screen and (max-width: 1000px) {
   .nav-left-element {
     border-radius: 0px;
@@ -192,28 +164,7 @@ $games-dropdown-element-nr: 2;
   }
 }
 
-@media only screen and (max-width: 600px) {
-  #she-town-text {
-    font-size: 10px;
-    margin-left: 20px;
-  }
-  #she-town-logo {
-    width: 25px;
-    height: 25px;
-  }
-}
-
 @media only screen and (max-width: 400px) {
-  #she-town-text {
-    margin-left: 20px;
-    line-height: 10px;
-    font-size: 6px;
-  }
-  #she-town-logo {
-    width: 25px;
-    height: 25px;
-    left: -5%;
-  }
   .nav-element {
     font-size: 12px;
     letter-spacing: 0px;

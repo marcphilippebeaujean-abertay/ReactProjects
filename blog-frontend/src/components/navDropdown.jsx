@@ -15,17 +15,7 @@ class NavDropDown extends Component {
   render() {
     return this.props.dropdownShouldShow ? (
       <div className="dropdown-vertical" id="projects-dropdown">
-        <div id="games-dropout">
-          <div
-            className="nav-element project-dropdown-element"
-            id="games-dropdown-div"
-            onClick={this.OnDropElemClicked}
-          >
-            <p>games</p>
-            <i className="arrow arrow-right" />
-          </div>
-          <NavGamesDropdown />
-        </div>
+        <NavGamesDropdown />
         <div className="nav-element project-dropdown-element">
           <p>web</p>
         </div>

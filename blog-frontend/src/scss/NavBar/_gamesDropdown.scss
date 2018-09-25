@@ -1,0 +1,46 @@
+#games-dropdown {
+  height: $nav-bar-height * $games-dropdown-element-nr;
+  width: 100%;
+}
+#games-dropout:hover #games-dropdown-div {
+  background: $nav-text-colour;
+  color: $nav-dropdown-colour;
+}
+
+#games-dropdown-div:hover ~ #games-dropdown {
+  display: flex;
+}
+
+#she-town-text {
+  font-family: "Press Start 2P", Arial, Helvetica, sans-serif;
+  font-size: 15px;
+  position: relative;
+  line-height: 20px;
+  letter-spacing: 0.2rem;
+  margin-left: 35px;
+  text-transform: uppercase;
+  color: #8e35e0;
+}
+
+#indestructible-dropdown {
+  color: #09a83e;
+}
+
+@media only screen and (max-width: 600px) {
+  #she-town-text {
+    font-size: 10px;
+    margin-left: 20px;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  #she-town-text {
+    margin-left: 20px;
+    line-height: 10px;
+    font-size: 6px;
+  }
+  .nav-element {
+    font-size: 12px;
+    letter-spacing: 0px;
+  }
+}
