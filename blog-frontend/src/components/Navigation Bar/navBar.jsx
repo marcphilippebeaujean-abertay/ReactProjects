@@ -5,15 +5,20 @@ import { connect } from "react-redux";
 import "../../css/style.css";
 import { isMobile } from "react-device-detect";
 import { shouldntBeMobile } from "../..";
+import { Link } from "react-router-dom";
 
 class NavBar extends Component {
   componentWillUnmount() {}
   render() {
     return (
       <nav id="nav-div">
-        <div className="nav-element nav-element-main nav-left-element btn-div">
+        <Link
+          to="/home"
+          className="nav-element nav-element-main nav-left-element btn-div"
+          style={{ textDecoration: "none" }}
+        >
           <p>home</p>
-        </div>
+        </Link>
         <div className="nav-element nav-element-main btn-div">
           <p>archive</p>
         </div>

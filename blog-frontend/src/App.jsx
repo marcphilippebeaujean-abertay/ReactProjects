@@ -15,8 +15,8 @@ class App extends Component {
       <Provider store={store}>
         <BrowserRouter>
           <div className="App">
-            <PersistentContentComponent />
-            <Route path="/" component={MainBlogComponent} />
+            <Route path="/" component={PersistentContentComponent} />
+            <Route path="/home" component={MainBlogComponent} />
             <Route path="/she-town" component={SheTown} />
           </div>
         </BrowserRouter>
