@@ -205,14 +205,19 @@
 #contacts-form {
   display: flex;
   flex-direction: column;
-  width: 50%; }
+  width: 70%; }
 
 .contact-form-elem {
   margin-bottom: 20px; }
 
 .contact-form-tex-input {
-  padding-bottom: 20px;
-  border-radius: 5px; }
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 18px; }
+
+#contact-message {
+  display: inline-block;
+  padding-bottom: 200px; }
 
 .blog-date {
   font-style: italic;

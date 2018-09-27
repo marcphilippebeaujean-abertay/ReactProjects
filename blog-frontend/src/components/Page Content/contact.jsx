@@ -9,11 +9,25 @@ export default class ContactComponent extends Component {
           <h2 id="contacts-header">Let's get in Touch</h2>
         </div>
         <form className="contact-form-elem" id="contacts-form">
-          <label className="contact-form-elem">Name</label>
           <input
             className="contact-form-elem contact-form-tex-input"
             type="text"
             name="name"
+            placeholder="Your Full Name..."
+          />
+          <input
+            className="contact-form-elem contact-form-tex-input"
+            type="text"
+            name="email"
+            placeholder="Your Email..."
+          />
+          <textarea
+            className="contact-form-elem contact-form-tex-input"
+            id="contact-message"
+            cols="40"
+            rows="5"
+            name="message"
+            placeholder="Your Message..."
           />
           <input className="contact-form-elem" type="submit" value="Submit" />
         </form>
