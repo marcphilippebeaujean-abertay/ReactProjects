@@ -2,6 +2,10 @@
   width: 80%;
   margin: 0 auto; }
 
+#content-bg {
+  width: 90%;
+  margin: auto; }
+
 .page-content {
   width: 60%;
   margin: 0 auto; }
@@ -11,11 +15,15 @@
 
 @media only screen and (max-width: 1000px) {
   .App {
+    width: 100%; }
+  .page-content {
+    width: 80%; }
+  #content-bg {
     width: 100%; } }
 
 #nav-div {
   position: relative;
-  padding: 10px 0;
+  padding-top: 11px;
   display: flex;
   flex-direction: row;
   align-content: center;
@@ -123,7 +131,7 @@
   display: flex; }
 
 .scndry-dd-elem {
-  background: #e9e7e7; }
+  background: #eff5ff; }
 
 .btn-div {
   cursor: pointer; }
@@ -182,16 +190,42 @@
     letter-spacing: 0px; } }
 
 #contacts-div {
-  height: 500px;
-  background-color: #e9e7e7; }
+  height: 400px; }
+
+#contacts-header-div {
+  letter-spacing: 0.2rem;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%; }
+
+#contacts-header {
+  color: black; }
 
 #contacts-form {
   display: flex;
-  flex-direction: row; }
+  flex-direction: column;
+  width: 50%; }
+
+.contact-form-elem {
+  margin-bottom: 20px; }
+
+.contact-form-tex-input {
+  padding-bottom: 20px;
+  border-radius: 5px; }
 
 .blog-date {
   font-style: italic;
   color: rgba(105, 105, 105, 0.692); }
+
+.blog-post {
+  height: 500px; }
+
+.blog-post-header-div {
+  overflow: auto; }
+
+.blog-post-header {
+  letter-spacing: 0.2rem; }
 
 @media only screen and (max-width: 800px) {
   .blog-post-div {

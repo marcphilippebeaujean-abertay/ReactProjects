@@ -1,3 +1,5 @@
+@import "colours";
+
 $nav-bg-colour: $main-colour;
 $nav-dropdown-colour: $secondry-colour;
 $nav-arrow-colour: #245866;
@@ -6,14 +8,14 @@ $scndry-bg-colour: $outline-colour;
 $nav-border-radius: 25px;
 $hover-transition-speed: 0.5s;
 $nav-bar-height: 60px;
-$nav-bar-top-padding: 10px;
+$nav-bar-top-padding: 11px;
 $nav-element-width: 20%;
 $nr-of-project-dropdowns: 3;
 $games-dropdown-element-nr: 2;
 
 #nav-div {
   position: relative;
-  padding: $nav-bar-top-padding 0;
+  padding-top: $nav-bar-top-padding;
   display: flex;
   flex-direction: row;
   align-content: center;

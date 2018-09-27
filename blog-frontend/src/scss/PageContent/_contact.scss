@@ -1,9 +1,32 @@
+@import "colours";
+
 #contacts-div {
-  height: 500px;
-  background-color: $outline-colour;
+  height: 400px;
+}
+
+#contacts-header-div {
+  letter-spacing: 0.2rem;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+}
+
+#contacts-header {
+  color: black;
 }
 
 #contacts-form {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+  width: 50%;
+}
+
+.contact-form-elem {
+  margin-bottom: 20px;
+}
+
+.contact-form-tex-input {
+  padding-bottom: 20px;
+  border-radius: 5px;
 }
