@@ -16,7 +16,7 @@ class App extends Component {
         <BrowserRouter>
           <div className="App">
             <Route path="/" component={PersistentContentComponent} />
-            <Route path="/home" component={MainBlogComponent} />
+            <Route path="/" exact component={MainBlogComponent} />
             <Route path="/she-town" component={SheTown} />
           </div>
         </BrowserRouter>

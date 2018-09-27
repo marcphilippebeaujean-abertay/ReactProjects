@@ -13,7 +13,7 @@ class NavBar extends Component {
     return (
       <nav id="nav-div">
         <Link
-          to="/home"
+          to="/"
           className="nav-element nav-element-main nav-left-element btn-div"
           style={{ textDecoration: "none" }}
         >
