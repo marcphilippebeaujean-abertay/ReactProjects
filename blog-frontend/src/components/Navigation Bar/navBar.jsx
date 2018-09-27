@@ -50,12 +50,14 @@ class NavBar extends Component {
         <div className="nav-element nav-element-main btn-div">
           <p>resume</p>
         </div>
-        <div
+        <Link
+          to="/contact"
           className="nav-element nav-element-main btn-div"
           id="nav-right-element"
+          style={{ textDecoration: "none" }}
         >
           <p>contact</p>
-        </div>
+        </Link>
       </nav>
     );
   }

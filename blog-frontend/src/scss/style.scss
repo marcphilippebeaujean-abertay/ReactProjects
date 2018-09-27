@@ -1,7 +1,9 @@
+@import "colours";
+@import "app";
 @import "NavBar/navBar";
 @import "NavBar/gamesDropdown";
-@import "app";
-@import "blogPost";
+@import "PageContent/contact";
+@import "PageContent/blogPost";
 @import "images";
 
 body {

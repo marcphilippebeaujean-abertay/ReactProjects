@@ -1,3 +1,18 @@
+.App {
+  width: 80%;
+  margin: 0 auto; }
+
+.page-content {
+  width: 60%;
+  margin: 0 auto; }
+
+.page-main-text {
+  text-align: justify; }
+
+@media only screen and (max-width: 1000px) {
+  .App {
+    width: 100%; } }
+
 #nav-div {
   position: relative;
   padding: 10px 0;
@@ -147,8 +162,7 @@
   letter-spacing: 0.2rem;
   margin-left: 35px;
   text-transform: uppercase;
-  color: #8e35e0;
-  text-decoration: none; }
+  color: #8e35e0; }
 
 #indestructible-dropdown {
   color: #09a83e; }
@@ -167,21 +181,17 @@
     font-size: 12px;
     letter-spacing: 0px; } }
 
-.App {
-  width: 80%;
-  margin: 0 auto; }
+#contacts-div {
+  height: 500px;
+  background-color: #e9e7e7; }
 
-@media only screen and (max-width: 1000px) {
-  .App {
-    width: 100%; } }
+#contacts-form {
+  display: flex;
+  flex-direction: row; }
 
 .blog-date {
   font-style: italic;
   color: rgba(105, 105, 105, 0.692); }
-
-.blog-post-div {
-  width: 60%;
-  margin: 0 auto; }
 
 @media only screen and (max-width: 800px) {
   .blog-post-div {
