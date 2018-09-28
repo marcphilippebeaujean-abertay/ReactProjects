@@ -17,10 +17,10 @@ class NavBar extends Component {
           className="nav-element nav-element-main nav-left-element btn-div"
           style={{ textDecoration: "none" }}
         >
-          <p>home</p>
+          <p>Home</p>
         </Link>
         <div className="nav-element nav-element-main btn-div">
-          <p>archive</p>
+          <p>Archive</p>
         </div>
         <div
           className="nav-element nav-element-main dropdown-container"
@@ -42,13 +42,13 @@ class NavBar extends Component {
           }}
         >
           <p>
-            projects
+            Projects
             <i className="arrow arrow-down" />
           </p>
           <NavDropdown />
         </div>
         <div className="nav-element nav-element-main btn-div">
-          <p>resume</p>
+          <p>Resume</p>
         </div>
         <Link
           to="/contact"
@@ -56,7 +56,7 @@ class NavBar extends Component {
           id="nav-right-element"
           style={{ textDecoration: "none" }}
         >
-          <p>contact</p>
+          <p>Contact</p>
         </Link>
       </nav>
     );

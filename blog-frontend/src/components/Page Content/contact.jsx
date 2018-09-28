@@ -8,7 +8,7 @@ class ContactComponent extends Component {
     return (
       <div id="contacts-div">
         <div id="contacts-header-div">
-          <h2 id="contacts-header">let's get in touch . . .</h2>
+          <h2 id="contacts-header">Send Me an E-Mail:</h2>
         </div>
         <form className="contact-form-elem" id="contacts-form">
           <input
@@ -39,7 +39,7 @@ class ContactComponent extends Component {
               this.props.onMessageFieldInput(event.target.value)
             }
           />
-          <input id="contacts-submit-btn" type="submit" value="submit" />
+          <input id="contacts-submit-btn" type="submit" value="Submit" />
         </form>
       </div>
     );
