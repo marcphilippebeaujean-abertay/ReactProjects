@@ -227,10 +227,12 @@
   color: white;
   letter-spacing: 0.2rem;
   box-shadow: 2px 2px 2px 0px #b4afaf;
-  border-radius: 5px; }
+  border-radius: 5px;
+  font-size: 14px; }
 
 #contacts-submit-btn:hover {
-  background-color: #3fbfe2; }
+  background-color: #3fbfe2;
+  cursor: pointer; }
 
 .blog-date {
   font-style: italic;
