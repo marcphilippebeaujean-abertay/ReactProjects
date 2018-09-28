@@ -190,7 +190,7 @@
     letter-spacing: 0px; } }
 
 #contacts-div {
-  height: 400px; }
+  height: 100%; }
 
 #contacts-header-div {
   letter-spacing: 0.2rem;
@@ -200,7 +200,7 @@
   width: 100%; }
 
 #contacts-header {
-  color: black; }
+  color: #3bb5d6; }
 
 #contacts-form {
   display: flex;
@@ -208,16 +208,29 @@
   width: 70%; }
 
 .contact-form-elem {
-  margin-bottom: 20px; }
+  margin-bottom: 20px;
+  font-size: 12px; }
 
 .contact-form-tex-input {
   border-radius: 5px;
   border: 1px solid #ccc;
-  font-size: 18px; }
+  padding: 10px; }
 
 #contact-message {
   display: inline-block;
-  padding-bottom: 200px; }
+  padding-bottom: 100px; }
+
+#contacts-submit-btn {
+  width: 30%;
+  height: 40px;
+  background-color: #3bb5d6;
+  color: white;
+  letter-spacing: 0.2rem;
+  box-shadow: 2px 2px 2px 0px #b4afaf;
+  border-radius: 5px; }
+
+#contacts-submit-btn:hover {
+  background-color: #3fbfe2; }
 
 .blog-date {
   font-style: italic;

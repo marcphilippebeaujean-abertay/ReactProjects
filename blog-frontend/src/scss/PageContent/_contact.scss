@@ -1,7 +1,7 @@
 @import "colours";
 
 #contacts-div {
-  height: 400px;
+  height: 100%;
 }
 
 #contacts-header-div {
@@ -13,7 +13,7 @@
 }
 
 #contacts-header {
-  color: black;
+  color: $main-colour;
 }
 
 #contacts-form {
@@ -24,15 +24,30 @@
 
 .contact-form-elem {
   margin-bottom: 20px;
+  font-size: 12px;
 }
 
 .contact-form-tex-input {
   border-radius: 5px;
   border: 1px solid #ccc;
-  font-size: 18px;
+  padding: 10px;
 }
 
 #contact-message {
   display: inline-block;
-  padding-bottom: 200px;
+  padding-bottom: 100px;
+}
+
+#contacts-submit-btn {
+  width: 30%;
+  height: 40px;
+  background-color: $main-colour;
+  color: white;
+  letter-spacing: 0.2rem;
+  box-shadow: 2px 2px 2px 0px rgb(180, 175, 175);
+  border-radius: 5px;
+}
+
+#contacts-submit-btn:hover {
+  background-color: #3fbfe2;
 }

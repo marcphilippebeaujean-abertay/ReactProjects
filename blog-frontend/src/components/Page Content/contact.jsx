@@ -6,20 +6,20 @@ export default class ContactComponent extends Component {
     return (
       <div id="contacts-div">
         <div id="contacts-header-div">
-          <h2 id="contacts-header">Let's get in Touch</h2>
+          <h2 id="contacts-header">let's get in touch . . .</h2>
         </div>
         <form className="contact-form-elem" id="contacts-form">
           <input
             className="contact-form-elem contact-form-tex-input"
             type="text"
             name="name"
-            placeholder="Your Full Name..."
+            placeholder="Full Name..."
           />
           <input
             className="contact-form-elem contact-form-tex-input"
             type="text"
             name="email"
-            placeholder="Your Email..."
+            placeholder="Email..."
           />
           <textarea
             className="contact-form-elem contact-form-tex-input"
@@ -27,9 +27,9 @@ export default class ContactComponent extends Component {
             cols="40"
             rows="5"
             name="message"
-            placeholder="Your Message..."
+            placeholder="Message..."
           />
-          <input className="contact-form-elem" type="submit" value="Submit" />
+          <input id="contacts-submit-btn" type="submit" value="submit" />
         </form>
       </div>
     );
