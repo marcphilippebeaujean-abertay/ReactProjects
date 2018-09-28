@@ -1,7 +1,17 @@
+import { emailRegex } from "../regex";
+
 const defaultState = {
   emailForm: "",
   nameForm: "",
   messageForm: ""
+};
+
+const validInputCheck = emailInput => {
+  if (emailInput.match(emailRegex)) {
+    console.log("valid email!");
+  } else {
+    console.log("invalid email!");
+  }
 };
 
 const contactsFormReducer = (previousState = defaultState, action) => {
@@ -17,9 +27,9 @@ const contactsFormReducer = (previousState = defaultState, action) => {
       newState.messageForm = action.data;
       break;
     case "FORM_SUBMIT_ATTEMPT":
+      validInputCheck(newState.emailForm);
       break;
     default:
-      console.log("unrecognised action type");
       break;
   }
   return newState;

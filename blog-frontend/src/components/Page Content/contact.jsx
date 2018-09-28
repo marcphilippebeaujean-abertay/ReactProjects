@@ -39,8 +39,15 @@ class ContactComponent extends Component {
               this.props.onMessageFieldInput(event.target.value)
             }
           />
-          <input id="contacts-submit-btn" type="submit" value="Submit" />
         </form>
+        <button
+          id="contacts-submit-btn"
+          type="submit"
+          value="Submit"
+          onClick={() => this.props.onFormSubmitted()}
+        >
+          Submit
+        </button>
       </div>
     );
   }
@@ -52,7 +59,8 @@ ContactComponent.propTypes = {
   messageInput: PropTypes.string.isRequired,
   onNameFieldInput: PropTypes.func.isRequired,
   onEmailFieldInput: PropTypes.func.isRequired,
-  onMessageFieldInput: PropTypes.func.isRequired
+  onMessageFieldInput: PropTypes.func.isRequired,
+  onFormSubmitted: PropTypes.func.isRequired
 };
 
 const mapStateToProps = state => {
@@ -79,6 +87,10 @@ const mapDispatchToProps = dispatch => {
       dispatch({
         type: "MESSAGE_FORM_UPDATE",
         data: input
+      }),
+    onFormSubmitted: () =>
+      dispatch({
+        type: "FORM_SUBMIT_ATTEMPT"
       })
   };
 };

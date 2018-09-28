@@ -50,7 +50,7 @@
   margin-top: auto 0;
   height: 100%;
   border: none;
-  font-size: 12px;
+  font-size: 14px;
   letter-spacing: 0.2rem;
   width: 20%;
   -webkit-transition: background-color 0.5s, color 0.5s;
@@ -193,7 +193,7 @@
   height: 100%; }
 
 #contacts-header-div {
-  letter-spacing: 0.2rem;
+  letter-spacing: 0.1rem;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -245,7 +245,7 @@
   overflow: auto; }
 
 .blog-post-header {
-  letter-spacing: 0.2rem; }
+  letter-spacing: 0.1rem; }
 
 @media only screen and (max-width: 800px) {
   .blog-post-div {
