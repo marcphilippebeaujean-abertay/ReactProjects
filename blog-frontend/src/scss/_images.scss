@@ -9,6 +9,9 @@
   height: 60px;
   width: 60px;
   left: 5%;
+  -webkit-transition: left $hover-transition-speed,
+    color $hover-transition-speed; /* Safari */
+  transition: left $hover-transition-speed, color $hover-transition-speed;
 }
 
 .social-media-logo:hover {
