@@ -230,7 +230,11 @@
   font-size: 14px; }
 
 #contacts-submit-btn:hover {
-  background-color: #3fbfe2;
+  background-color: white;
+  color: #3bb5d6;
+  -webkit-transition: background-color 0.5s, color 0.5s;
+  /* Safari */
+  transition: background-color 0.5s, color 0.5s;
   cursor: pointer; }
 
 .contact-form-error {

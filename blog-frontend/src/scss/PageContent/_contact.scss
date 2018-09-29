@@ -50,7 +50,9 @@ $form-font-size: 12px;
 }
 
 #contacts-submit-btn:hover {
-  background-color: #3fbfe2;
+  background-color: white;
+  color: $main-colour;
+  @include main-widget-colour-transition();
   cursor: pointer;
 }
 

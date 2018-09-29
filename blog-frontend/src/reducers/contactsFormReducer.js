@@ -1,5 +1,7 @@
 import { emailRegex, nameRegex } from "../regex";
 
+const minMessageLength = 10;
+
 const defaultState = {
   emailForm: "",
   nameForm: "",
@@ -23,6 +25,11 @@ const validInputCheck = previousState => {
   } else {
     newState.nameErrorMsg = "Please enter a valid name";
     validInput = false;
+  }
+  if (previousState.messageForm.length >= minMessageLength) {
+    newState.messageErrorMsg = "";
+  } else {
+    newState.messageErrorMsg = `Please enter at least ${minMessageLength} characters`;
   }
   if (validInput) {
     // Reset the form
