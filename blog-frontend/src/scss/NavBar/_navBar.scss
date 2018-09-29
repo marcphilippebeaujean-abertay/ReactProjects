@@ -1,10 +1,10 @@
-@import "colours";
+@import "varsMain";
 
 $nav-bg-colour: $main-colour;
-$nav-dropdown-colour: $secondry-colour;
+$nav-dropdown-colour: $secondry-colour; //$secondry-colour;
 $nav-arrow-colour: #245866;
 $nav-text-colour: white;
-$scndry-bg-colour: $outline-colour;
+$scndry-bg-colour: $outline-colour; //$outline-colour;
 $nav-border-radius: 25px;
 $nav-bar-height: 60px;
 $nav-bar-top-padding: 11px;
@@ -40,6 +40,7 @@ $games-dropdown-element-nr: 2;
   position: relative;
   flex-direction: column;
   justify-content: center;
+  text-transform: capitalize;
   text-align: center;
   margin-top: auto 0;
   height: 100%;
