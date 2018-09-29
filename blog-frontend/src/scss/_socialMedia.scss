@@ -5,7 +5,22 @@
   flex-direction: column;
   width: 80px;
   height: 305px;
-  left: 0%;
+  left: -50px;
   top: 30%;
   border-radius: 0px 15px 15px 0;
+  animation-name: left-side-fade-in;
+  animation-duration: 1s;
+  animation-iteration-count: 1;
+  -webkit-animation: left-side-fade-in 1s normal forwards;
+  -moz-animation: left-side-fade-in 1s normal forwards;
+  -o-animation: left-side-fade-in 1s normal forwards;
+}
+
+@keyframes left-side-fade-in {
+  from {
+    left: -50px;
+  }
+  to {
+    left: 0px;
+  }
 }
