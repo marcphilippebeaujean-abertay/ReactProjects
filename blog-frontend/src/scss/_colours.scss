@@ -1,7 +1,9 @@
 $main-colour: #3bb5d6;
 $secondry-colour: #4dd6fc;
-$outline-colour: #eff5ff;
+$outline-colour: #e6e6ff;
 $hover-transition-speed: 0.5s;
+$widget-letter-spacing: 0.2rem;
+$header-letter-spacing: 0.1rem;
 
 @mixin main-widget-colour-transition {
   -webkit-transition: background-color $hover-transition-speed,

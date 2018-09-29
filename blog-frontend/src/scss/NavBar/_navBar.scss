@@ -45,7 +45,7 @@ $games-dropdown-element-nr: 2;
   height: 100%;
   border: none;
   font-size: 14px;
-  letter-spacing: 0.2rem;
+  letter-spacing: $widget-letter-spacing;
   width: $nav-element-width;
   -webkit-transition: background-color $hover-transition-speed,
     color $hover-transition-speed; /* Safari */
@@ -101,7 +101,7 @@ $games-dropdown-element-nr: 2;
   position: absolute;
   top: $nav-bar-height;
   width: $nav-element-width;
-  letter-spacing: 0.2rem;
+  letter-spacing: $widget-letter-spacing;
   flex-direction: column;
 }
 

@@ -12,7 +12,7 @@
 }
 
 .blog-post-header {
-  letter-spacing: 0.1rem;
+  letter-spacing: $header-letter-spacing;
 }
 
 @media only screen and (max-width: 800px) {
