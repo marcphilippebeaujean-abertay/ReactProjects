@@ -1,17 +1,36 @@
-import { emailRegex } from "../regex";
+import { emailRegex, nameRegex } from "../regex";
 
 const defaultState = {
   emailForm: "",
   nameForm: "",
-  messageForm: ""
+  messageForm: "",
+  emailErrorMsg: "",
+  nameErrorMsg: "",
+  messageErrorMsg: ""
 };
 
-const validInputCheck = emailInput => {
-  if (emailInput.match(emailRegex)) {
-    console.log("valid email!");
+const validInputCheck = previousState => {
+  let newState = { ...previousState };
+  let validInput = true;
+  if (previousState.emailForm.match(emailRegex)) {
+    newState.emailErrorMsg = "";
   } else {
-    console.log("invalid email!");
+    newState.emailErrorMsg = "Please enter a valid E-Mail.";
+    validInput = false;
   }
+  if (previousState.nameForm.match(nameRegex)) {
+    newState.nameErrorMsg = "";
+  } else {
+    newState.nameErrorMsg = "Please enter a valid (full) name.";
+    validInput = false;
+  }
+  if (validInput) {
+    // Reset the form
+    newState.emailForm = "";
+    newState.messageForm = "";
+    newState.nameForm = "";
+  }
+  return newState;
 };
 
 const contactsFormReducer = (previousState = defaultState, action) => {
@@ -27,7 +46,7 @@ const contactsFormReducer = (previousState = defaultState, action) => {
       newState.messageForm = action.data;
       break;
     case "FORM_SUBMIT_ATTEMPT":
-      validInputCheck(newState.emailForm);
+      newState = validInputCheck(previousState);
       break;
     default:
       break;

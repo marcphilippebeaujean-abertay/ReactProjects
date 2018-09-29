@@ -19,6 +19,7 @@ class ContactComponent extends Component {
             value={this.props.nameInput}
             onChange={event => this.props.onNameFieldInput(event.target.value)}
           />
+          <p className="contact-form-error">{this.props.nameErrorMsg}</p>
           <input
             className="contact-form-elem contact-form-tex-input"
             type="text"
@@ -27,6 +28,7 @@ class ContactComponent extends Component {
             value={this.props.emailInput}
             onChange={event => this.props.onEmailFieldInput(event.target.value)}
           />
+          <p className="contact-form-error">{this.props.emailErrorMsg}</p>
           <textarea
             className="contact-form-elem contact-form-tex-input"
             id="contact-message"
@@ -39,6 +41,7 @@ class ContactComponent extends Component {
               this.props.onMessageFieldInput(event.target.value)
             }
           />
+          <p className="contact-form-error">{this.props.msgErrorMsg}</p>
         </form>
         <button
           id="contacts-submit-btn"
@@ -60,14 +63,20 @@ ContactComponent.propTypes = {
   onNameFieldInput: PropTypes.func.isRequired,
   onEmailFieldInput: PropTypes.func.isRequired,
   onMessageFieldInput: PropTypes.func.isRequired,
-  onFormSubmitted: PropTypes.func.isRequired
+  onFormSubmitted: PropTypes.func.isRequired,
+  nameErrorMsg: PropTypes.string.isRequired,
+  emailErrorMsg: PropTypes.string.isRequired,
+  msgErrorMsg: PropTypes.string.isRequired
 };
 
 const mapStateToProps = state => {
   return {
     emailInput: state.contactsFormReducer.emailForm,
     nameInput: state.contactsFormReducer.nameForm,
-    messageInput: state.contactsFormReducer.messageForm
+    messageInput: state.contactsFormReducer.messageForm,
+    emailErrorMsg: state.contactsFormReducer.emailErrorMsg,
+    nameErrorMsg: state.contactsFormReducer.nameErrorMsg,
+    msgErrorMsg: state.contactsFormReducer.messageErrorMsg
   };
 };
 

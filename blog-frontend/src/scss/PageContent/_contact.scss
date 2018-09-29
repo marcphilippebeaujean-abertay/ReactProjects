@@ -1,4 +1,5 @@
 @import "colours";
+$form-font-size: 12px;
 
 #contacts-div {
   height: 100%;
@@ -23,8 +24,7 @@
 }
 
 .contact-form-elem {
-  margin-bottom: 20px;
-  font-size: 12px;
+  font-size: $form-font-size;
 }
 
 .contact-form-tex-input {
@@ -52,4 +52,14 @@
 #contacts-submit-btn:hover {
   background-color: #3fbfe2;
   cursor: pointer;
+}
+
+.contact-form-error {
+  color: rgb(204, 90, 90);
+  height: 30px;
+  margin: 0px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: $form-font-size;
 }
