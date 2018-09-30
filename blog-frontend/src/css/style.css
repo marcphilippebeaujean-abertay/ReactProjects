@@ -13,9 +13,13 @@
   width: 70%; }
 
 #right-info-sidebar {
-  width: 30%;
+  width: 300px;
   text-align: justify;
   margin: 0 20px; }
+
+#about-infotext-main {
+  font-size: 13px;
+  color: rgba(65, 64, 64, 0.692); }
 
 .page-main-text {
   text-align: justify; }
@@ -32,7 +36,7 @@
   #right-info-sidebar {
     display: none; }
   .page-content {
-    width: 80%;
+    width: 90%;
     margin: 0px; } }
 
 #nav-div {
@@ -267,7 +271,7 @@
 
 .blog-date {
   font-style: italic;
-  color: rgba(105, 105, 105, 0.692); }
+  color: rgba(65, 64, 64, 0.692); }
 
 .blog-post {
   height: 500px; }

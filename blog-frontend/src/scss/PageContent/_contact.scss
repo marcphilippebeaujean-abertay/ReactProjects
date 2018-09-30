@@ -70,3 +70,8 @@ $form-font-size: 12px;
     text-align: center;
   }
 }
+
+@media only screen and (max-width: 800px) {
+  .contact-form-elem {
+  }
+}
