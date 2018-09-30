@@ -24,3 +24,29 @@
     left: 0px;
   }
 }
+
+@media only screen and (max-width: $medium-screen-size) {
+  #social-media-sidebar {
+    flex-direction: row;
+    width: 305px;
+    height: 80px;
+    left: 50%;
+    margin-left: -152px;
+    top: 90%;
+    border-radius: 15px 15px 0px 0;
+    animation-name: left-side-fade-in;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+    -webkit-animation: left-side-fade-in 1s normal forwards;
+    -moz-animation: left-side-fade-in 1s normal forwards;
+    -o-animation: left-side-fade-in 1s normal forwards;
+  }
+  @keyframes left-side-fade-in {
+    from {
+      top: 100%;
+    }
+    to {
+      top: 90%;
+    }
+  }
+}

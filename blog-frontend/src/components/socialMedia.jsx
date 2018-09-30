@@ -8,7 +8,11 @@ export default class SocialMediaSidebar extends Component {
   render() {
     return (
       <div id="social-media-sidebar">
-        <a href="https://twitter.com/marcbeaujean" target="_blank">
+        <a
+          href="https://twitter.com/marcbeaujean"
+          rel="noreferrer noopener"
+          target="_blank"
+        >
           <img
             src={TwitterLogo}
             alt="Twitter logo"
@@ -18,6 +22,7 @@ export default class SocialMediaSidebar extends Component {
         </a>
         <a
           href="https://github.com/marcphilippebeaujean-abertay"
+          rel="noreferrer noopener"
           target="_blank"
         >
           <img
@@ -29,6 +34,7 @@ export default class SocialMediaSidebar extends Component {
         </a>
         <a
           href="https://www.linkedin.com/in/marc-philippe-beaujean-5ab27815a/"
+          rel="noreferrer noopener"
           target="_blank"
         >
           <img
