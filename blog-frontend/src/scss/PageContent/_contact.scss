@@ -64,3 +64,12 @@ $form-font-size: 12px;
   justify-content: center;
   font-size: $form-font-size;
 }
+
+@media only screen and (max-width: $small-screen-size) {
+  #contacts-form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+  }
+}

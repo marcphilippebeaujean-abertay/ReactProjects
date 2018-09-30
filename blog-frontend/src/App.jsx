@@ -9,6 +9,7 @@ import PersistentContentComponent from "./components/persistentContent";
 import MainBlogComponent from "./components/blogMain";
 import SheTown from "./components/Page Content/sheTown";
 import ContactComponent from "./components/Page Content/contact";
+import AboutInfoBar from "./components/Page Content/aboutInfoBar";
 
 class App extends Component {
   render() {
@@ -22,6 +23,9 @@ class App extends Component {
                 <Route path="/" exact component={MainBlogComponent} />
                 <Route path="/she-town" component={SheTown} />
                 <Route path="/contact" component={ContactComponent} />
+              </div>
+              <div id="right-info-sidebar">
+                <AboutInfoBar />
               </div>
             </div>
           </div>
