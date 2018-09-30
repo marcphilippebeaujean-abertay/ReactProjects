@@ -4,7 +4,6 @@
 }
 
 #content-bg {
-  width: 100%;
   margin: 0 auto;
   display: flex;
   flex-direction: row;
@@ -12,12 +11,12 @@
 }
 
 .page-content {
-  width: 90%;
   margin: 0 20px;
+  width: 70%;
 }
 
 #right-info-sidebar {
-  width: 400px;
+  width: 30%;
   text-align: justify;
   margin: 0 20px;
 }
@@ -25,10 +24,6 @@
 .page-main-text {
   text-align: justify;
 }
-
-@media only screen and (max-width: $max-screen-size) {
-}
-
 @media only screen and (max-width: $medium-screen-size) {
   .App {
     width: 100%;
