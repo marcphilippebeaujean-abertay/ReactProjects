@@ -25,7 +25,7 @@ class App extends Component {
                 <Route path="/contact" component={ContactComponent} />
               </div>
               <div id="right-info-sidebar">
-                <AboutInfoBar />
+                <Route path="/" component={AboutInfoBar} />
               </div>
             </div>
           </div>

@@ -17,13 +17,14 @@ const validInputCheck = previousState => {
   if (previousState.emailForm.match(emailRegex)) {
     newState.emailErrorMsg = "";
   } else {
-    newState.emailErrorMsg = "Please enter a valid E-Mail";
+    newState.emailErrorMsg =
+      "This E-Mail is looking strange...please make sure its correct!";
     validInput = false;
   }
   if (previousState.nameForm.match(nameRegex)) {
     newState.nameErrorMsg = "";
   } else {
-    newState.nameErrorMsg = "Please enter a valid name";
+    newState.nameErrorMsg = "Please enter your full name";
     validInput = false;
   }
   if (previousState.messageForm.length >= minMessageLength) {

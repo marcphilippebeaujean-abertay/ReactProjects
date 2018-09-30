@@ -1,20 +1,22 @@
 .App {
-  width: 80%;
+  width: 1000px;
   margin: 0 auto; }
 
 #content-bg {
-  width: 90%;
+  width: 100%;
   margin: 0 auto;
   display: flex;
   flex-direction: row;
   justify-content: center; }
 
 .page-content {
-  width: 100%; }
+  width: 90%;
+  margin: 0 20px; }
 
 #right-info-sidebar {
-  width: 40%;
-  text-align: justify; }
+  width: 400px;
+  text-align: justify;
+  margin: 0 20px; }
 
 .page-main-text {
   text-align: justify; }
@@ -25,9 +27,14 @@
   .page-content {
     width: 80%; }
   #content-bg {
-    width: 100%; }
+    width: 100%; } }
+
+@media only screen and (max-width: 800px) {
   #right-info-sidebar {
-    display: none; } }
+    display: none; }
+  .page-content {
+    width: 80%;
+    margin: 0px; } }
 
 #nav-div {
   position: relative;
@@ -205,16 +212,14 @@
   letter-spacing: 0.1rem;
   display: flex;
   justify-content: center;
-  flex-direction: column;
-  width: 100%; }
+  flex-direction: column; }
 
 #contacts-header {
   color: black; }
 
 #contacts-form {
   display: flex;
-  flex-direction: column;
-  width: 70%; }
+  flex-direction: column; }
 
 .contact-form-elem {
   font-size: 12px; }
@@ -222,7 +227,8 @@
 .contact-form-tex-input {
   border-radius: 5px;
   border: 1px solid #ccc;
-  padding: 10px; }
+  padding: 10px;
+  width: 100%; }
 
 #contact-message {
   display: inline-block;
@@ -259,7 +265,6 @@
   #contacts-form {
     display: flex;
     flex-direction: column;
-    width: 100%;
     text-align: center; } }
 
 .blog-date {
