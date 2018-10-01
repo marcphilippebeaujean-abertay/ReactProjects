@@ -9,7 +9,6 @@ const sidebarID = "games";
 
 class NavGamesDropdown extends Component {
   renderSidebar = () => {
-    console.log("rendering sidebar");
     return this.props.curSidebarHovered === sidebarID ? (
       <div className="scndry-dd" id="games-dropdown">
         <Link to="/she-town" style={{ textDecoration: "none" }}>
@@ -57,7 +56,9 @@ class NavGamesDropdown extends Component {
 }
 
 NavGamesDropdown.propTypes = {
-  onBtnClicked: PropTypes.func.isRequired
+  onBtnClicked: PropTypes.func.isRequired,
+  onBtnHovered: PropTypes.func.isRequired,
+  curSidebarHovered: PropTypes.string.isRequired
 };
 
 const mapDispatchToProps = dispatch => {

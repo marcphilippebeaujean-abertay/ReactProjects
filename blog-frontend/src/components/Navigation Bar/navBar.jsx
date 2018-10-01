@@ -3,7 +3,6 @@ import NavDropdown from "./navDropdown";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import "../../css/style.css";
-import { isMobile } from "react-device-detect";
 import { Link } from "react-router-dom";
 
 class NavBar extends Component {
@@ -25,7 +24,7 @@ class NavBar extends Component {
           className="nav-element nav-element-main dropdown-container"
           id="projects-dropdown-container"
           onClick={() => {
-            if (this.props.exitedViaHover === false && isMobile) {
+            if (this.props.exitedViaHover === false) {
               this.props.onHover();
             }
           }}
