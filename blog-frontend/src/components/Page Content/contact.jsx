@@ -8,40 +8,50 @@ class ContactComponent extends Component {
     return (
       <div id="contacts-div">
         <div id="contacts-header-div">
-          <h2 id="contacts-header">Send Me an E-Mail:</h2>
+          <h2 id="contacts-header">I'd love to hear from you.</h2>
         </div>
         <form className="contact-form-elem" id="contacts-form">
-          <input
-            className="contact-form-elem contact-form-tex-input"
-            type="text"
-            name="name"
-            placeholder="Full Name..."
-            value={this.props.nameInput}
-            onChange={event => this.props.onNameFieldInput(event.target.value)}
-          />
-          <p className="contact-form-error">{this.props.nameErrorMsg}</p>
-          <input
-            className="contact-form-elem contact-form-tex-input"
-            type="text"
-            name="email"
-            placeholder="Email..."
-            value={this.props.emailInput}
-            onChange={event => this.props.onEmailFieldInput(event.target.value)}
-          />
-          <p className="contact-form-error">{this.props.emailErrorMsg}</p>
-          <textarea
-            className="contact-form-elem contact-form-tex-input"
-            id="contact-message"
-            cols="40"
-            rows="5"
-            name="message"
-            placeholder="Message..."
-            value={this.props.messageInput}
-            onChange={event =>
-              this.props.onMessageFieldInput(event.target.value)
-            }
-          />
-          <p className="contact-form-error">{this.props.msgErrorMsg}</p>
+          <div id="contacts-grid">
+            <div className="form-input-elem" id="email-def-text-inputs">
+              <input
+                className="contact-form-elem contact-form-tex-input small-form-elem"
+                type="text"
+                name="name"
+                placeholder="Full Name..."
+                value={this.props.nameInput}
+                onChange={event =>
+                  this.props.onNameFieldInput(event.target.value)
+                }
+              />
+              <p className="contact-form-error">{this.props.nameErrorMsg}</p>
+              <input
+                className="contact-form-elem contact-form-tex-input small-form-elem"
+                type="text"
+                name="email"
+                placeholder="Email..."
+                value={this.props.emailInput}
+                onChange={event =>
+                  this.props.onEmailFieldInput(event.target.value)
+                }
+              />
+              <p className="contact-form-error">{this.props.emailErrorMsg}</p>
+            </div>
+            <div className="form-input-elem">
+              <textarea
+                className="contact-form-elem contact-form-tex-input"
+                id="contact-message"
+                cols="40"
+                rows="5"
+                name="message"
+                placeholder="Message..."
+                value={this.props.messageInput}
+                onChange={event =>
+                  this.props.onMessageFieldInput(event.target.value)
+                }
+              />
+              <p className="contact-form-error">{this.props.msgErrorMsg}</p>
+            </div>
+          </div>
         </form>
         <button
           id="contacts-submit-btn"

@@ -205,9 +205,6 @@
     font-size: 12px;
     letter-spacing: 0px; } }
 
-#contacts-div {
-  height: 100%; }
-
 #contacts-header-div {
   letter-spacing: 0.1rem;
   display: flex;
@@ -219,6 +216,10 @@
 
 #contacts-form {
   display: flex;
+  flex-direction: row; }
+
+#contact-non-txt-area-input {
+  display: flex;
   flex-direction: column; }
 
 .contact-form-elem {
@@ -226,12 +227,26 @@
 
 .contact-form-tex-input {
   border-radius: 5px;
-  border: 1px solid #ccc;
-  padding: 10px; }
+  border: 1px solid #ccc; }
+
+.small-form-elem {
+  padding: 10px;
+  width: 80%; }
+
+#contacts-grid {
+  display: flex;
+  direction: row;
+  height: 200px;
+  width: 100%; }
+
+.form-input-elem {
+  display: flex;
+  flex-direction: column;
+  width: 50%; }
 
 #contact-message {
-  display: inline-block;
-  padding-bottom: 100px; }
+  height: 100%;
+  padding: 10px; }
 
 #contacts-submit-btn {
   width: 120px;
@@ -241,7 +256,9 @@
   letter-spacing: 0.2rem;
   box-shadow: 2px 2px 2px 0px #b4afaf;
   border-radius: 5px;
-  font-size: 14px; }
+  font-size: 14px;
+  grid-row: 3;
+  grid-column: 1; }
 
 #contacts-submit-btn:hover {
   background-color: white;
