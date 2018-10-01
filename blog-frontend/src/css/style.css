@@ -99,7 +99,7 @@
   border-width: 0 3px 3px 0;
   display: inline-block;
   position: absolute;
-  right: 25%;
+  right: 15%;
   padding: 3px;
   -webkit-transition: border-color 0.5s;
   /* Safari */
@@ -139,7 +139,7 @@
   width: 20%; }
 
 .scndry-dd {
-  display: none;
+  display: flex;
   position: absolute;
   flex-direction: column;
   width: 100%;
@@ -177,9 +177,6 @@
 #games-dropout:hover #games-dropdown-div {
   background: white;
   color: #4dd6fc; }
-
-#games-dropdown-div:hover ~ #games-dropdown {
-  display: flex; }
 
 #she-town-text {
   font-family: "Press Start 2P", Arial, Helvetica, sans-serif;

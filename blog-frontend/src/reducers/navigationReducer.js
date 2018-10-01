@@ -1,10 +1,12 @@
 const defaultState = {
   dropdownShouldShow: false,
-  exitedViaHover: true
+  exitedViaHover: true,
+  curSidebarHovered: ""
 };
 
 const navigationReducer = (previousState = defaultState, action) => {
   let newState = { ...previousState };
+  newState.curSidebarHovered = "";
   switch (action.type) {
     case "HIDE_DROPDOWN":
       newState.dropdownShouldShow = false;
@@ -15,6 +17,9 @@ const navigationReducer = (previousState = defaultState, action) => {
       break;
     case "ON_DROPDOWN_CLICKED":
       newState.exitedViaHover = true;
+      break;
+    case "SIDEBAR_CATEGORY_HOVERED":
+      newState.curSidebarHovered = action.curSidebarHovered;
       break;
     default:
       break;

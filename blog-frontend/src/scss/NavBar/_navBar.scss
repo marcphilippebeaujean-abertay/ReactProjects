@@ -81,7 +81,7 @@ $games-dropdown-element-nr: 2;
   border-width: 0 3px 3px 0;
   display: inline-block;
   position: absolute;
-  right: 25%;
+  right: 15%;
   padding: 3px;
   -webkit-transition: border-color $hover-transition-speed; /* Safari */
   transition: border-color $hover-transition-speed;
@@ -127,7 +127,7 @@ $games-dropdown-element-nr: 2;
 }
 
 .scndry-dd {
-  display: none;
+  display: flex;
   position: absolute;
   flex-direction: column;
   width: 100%;
