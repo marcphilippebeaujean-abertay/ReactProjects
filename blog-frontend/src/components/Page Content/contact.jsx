@@ -35,6 +35,16 @@ class ContactComponent extends Component {
                 }
               />
               <p className="contact-form-error">{this.props.emailErrorMsg}</p>
+              <input
+                className="contact-form-elem contact-form-tex-input small-form-elem"
+                type="text"
+                name="subject"
+                placeholder="Subject..."
+                value={this.props.emailInput}
+                onChange={event =>
+                  this.props.onEmailFieldInput(event.target.value)
+                }
+              />
             </div>
             <div className="form-input-elem">
               <textarea
@@ -70,6 +80,7 @@ ContactComponent.propTypes = {
   emailInput: PropTypes.string.isRequired,
   nameInput: PropTypes.string.isRequired,
   messageInput: PropTypes.string.isRequired,
+  subjectInput: PropTypes.string.isRequired,
   onNameFieldInput: PropTypes.func.isRequired,
   onEmailFieldInput: PropTypes.func.isRequired,
   onMessageFieldInput: PropTypes.func.isRequired,
@@ -84,6 +95,7 @@ const mapStateToProps = state => {
     emailInput: state.contactsFormReducer.emailForm,
     nameInput: state.contactsFormReducer.nameForm,
     messageInput: state.contactsFormReducer.messageForm,
+    subjectInput: state.contactsFormReducer.subjectForm,
     emailErrorMsg: state.contactsFormReducer.emailErrorMsg,
     nameErrorMsg: state.contactsFormReducer.nameErrorMsg,
     msgErrorMsg: state.contactsFormReducer.messageErrorMsg

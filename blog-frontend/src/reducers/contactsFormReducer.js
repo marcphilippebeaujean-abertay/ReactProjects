@@ -6,6 +6,7 @@ const defaultState = {
   emailForm: "",
   nameForm: "",
   messageForm: "",
+  subjectForm: "",
   emailErrorMsg: "",
   nameErrorMsg: "",
   messageErrorMsg: ""
@@ -17,8 +18,7 @@ const validInputCheck = previousState => {
   if (previousState.emailForm.match(emailRegex)) {
     newState.emailErrorMsg = "";
   } else {
-    newState.emailErrorMsg =
-      "This E-Mail is looking strange...please make sure its correct!";
+    newState.emailErrorMsg = "This E-Mail is looking strange...";
     validInput = false;
   }
   if (previousState.nameForm.match(nameRegex)) {
@@ -37,6 +37,7 @@ const validInputCheck = previousState => {
     newState.emailForm = "";
     newState.messageForm = "";
     newState.nameForm = "";
+    newState.subjectForm = "";
   }
   return newState;
 };
