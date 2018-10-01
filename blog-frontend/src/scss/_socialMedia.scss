@@ -6,7 +6,7 @@
   width: 80px;
   height: 305px;
   left: -50px;
-  top: 30%;
+  bottom: 30%;
   border-radius: 0px 15px 15px 0;
   animation-name: left-side-fade-in;
   animation-duration: 1s;
@@ -32,7 +32,7 @@
     height: 80px;
     left: 50%;
     margin-left: -152px;
-    top: 90%;
+    bottom: 0%;
     border-radius: 15px 15px 0px 0;
     animation-name: left-side-fade-in;
     animation-duration: 1s;
@@ -43,10 +43,10 @@
   }
   @keyframes left-side-fade-in {
     from {
-      top: 100%;
+      bottom: -10px;
     }
     to {
-      top: 90%;
+      bottom: 0px;
     }
   }
 }

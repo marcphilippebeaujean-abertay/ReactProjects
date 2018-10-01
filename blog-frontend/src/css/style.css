@@ -24,6 +24,9 @@
 .page-main-text {
   text-align: justify; }
 
+#extra-space {
+  height: 100px; }
+
 @media only screen and (max-width: 1000px) {
   .App {
     width: 100%; }
@@ -256,9 +259,7 @@
   letter-spacing: 0.2rem;
   box-shadow: 2px 2px 2px 0px #b4afaf;
   border-radius: 5px;
-  font-size: 14px;
-  grid-row: 3;
-  grid-column: 1; }
+  font-size: 14px; }
 
 #contacts-submit-btn:hover {
   background-color: white;
@@ -277,10 +278,29 @@
   justify-content: center;
   font-size: 12px; }
 
-@media only screen and (max-width: 600px) {
-  #contacts-form {
+@media only screen and (max-width: 450px) {
+  #contacts-div {
+    margin: 0 auto;
+    width: 350px; }
+  #contacts-grid {
     display: flex;
-    flex-direction: column; } }
+    flex-direction: column;
+    width: 100%;
+    height: 500px;
+    padding: 10px 0px; }
+  .form-input-elem {
+    width: 100%;
+    margin-bottom: 20px; }
+  #contact-message {
+    padding: 10px 0px;
+    height: 300px; }
+  .small-form-elem {
+    padding: 10px 0px;
+    width: 100%; } }
+
+@media only screen and (max-width: 380px) {
+  #contacts-div {
+    width: 100%; } }
 
 .blog-date {
   font-style: italic;
@@ -345,7 +365,7 @@
   width: 80px;
   height: 305px;
   left: -50px;
-  top: 30%;
+  bottom: 30%;
   border-radius: 0px 15px 15px 0;
   animation-name: left-side-fade-in;
   animation-duration: 1s;
@@ -367,7 +387,7 @@
     height: 80px;
     left: 50%;
     margin-left: -152px;
-    top: 90%;
+    bottom: 0%;
     border-radius: 15px 15px 0px 0;
     animation-name: left-side-fade-in;
     animation-duration: 1s;
@@ -377,9 +397,9 @@
     -o-animation: left-side-fade-in 1s normal forwards; }
   @keyframes left-side-fade-in {
     from {
-      top: 100%; }
+      bottom: -10px; }
     to {
-      top: 90%; } } }
+      bottom: 0px; } } }
 
 body {
   margin: 0;

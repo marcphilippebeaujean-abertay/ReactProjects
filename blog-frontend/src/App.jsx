@@ -28,6 +28,7 @@ class App extends Component {
                 <Route path="/" component={AboutInfoBar} />
               </div>
             </div>
+            <div id="extra-space" />
           </div>
         </BrowserRouter>
       </Provider>

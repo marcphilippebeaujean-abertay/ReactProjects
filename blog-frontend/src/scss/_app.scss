@@ -29,6 +29,11 @@
 .page-main-text {
   text-align: justify;
 }
+
+#extra-space {
+  height: 100px;
+}
+
 @media only screen and (max-width: $medium-screen-size) {
   .App {
     width: 100%;
