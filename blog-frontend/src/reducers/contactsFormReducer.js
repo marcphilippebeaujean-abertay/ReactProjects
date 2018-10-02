@@ -15,23 +15,19 @@ const defaultState = {
 const validInputCheck = previousState => {
   let newState = { ...previousState };
   let validInput = true;
-  if (previousState.emailForm.match(emailRegex)) {
-    newState.emailErrorMsg = "";
-  } else {
+  if (!previousState.emailForm.match(emailRegex)) {
     newState.emailErrorMsg = "This E-Mail is looking strange...";
     validInput = false;
   }
-  if (previousState.nameForm.match(nameRegex)) {
-    newState.nameErrorMsg = "";
-  } else {
-    newState.nameErrorMsg = "Please enter your full name";
+  if (previousState.nameForm.length < 6) {
+    newState.nameErrorMsg = "Please enter at least 6 digits";
     validInput = false;
   }
-  if (previousState.messageForm.length >= minMessageLength) {
-    newState.messageErrorMsg = "";
-  } else {
+  if (previousState.messageForm.length < minMessageLength) {
     newState.messageErrorMsg = `Please enter at least ${minMessageLength} characters`;
   }
+  // TODO: Send off http data containing email info
+
   if (validInput) {
     // Reset the form
     newState.emailForm = "";
