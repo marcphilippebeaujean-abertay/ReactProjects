@@ -10,7 +10,7 @@ class ContactComponent extends Component {
         <div id="contacts-header-div">
           <h2 id="contacts-header">I'd love to hear from you.</h2>
         </div>
-        <form className="contact-form-elem" id="contacts-form">
+        <form id="contacts-form">
           <div id="contacts-grid">
             <div className="form-input-elem" id="form-def-text-inputs">
               <input

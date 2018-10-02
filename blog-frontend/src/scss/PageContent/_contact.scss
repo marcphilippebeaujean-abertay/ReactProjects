@@ -23,6 +23,7 @@ $form-font-size: 12px;
 
 .contact-form-elem {
   font-size: $form-font-size;
+  box-shadow: 2px 2px 2px 0px rgb(180, 175, 175);
 }
 
 .contact-form-tex-input {
@@ -40,7 +41,6 @@ $form-font-size: 12px;
   direction: row;
   height: 200px;
   width: 100%;
-  box-sizing: border-box;
 }
 
 .form-input-elem {
