@@ -9,13 +9,14 @@
   justify-content: center; }
 
 .page-content {
-  margin: 0 20px;
+  margin: 0 10px;
   width: 70%; }
 
 #right-info-sidebar {
   width: 300px;
   text-align: justify;
-  margin: 0 20px; }
+  box-sizing: border-box;
+  margin: 0 10px; }
 
 #about-infotext-main {
   font-size: 13px;
