@@ -1,3 +1,5 @@
+$social-media-position-switch-screen-size: 1400px;
+
 #social-media-sidebar {
   position: fixed;
   background-color: $outline-colour;
@@ -25,7 +27,7 @@
   }
 }
 
-@media only screen and (max-width: 1140px) {
+@media only screen and (max-width: $social-media-position-switch-screen-size) {
   #social-media-sidebar {
     flex-direction: row;
     width: 305px;
@@ -43,10 +45,10 @@
   }
   @keyframes left-side-fade-in {
     from {
-      bottom: -10px;
+      bottom: -50px;
     }
     to {
-      bottom: 0px;
+      bottom: -10px;
     }
   }
 }

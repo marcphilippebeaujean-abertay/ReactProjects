@@ -12,7 +12,7 @@ class ContactComponent extends Component {
         </div>
         <form className="contact-form-elem" id="contacts-form">
           <div id="contacts-grid">
-            <div className="form-input-elem" id="email-def-text-inputs">
+            <div className="form-input-elem" id="form-def-text-inputs">
               <input
                 className="contact-form-elem contact-form-tex-input small-form-elem"
                 type="text"

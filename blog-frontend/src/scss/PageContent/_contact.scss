@@ -32,7 +32,7 @@ $form-font-size: 12px;
 
 .small-form-elem {
   padding: 10px;
-  width: 80%;
+  width: 90%;
 }
 
 #contacts-grid {
@@ -40,6 +40,7 @@ $form-font-size: 12px;
   direction: row;
   height: 200px;
   width: 100%;
+  box-sizing: border-box;
 }
 
 .form-input-elem {
@@ -51,6 +52,7 @@ $form-font-size: 12px;
 #contact-message {
   height: 78%;
   padding: 10px;
+  width: 100%;
 }
 
 #contacts-submit-btn {
