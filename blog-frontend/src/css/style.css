@@ -255,7 +255,8 @@
 #contact-message {
   height: 91%;
   padding: 10px;
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  resize: none; }
 
 #contacts-submit-btn {
   width: 120px;
