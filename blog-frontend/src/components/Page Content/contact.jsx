@@ -3,6 +3,8 @@ import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import "../../css/style.css";
 
+import ContactFormElement from "./contactFormElement";
+
 class ContactComponent extends Component {
   render() {
     return (
@@ -13,28 +15,16 @@ class ContactComponent extends Component {
         <form id="contacts-form">
           <div id="contacts-grid">
             <div className="form-input-elem" id="form-def-text-inputs">
-              <input
-                className="contact-form-elem contact-form-tex-input small-form-elem"
-                type="text"
-                name="name"
-                placeholder="Full Name..."
-                value={this.props.nameInput}
-                onChange={event =>
-                  this.props.onNameFieldInput(event.target.value)
-                }
+              <ContactFormElement
+                placeholderText={"Name..."}
+                errorMsg={"Please enter at least 6 characters"}
+                id={"nameForm"}
               />
-              <p className="contact-form-error">{this.props.nameErrorMsg}</p>
-              <input
-                className="contact-form-elem contact-form-tex-input small-form-elem"
-                type="text"
-                name="email"
-                placeholder="Email..."
-                value={this.props.emailInput}
-                onChange={event =>
-                  this.props.onEmailFieldInput(event.target.value)
-                }
+              <ContactFormElement
+                placeholderText={"E-Mail..."}
+                errorMsg={"Please enter a valid E-Mail"}
+                id={"emailForm"}
               />
-              <p className="contact-form-error">{this.props.emailErrorMsg}</p>
               <input
                 className="contact-form-elem contact-form-tex-input small-form-elem"
                 type="text"

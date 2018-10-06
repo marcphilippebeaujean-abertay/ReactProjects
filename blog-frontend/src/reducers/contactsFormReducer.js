@@ -2,6 +2,11 @@ import { emailRegex, nameRegex } from "../regex";
 
 const minMessageLength = 10;
 
+const formState = {
+  formInput: "",
+  showError: false
+};
+
 const defaultState = {
   emailForm: "",
   nameForm: "",
@@ -9,7 +14,11 @@ const defaultState = {
   subjectForm: "",
   emailErrorMsg: "",
   nameErrorMsg: "",
-  messageErrorMsg: ""
+  messageErrorMsg: "",
+  forms: {
+    nameForm: formState,
+    emailForm: formState
+  }
 };
 
 const validInputCheck = previousState => {
@@ -41,6 +50,9 @@ const validInputCheck = previousState => {
 const contactsFormReducer = (previousState = defaultState, action) => {
   let newState = { ...previousState };
   switch (action.type) {
+    case "FORM_INPUT_UPDATE":
+      newState.forms[action.formId].formInput = action.formInput;
+      break;
     case "EMAIL_FORM_UPDATE":
       newState.emailForm = action.data;
       break;
