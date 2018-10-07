@@ -16,8 +16,8 @@ const defaultState = {
   nameErrorMsg: "",
   messageErrorMsg: "",
   forms: {
-    nameForm: formState,
-    emailForm: formState
+    nameForm: { ...formState },
+    emailForm: { ...formState }
   }
 };
 
@@ -51,6 +51,7 @@ const contactsFormReducer = (previousState = defaultState, action) => {
   let newState = { ...previousState };
   switch (action.type) {
     case "FORM_INPUT_UPDATE":
+      console.log(action.formId);
       newState.forms[action.formId].formInput = action.formInput;
       break;
     case "EMAIL_FORM_UPDATE":

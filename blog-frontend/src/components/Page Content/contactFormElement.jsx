@@ -51,10 +51,9 @@ const mapStateToProps = (state, ownProps) => {
 };
 
 const mapDispatchToProps = (dispatch, ownProps) => {
-  console.log(ownProps.id);
   return {
     onFieldInput: input => {
-      console.log(input);
+      console.log(`form inputed: ${ownProps.id}`);
       dispatch({
         type: "FORM_INPUT_UPDATE",
         formInput: input,
