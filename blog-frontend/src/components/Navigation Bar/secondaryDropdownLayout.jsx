@@ -15,7 +15,7 @@ export default class SecondaryDropdownLayout extends Component {
         id="games-dropdown-div"
         onClick={this.OnDropElemClicked}
       >
-        <p>games</p>
+        <p>{this.props.sidebarId}</p>
         <i className="arrow arrow-right" />
       </div>
       {this.renderSidebar()}
@@ -27,5 +27,6 @@ SecondaryDropdownLayout.propTypes = {
   onBtnHovered: PropTypes.func.isRequired,
   onBtnUnhovered: PropTypes.func.isRequired,
   sidebarIsHovered: PropTypes.func.isRequired,
+  sidebarId: PropTypes.string.isRequired,
   dropdownElements: PropTypes.object.isRequired
 };
