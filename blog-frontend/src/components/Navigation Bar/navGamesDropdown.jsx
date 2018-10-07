@@ -45,6 +45,7 @@ class NavGamesDropdown extends Component {
           id="games-dropdown-div"
           onClick={this.OnDropElemClicked}
           onMouseEnter={() => this.props.onBtnHovered()}
+          onMouseLeave={() => this.props.onBtnUnhovered()}
         >
           <p>games</p>
           <i className="arrow arrow-right" />
@@ -58,10 +59,11 @@ class NavGamesDropdown extends Component {
 NavGamesDropdown.propTypes = {
   onBtnClicked: PropTypes.func.isRequired,
   onBtnHovered: PropTypes.func.isRequired,
+  onBtnUnhovered: PropTypes.func.isRequired,
   curSidebarHovered: PropTypes.string.isRequired
 };
 
-const mapDispatchToProps = dispatch => {
+const mapDispatchToProps = (dispatch, ownProps) => {
   return {
     onBtnClicked: () =>
       dispatch({
@@ -72,6 +74,11 @@ const mapDispatchToProps = dispatch => {
       dispatch({
         type: "SIDEBAR_CATEGORY_HOVERED",
         curSidebarHovered: sidebarID
+      }),
+    onBtnUnhovered: () =>
+      dispatch({
+        type: "SIDEBAR_CATEGORY_UNHOVERED",
+        sidebarID: sidebarID
       })
   };
 };

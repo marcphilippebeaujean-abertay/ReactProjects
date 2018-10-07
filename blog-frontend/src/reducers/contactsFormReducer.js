@@ -22,7 +22,6 @@ const validInputCheck = previousState => {
   let invalidInput = false;
   for (let form in previousState.forms) {
     let formInput = previousState.forms[form].formInput;
-    console.log(newState.forms[form]);
     switch (form) {
       case "nameForm":
         console.log(nameRegex.test(formInput));

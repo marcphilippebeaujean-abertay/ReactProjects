@@ -2,17 +2,6 @@ import React, { Component } from "react";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import "../../css/style.css";
-
-// Form design
-
-// component id = id used to see what values should be matched to the component
-// component placeholder
-// component errormsg
-
-// Form value = value of that specific form element
-// Form error msg
-// Form show error msg?
-
 class ContactFormElement extends Component {
   render() {
     return (

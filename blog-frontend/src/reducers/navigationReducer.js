@@ -16,6 +16,10 @@ const navigationReducer = (previousState = defaultState, action) => {
       newState.dropdownShouldShow = true;
       newState.exitedViaHover = true;
       break;
+    case "SSIDEBAR_CATEGORY_HOVERED":
+      if (previousState.curSidebarHovered === action.sidebarID) {
+        newState.curSidebarHovered = "";
+      }
     case "SIDEBAR_CATEGORY_HOVERED":
       newState.curSidebarHovered = action.curSidebarHovered;
       break;
