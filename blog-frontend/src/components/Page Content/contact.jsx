@@ -6,6 +6,7 @@ import "../../css/style.css";
 import ContactFormElement from "./contactFormElement";
 
 class ContactComponent extends Component {
+  componentDidMount() {}
   render() {
     return (
       <div id="contacts-div">
@@ -25,15 +26,10 @@ class ContactComponent extends Component {
                 errorMsg={"Please enter a valid E-Mail"}
                 id={"emailForm"}
               />
-              <input
-                className="contact-form-elem contact-form-tex-input small-form-elem"
-                type="text"
-                name="subject"
-                placeholder="Subject..."
-                value={this.props.emailInput}
-                onChange={event =>
-                  this.props.onEmailFieldInput(event.target.value)
-                }
+              <ContactFormElement
+                placeholderText={"Subject..."}
+                errorMsg={""}
+                id={"subjectForm"}
               />
             </div>
             <div className="form-input-elem">
@@ -67,43 +63,21 @@ class ContactComponent extends Component {
 }
 
 ContactComponent.propTypes = {
-  emailInput: PropTypes.string.isRequired,
-  nameInput: PropTypes.string.isRequired,
   messageInput: PropTypes.string.isRequired,
-  subjectInput: PropTypes.string.isRequired,
-  onNameFieldInput: PropTypes.func.isRequired,
-  onEmailFieldInput: PropTypes.func.isRequired,
   onMessageFieldInput: PropTypes.func.isRequired,
   onFormSubmitted: PropTypes.func.isRequired,
-  nameErrorMsg: PropTypes.string.isRequired,
-  emailErrorMsg: PropTypes.string.isRequired,
   msgErrorMsg: PropTypes.string.isRequired
 };
 
 const mapStateToProps = state => {
   return {
-    emailInput: state.contactsFormReducer.emailForm,
-    nameInput: state.contactsFormReducer.nameForm,
-    messageInput: state.contactsFormReducer.messageForm,
-    subjectInput: state.contactsFormReducer.subjectForm,
-    emailErrorMsg: state.contactsFormReducer.emailErrorMsg,
-    nameErrorMsg: state.contactsFormReducer.nameErrorMsg,
-    msgErrorMsg: state.contactsFormReducer.messageErrorMsg
+    msgErrorMsg: state.contactsFormReducer.messageErrorMsg,
+    messageInput: state.contactsFormReducer.messageInput
   };
 };
 
 const mapDispatchToProps = dispatch => {
   return {
-    onNameFieldInput: input =>
-      dispatch({
-        type: "NAME_FORM_UPDATE",
-        data: input
-      }),
-    onEmailFieldInput: input =>
-      dispatch({
-        type: "EMAIL_FORM_UPDATE",
-        data: input
-      }),
     onMessageFieldInput: input =>
       dispatch({
         type: "MESSAGE_FORM_UPDATE",

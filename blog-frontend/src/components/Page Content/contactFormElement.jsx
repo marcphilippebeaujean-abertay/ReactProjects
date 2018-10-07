@@ -26,7 +26,7 @@ class ContactFormElement extends Component {
           onChange={event => this.props.onFieldInput(event.target.value)}
         />
         <p className="contact-form-error">
-          {this.props.showError ? this.props.errorMsg : null}
+          {this.props.showError ? this.props.errorMsg : ""}
         </p>
       </React.Fragment>
     );
@@ -43,7 +43,6 @@ ContactFormElement.propTypes = {
 };
 
 const mapStateToProps = (state, ownProps) => {
-  console.log(ownProps.id);
   return {
     formValue: state.contactsFormReducer.forms[ownProps.id].formInput,
     showError: state.contactsFormReducer.forms[ownProps.id].showError
@@ -53,7 +52,6 @@ const mapStateToProps = (state, ownProps) => {
 const mapDispatchToProps = (dispatch, ownProps) => {
   return {
     onFieldInput: input => {
-      console.log(`form inputed: ${ownProps.id}`);
       dispatch({
         type: "FORM_INPUT_UPDATE",
         formInput: input,

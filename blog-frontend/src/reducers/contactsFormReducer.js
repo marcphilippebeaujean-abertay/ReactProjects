@@ -8,41 +8,45 @@ const formState = {
 };
 
 const defaultState = {
-  emailForm: "",
-  nameForm: "",
-  messageForm: "",
-  subjectForm: "",
-  emailErrorMsg: "",
-  nameErrorMsg: "",
+  messageInput: "",
   messageErrorMsg: "",
   forms: {
     nameForm: { ...formState },
-    emailForm: { ...formState }
+    emailForm: { ...formState },
+    subjectForm: { ...formState }
   }
 };
 
 const validInputCheck = previousState => {
   let newState = { ...previousState };
-  let validInput = true;
-  if (!previousState.emailForm.match(emailRegex)) {
-    newState.emailErrorMsg = "This E-Mail is looking strange...";
-    validInput = false;
+  let invalidInput = false;
+  for (let form in previousState.forms) {
+    let formInput = previousState.forms[form].formInput;
+    console.log(newState.forms[form]);
+    switch (form) {
+      case "nameForm":
+        console.log(nameRegex.test(formInput));
+        newState.forms[form].showError = !nameRegex.test(formInput);
+        break;
+      case "emailForm":
+        newState.forms[form].showError = !emailRegex.test(formInput);
+        break;
+      default:
+        break;
+    }
+    if (newState.forms[form].showError) {
+      invalidInput = true;
+    }
   }
-  if (previousState.nameForm.length < 6) {
-    newState.nameErrorMsg = "Please enter at least 6 digits";
-    validInput = false;
-  }
-  if (previousState.messageForm.length < minMessageLength) {
+  if (previousState.messageInput.length < minMessageLength) {
     newState.messageErrorMsg = `Please enter at least ${minMessageLength} characters`;
+    invalidInput = true;
   }
-  // TODO: Send off http data containing email info
-
-  if (validInput) {
-    // Reset the form
-    newState.emailForm = "";
-    newState.messageForm = "";
-    newState.nameForm = "";
-    newState.subjectForm = "";
+  if (invalidInput === false) {
+    newState.messageErrorMsg = "";
+    for (let form in previousState.forms) {
+      newState.forms[form].formInput = "";
+    }
   }
   return newState;
 };
@@ -51,17 +55,10 @@ const contactsFormReducer = (previousState = defaultState, action) => {
   let newState = { ...previousState };
   switch (action.type) {
     case "FORM_INPUT_UPDATE":
-      console.log(action.formId);
       newState.forms[action.formId].formInput = action.formInput;
       break;
-    case "EMAIL_FORM_UPDATE":
-      newState.emailForm = action.data;
-      break;
-    case "NAME_FORM_UPDATE":
-      newState.nameForm = action.data;
-      break;
     case "MESSAGE_FORM_UPDATE":
-      newState.messageForm = action.data;
+      newState.messageInput = action.data;
       break;
     case "FORM_SUBMIT_ATTEMPT":
       newState = validInputCheck(previousState);
