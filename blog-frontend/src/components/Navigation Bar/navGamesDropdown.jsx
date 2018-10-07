@@ -39,12 +39,15 @@ class NavGamesDropdown extends Component {
 
   render() {
     return (
-      <div id="games-dropout" onMouseLeave={() => this.props.onBtnUnhovered()}>
+      <div
+        id="games-dropout"
+        onMouseLeave={() => this.props.onBtnUnhovered()}
+        onMouseEnter={() => this.props.onBtnHovered()}
+      >
         <div
           className="nav-element project-dropdown-element"
           id="games-dropdown-div"
           onClick={this.OnDropElemClicked}
-          onMouseEnter={() => this.props.onBtnHovered()}
         >
           <p>games</p>
           <i className="arrow arrow-right" />
