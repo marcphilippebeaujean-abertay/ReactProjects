@@ -6,7 +6,6 @@ const defaultState = {
 
 const navigationReducer = (previousState = defaultState, action) => {
   let newState = { ...previousState };
-  newState.curSidebarHovered = "";
   switch (action.type) {
     case "HIDE_DROPDOWN":
       newState.dropdownShouldShow = false;
@@ -22,7 +21,7 @@ const navigationReducer = (previousState = defaultState, action) => {
       }
       break;
     case "SIDEBAR_CATEGORY_HOVERED":
-      newState.curSidebarHovered = action.curSidebarHovered;
+      newState.curSidebarHovered = action.sidebarId;
       break;
     default:
       break;

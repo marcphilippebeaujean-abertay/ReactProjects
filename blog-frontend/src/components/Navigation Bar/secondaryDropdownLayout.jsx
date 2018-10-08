@@ -4,65 +4,63 @@ import DropdownBlankSpace from "./dropdownBlankSpace";
 import { connect } from "react-redux";
 import "../../css/style.css";
 
-export default class SecondaryDropdownLayout extends Component {
+class SecondaryDropdownLayout extends Component {
+  IsSidebarHovered = () => {
+    console.log(this.props.curSidebarHovered);
+    return this.props.curSidebarHovered === this.props.sidebarId;
+  };
   render() {
-    <div
-      className="dropout-div"
-      onMouseLeave={() => this.props.onDropdownUnhovered()}
-      onMouseEnter={() => this.props.onDropdownHovered()}
-    >
+    return (
       <div
-        className="nav-element project-dropdown-element"
-        className="dropout-entry-div"
+        className="dropout-div"
+        onMouseLeave={() => this.props.onDropdownUnhovered()}
+        onMouseEnter={() => this.props.onDropdownHovered()}
       >
-        <p>{this.props.sidebarId}</p>
-        <i className="arrow arrow-right" />
+        <div className="nav-element project-dropdown-element dropout-entry-div">
+          <p>{this.props.sidebarId}</p>
+          <i className="arrow arrow-right" />
+        </div>
+        {this.IsSidebarHovered() ? (
+          <div className="scndry-dd">
+            {this.props.children}
+            <DropdownBlankSpace />
+          </div>
+        ) : null}
       </div>
-      { this.props.IsSidebarHovered() ? 
-        <div className="scndry-dd"> 
-        {props.children}
-        <DropdownBlankSpace/>
-        </div> : null }
-    </div>;
+    );
   }
 }
 
 SecondaryDropdownLayout.propTypes = {
   onDropdownHovered: PropTypes.func.isRequired,
   onDropdownUnhovered: PropTypes.func.isRequired,
-  sidebarIsHovered: PropTypes.func.isRequired,
-  sidebarId: PropTypes.string.isRequired
+  sidebarId: PropTypes.string.isRequired,
+  curSidebarHovered: PropTypes.string.isRequired
 };
 
 const mapDispatchToProps = (dispatch, ownProps) => {
-    return {
-      onDropdownHovered: () =>
-        dispatch({
-          type: "SIDEBAR_CATEGORY_HOVERED",
-          sidebarId: ownProps.sidebarId
-        }),
-      onDropdownUnhovered: () =>
-        dispatch({
-          type: "SIDEBAR_CATEGORY_UNHOVERED",
-          sidebarId: ownProps.sidebarId
-        }),
-      onBtnClicked: () =>
-        dispatch({
-          type: "HIDE_DROPDOWN",
-          exitedViaHover: false
-        })
-    };
+  return {
+    onDropdownHovered: () =>
+      dispatch({
+        type: "SIDEBAR_CATEGORY_HOVERED",
+        sidebarId: ownProps.sidebarId
+      }),
+    onDropdownUnhovered: () =>
+      dispatch({
+        type: "SIDEBAR_CATEGORY_UNHOVERED",
+        sidebarId: ownProps.sidebarId
+      })
   };
-  
-  const mapStateToProps = (state, ownProps) => {
-    return {
-      IsSidebarHovered: () => {
-          return state.curSidebarHovered === ownProps.sidebarId
-      }
-    };
+};
+
+const mapStateToProps = state => {
+  console.log(state);
+  return {
+    curSidebarHovered: state.navReducer.curSidebarHovered
   };
-  
-  export default connect(
-    mapStateToProps,
-    mapDispatchToProps
-  )(SecondaryDropdownLayout);
+};
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(SecondaryDropdownLayout);
