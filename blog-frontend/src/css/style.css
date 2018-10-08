@@ -70,8 +70,7 @@
   justify-content: center;
   text-transform: capitalize;
   text-align: center;
-  margin-top: auto 0;
-  height: 100%;
+  height: 60px;
   border: none;
   font-size: 14px;
   letter-spacing: 0.2rem;
@@ -105,16 +104,17 @@
     letter-spacing: 0px; } }
 
 .dropdown-blank-space {
-  height: 100%;
+  height: 300px;
   width: 100%;
+  margin: 0px;
+  padding: 0px;
   background-color: red; }
 
 .project-dropdown-element {
   width: 100%;
   height: 60px;
   background-color: #4dd6fc;
-  color: white;
-  margin: 0px; }
+  color: white; }
 
 .project-dropdown-element:hover {
   background-color: white;
@@ -124,7 +124,6 @@
   position: absolute;
   top: 60px;
   width: 20%;
-  letter-spacing: 0.2rem;
   flex-direction: column; }
 
 .dropdown-container {
@@ -135,7 +134,7 @@
   display: none;
   color: white;
   width: 100%;
-  height: 480px; }
+  height: 1000px; }
 
 #projects-dropdown-container:hover #projects-dropdown {
   display: flex; }
@@ -258,7 +257,7 @@
   margin-right: 20px; }
 
 #contact-message {
-  height: 91%;
+  height: 88%;
   padding: 10px;
   box-sizing: border-box;
   resize: none; }

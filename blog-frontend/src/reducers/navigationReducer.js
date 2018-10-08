@@ -10,6 +10,7 @@ const navigationReducer = (previousState = defaultState, action) => {
     case "HIDE_DROPDOWN":
       newState.dropdownShouldShow = false;
       newState.exitedViaHover = action.exitedViaHover;
+      newState.curSidebarHovered = "";
       break;
     case "SHOW_DROPDOWN":
       newState.dropdownShouldShow = true;

@@ -54,7 +54,6 @@ const mapDispatchToProps = (dispatch, ownProps) => {
 };
 
 const mapStateToProps = state => {
-  console.log(state);
   return {
     curSidebarHovered: state.navReducer.curSidebarHovered
   };

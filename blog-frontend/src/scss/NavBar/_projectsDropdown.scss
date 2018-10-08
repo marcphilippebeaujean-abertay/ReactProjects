@@ -2,8 +2,10 @@ $nr-of-project-dropdowns: 8;
 $nav-dropdown-colour: $secondry-colour; //$secondry-colour;
 
 .dropdown-blank-space {
-  height: 100%;
+  height: 300px;
   width: 100%;
+  margin: 0px;
+  padding: 0px;
   background-color: red;
   //opacity: 0;
 }
@@ -13,7 +15,6 @@ $nav-dropdown-colour: $secondry-colour; //$secondry-colour;
   height: $nav-bar-height;
   background-color: $nav-dropdown-colour;
   color: $nav-text-colour;
-  margin: 0px;
 }
 
 .project-dropdown-element:hover {
@@ -24,7 +25,6 @@ $nav-dropdown-colour: $secondry-colour; //$secondry-colour;
   position: absolute;
   top: $nav-bar-height;
   width: $nav-element-width;
-  letter-spacing: $widget-letter-spacing;
   flex-direction: column;
 }
 
@@ -37,7 +37,7 @@ $nav-dropdown-colour: $secondry-colour; //$secondry-colour;
   display: none;
   color: $nav-text-colour;
   width: 100%;
-  height: $nav-bar-height * $nr-of-project-dropdowns; // Adjust nav-dropdown-vertical height when adding elements
+  height: 1000px; // Adjust nav-dropdown-vertical height when adding elements
 }
 
 #projects-dropdown-container:hover #projects-dropdown {

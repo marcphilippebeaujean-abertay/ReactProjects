@@ -1,12 +1,9 @@
 import React, { Component } from "react";
 import DropdownButton from "./dropdownButton";
-import DropdownBlankSpace from "./dropdownBlankSpace";
 import SecondaryDropdownLayout from "./secondaryDropdownLayout";
 import "../../css/style.css";
 import SheTownLogo from "../../media/she-town-player.png";
 import { Link } from "react-router-dom";
-
-const sidebarId = "games";
 
 export default class NavGamesDropdown extends Component {
   render() {
@@ -26,7 +23,6 @@ export default class NavGamesDropdown extends Component {
         <DropdownButton styleId="indestructible-dropdown">
           <p>indestructible</p>
         </DropdownButton>
-        <DropdownBlankSpace />
       </SecondaryDropdownLayout>
     );
   }
