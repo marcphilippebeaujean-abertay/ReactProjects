@@ -110,8 +110,7 @@
   margin: 0px;
   padding: 0px;
   background-color: red;
-  clear: both;
-  overflow: hidden; }
+  opacity: 0; }
 
 .project-dropdown-element {
   width: 100%;
@@ -151,13 +150,45 @@
   background: white;
   color: #4dd6fc; }
 
+.scndry-dd-top-padding-0 {
+  top: 0px; }
+
+.scndry-dd-top-padding-1 {
+  top: 60px; }
+
+.scndry-dd-top-padding-2 {
+  top: 120px; }
+
+.scndry-dd-top-padding-3 {
+  top: 180px; }
+
+.scndry-dd-top-padding-4 {
+  top: 240px; }
+
+.scndry-dd-top-padding-5 {
+  top: 300px; }
+
+.scndry-dd-top-padding-6 {
+  top: 360px; }
+
+.scndry-dd-top-padding-7 {
+  top: 420px; }
+
+.scndry-dd-top-padding-8 {
+  top: 480px; }
+
+.scndry-dd-top-padding-9 {
+  top: 540px; }
+
+.scndry-dd-top-padding-10 {
+  top: 600px; }
+
 .scndry-dd {
   display: flex;
   position: absolute;
   flex-direction: column;
   width: 100%;
   height: 1000px;
-  top: 0%;
   left: 100%; }
 
 .scndry-dd:after {

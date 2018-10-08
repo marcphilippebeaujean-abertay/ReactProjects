@@ -5,6 +5,9 @@ import { connect } from "react-redux";
 import "../../css/style.css";
 
 class SecondaryDropdownLayout extends Component {
+  componentDidMount() {
+    this.props.onDropdownMounted();
+  }
   IsSidebarHovered = () => {
     return this.props.curSidebarHovered === this.props.sidebarId;
   };
@@ -20,7 +23,9 @@ class SecondaryDropdownLayout extends Component {
           <i className="arrow arrow-right" />
         </div>
         {this.IsSidebarHovered() ? (
-          <div className="scndry-dd">
+          <div
+            className={`scndry-dd scndry-dd-top-padding-${this.props.getDropdownHeight()}`}
+          >
             {this.props.children}
             <DropdownBlankSpace />
           </div>
@@ -34,7 +39,8 @@ SecondaryDropdownLayout.propTypes = {
   onDropdownHovered: PropTypes.func.isRequired,
   onDropdownUnhovered: PropTypes.func.isRequired,
   sidebarId: PropTypes.string.isRequired,
-  curSidebarHovered: PropTypes.string.isRequired
+  curSidebarHovered: PropTypes.string.isRequired,
+  getDropdownHeight: PropTypes.func.isRequired
 };
 
 const mapDispatchToProps = (dispatch, ownProps) => {
@@ -48,13 +54,21 @@ const mapDispatchToProps = (dispatch, ownProps) => {
       dispatch({
         type: "SIDEBAR_CATEGORY_UNHOVERED",
         sidebarId: ownProps.sidebarId
+      }),
+    onDropdownMounted: () =>
+      dispatch({
+        type: "ON_DROPDOWN_MOUNTED",
+        sidebarId: ownProps.sidebarId
       })
   };
 };
 
-const mapStateToProps = state => {
+const mapStateToProps = (state, ownProps) => {
   return {
-    curSidebarHovered: state.navReducer.curSidebarHovered
+    curSidebarHovered: state.navReducer.curSidebarHovered,
+    getDropdownHeight: () => {
+      return state.navReducer.mountedDropdowns.indexOf(ownProps.sidebarId);
+    }
   };
 };
 

@@ -1,7 +1,8 @@
 const defaultState = {
   dropdownShouldShow: false,
   exitedViaHover: true,
-  curSidebarHovered: ""
+  curSidebarHovered: "",
+  mountedDropdowns: []
 };
 
 const navigationReducer = (previousState = defaultState, action) => {
@@ -24,7 +25,15 @@ const navigationReducer = (previousState = defaultState, action) => {
     case "SIDEBAR_CATEGORY_HOVERED":
       newState.curSidebarHovered = action.sidebarId;
       break;
+    case "ON_DROPDOWN_MOUNTED":
+      let newMountedDropdowns = [
+        ...previousState.mountedDropdowns,
+        action.sidebarId
+      ];
+      newState.mountedDropdowns = newMountedDropdowns;
+      break;
     default:
+      console.log("undefined action type called");
       break;
   }
   return newState;
