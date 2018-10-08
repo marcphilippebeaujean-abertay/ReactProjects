@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
+import DropdownBlankSpace from "./dropdownBlankSpace";
 import { connect } from "react-redux";
 import "../../css/style.css";
 
@@ -20,7 +21,8 @@ export default class SecondaryDropdownLayout extends Component {
       { this.props.IsSidebarHovered() ? 
         <div className="scndry-dd"> 
         {props.children}
-        </div> : null}
+        <DropdownBlankSpace/>
+        </div> : null }
     </div>;
   }
 }

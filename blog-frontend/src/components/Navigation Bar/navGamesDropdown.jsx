@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import PropTypes from "prop-types";
 import DropdownButton from "./dropdownButton";
+import DropdownBlankSpace from "./dropdownBlankSpace";
 import "../../css/style.css";
 import SheTownLogo from "../../media/she-town-player.png";
 import { Link } from "react-router-dom";
@@ -26,6 +27,7 @@ class NavGamesDropdown extends Component {
         <DropdownButton styleId="indestructible-dropdown">
           <p>indestructible</p>
         </DropdownButton>
+        <DropdownBlankSpace />
       </div>
     ) : null;
   };
@@ -52,7 +54,6 @@ class NavGamesDropdown extends Component {
 }
 
 NavGamesDropdown.propTypes = {
-  onBtnClicked: PropTypes.func.isRequired,
   onBtnHovered: PropTypes.func.isRequired,
   onBtnUnhovered: PropTypes.func.isRequired,
   curSidebarHovered: PropTypes.string.isRequired
@@ -60,11 +61,6 @@ NavGamesDropdown.propTypes = {
 
 const mapDispatchToProps = (dispatch, ownProps) => {
   return {
-    onBtnClicked: () =>
-      dispatch({
-        type: "HIDE_DROPDOWN",
-        exitedViaHover: false
-      }),
     onBtnHovered: () =>
       dispatch({
         type: "SIDEBAR_CATEGORY_HOVERED",
