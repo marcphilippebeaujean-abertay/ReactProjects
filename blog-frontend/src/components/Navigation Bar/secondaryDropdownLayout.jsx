@@ -6,7 +6,6 @@ import "../../css/style.css";
 
 class SecondaryDropdownLayout extends Component {
   IsSidebarHovered = () => {
-    console.log(this.props.curSidebarHovered);
     return this.props.curSidebarHovered === this.props.sidebarId;
   };
   render() {

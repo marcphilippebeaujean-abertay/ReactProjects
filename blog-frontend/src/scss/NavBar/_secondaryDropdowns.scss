@@ -22,6 +22,10 @@ $scndry-bg-colour: $outline-colour; //$outline-colour;
   left: 100%;
 }
 
+.scndry-dd:after {
+  overflow: hidden;
+}
+
 .scndry-dd:hover {
   display: flex;
 }

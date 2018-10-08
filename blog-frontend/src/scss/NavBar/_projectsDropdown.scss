@@ -2,11 +2,14 @@ $nr-of-project-dropdowns: 8;
 $nav-dropdown-colour: $secondry-colour; //$secondry-colour;
 
 .dropdown-blank-space {
-  height: 300px;
+  display: inline-block;
+  height: 100vh;
   width: 100%;
   margin: 0px;
   padding: 0px;
   background-color: red;
+  clear: both;
+  overflow: hidden;
   //opacity: 0;
 }
 
