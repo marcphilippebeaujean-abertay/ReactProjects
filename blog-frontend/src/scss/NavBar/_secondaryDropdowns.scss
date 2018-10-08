@@ -1,0 +1,33 @@
+$games-dropdown-element-nr: 2;
+$scndry-bg-colour: $outline-colour; //$outline-colour;
+
+.dropout-div {
+  height: $nav-bar-height;
+  width: 100%;
+  margin: 0px;
+}
+.dropout-div:hover .dropout-entry-div {
+  background: $nav-text-colour;
+  color: $nav-dropdown-colour;
+}
+
+.scndry-dd {
+  display: flex;
+  position: absolute;
+  flex-direction: column;
+  width: 100%;
+  top: 0%;
+  left: 100%;
+}
+
+.scndry-dd:hover {
+  display: flex;
+}
+
+.scndry-dd-elem {
+  background: $scndry-bg-colour;
+}
+
+#secondary-dropdown-container {
+  width: $nav-element-width;
+}

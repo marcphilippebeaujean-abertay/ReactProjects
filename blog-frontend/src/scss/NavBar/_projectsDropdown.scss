@@ -1,0 +1,38 @@
+$nr-of-project-dropdowns: 3;
+$nav-dropdown-colour: $secondry-colour; //$secondry-colour;
+
+.project-dropdown-element {
+  width: 100%;
+  height: $nav-bar-height;
+  background-color: $nav-dropdown-colour;
+  color: $nav-text-colour;
+  margin: 0px;
+}
+
+.project-dropdown-element:hover {
+  background-color: $nav-text-colour;
+  color: $nav-dropdown-colour;
+}
+.dropdown-vertical {
+  position: absolute;
+  top: $nav-bar-height;
+  width: $nav-element-width;
+  letter-spacing: $widget-letter-spacing;
+  flex-direction: column;
+}
+
+.dropdown-container {
+  position: relative;
+  overflow: visible;
+}
+
+#projects-dropdown {
+  display: none;
+  color: $nav-text-colour;
+  width: 100%;
+  height: $nav-bar-height * $nr-of-project-dropdowns; // Adjust nav-dropdown-vertical height when adding elements
+}
+
+#projects-dropdown-container:hover #projects-dropdown {
+  display: flex;
+}

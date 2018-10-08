@@ -6,27 +6,58 @@ import "../../css/style.css";
 export default class SecondaryDropdownLayout extends Component {
   render() {
     <div
-      id="games-dropout"
-      onMouseLeave={() => this.props.onBtnUnhovered()}
-      onMouseEnter={() => this.props.onBtnHovered()}
+      className="dropout-div"
+      onMouseLeave={() => this.props.onDropdownUnhovered()}
+      onMouseEnter={() => this.props.onDropdownHovered()}
     >
       <div
         className="nav-element project-dropdown-element"
-        id="games-dropdown-div"
-        onClick={this.OnDropElemClicked}
+        className="dropout-entry-div"
       >
         <p>{this.props.sidebarId}</p>
         <i className="arrow arrow-right" />
       </div>
-      {this.renderSidebar()}
+      {this.props.IsSidebarHovered() ? props.children : null}
     </div>;
   }
 }
 
 SecondaryDropdownLayout.propTypes = {
-  onBtnHovered: PropTypes.func.isRequired,
-  onBtnUnhovered: PropTypes.func.isRequired,
+  onDropdownHovered: PropTypes.func.isRequired,
+  onDropdownUnhovered: PropTypes.func.isRequired,
   sidebarIsHovered: PropTypes.func.isRequired,
-  sidebarId: PropTypes.string.isRequired,
-  dropdownElements: PropTypes.object.isRequired
+  sidebarId: PropTypes.string.isRequired
 };
+
+const mapDispatchToProps = (dispatch, ownProps) => {
+    return {
+      onDropdownHovered: () =>
+        dispatch({
+          type: "SIDEBAR_CATEGORY_HOVERED",
+          sidebarId: ownProps.sidebarId
+        }),
+      onDropdownUnhovered: () =>
+        dispatch({
+          type: "SIDEBAR_CATEGORY_UNHOVERED",
+          sidebarId: ownProps.sidebarId
+        }),
+      onBtnClicked: () =>
+        dispatch({
+          type: "HIDE_DROPDOWN",
+          exitedViaHover: false
+        })
+    };
+  };
+  
+  const mapStateToProps = (state, ownProps) => {
+    return {
+      IsSidebarHovered: () => {
+          return state.curSidebarHovered === ownProps.sidebarId
+      }
+    };
+  };
+  
+  export default connect(
+    mapStateToProps,
+    mapDispatchToProps
+  )(SecondaryDropdownLayout);

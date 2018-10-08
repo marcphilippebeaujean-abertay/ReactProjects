@@ -1,7 +1,10 @@
 @import "varsMain";
 @import "app";
 @import "NavBar/navBar";
+@import "NavBar/projectsDropdown";
 @import "NavBar/gamesDropdown";
+@import "NavBar/secondaryDropdowns";
+@import "NavBar/dropdownArrows";
 @import "PageContent/contact";
 @import "PageContent/blogPost";
 @import "socialMedia";
@@ -11,4 +14,8 @@ body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
+}
+
+.btn-div {
+  cursor: pointer;
 }

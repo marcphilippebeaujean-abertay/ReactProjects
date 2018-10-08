@@ -89,31 +89,32 @@
   background-color: white;
   color: #2caccf; }
 
-.arrow-down {
-  transform: rotate(45deg);
-  -webkit-transform: rotate(45deg); }
+.dropdown-blank-space {
+  height: 100%;
+  width: 100%;
+  background-color: red; }
 
-.arrow-right {
-  transform: rotate(-45deg);
-  -webkit-transform: rotate(-45deg); }
+@media only screen and (max-width: 1400px) {
+  .nav-left-element {
+    border-radius: 0px; }
+  #nav-right-element {
+    border-radius: 0px; } }
 
-.arrow {
-  border-color: #245866;
-  border-style: solid;
-  border-width: 0 3px 3px 0;
-  display: inline-block;
-  position: absolute;
-  right: 15%;
-  padding: 3px;
-  -webkit-transition: border-color 0.5s;
-  /* Safari */
-  transition: border-color 0.5s; }
+@media only screen and (max-width: 1200px) {
+  .arrow {
+    display: none; } }
+
+@media only screen and (max-width: 400px) {
+  .nav-element {
+    font-size: 12px;
+    letter-spacing: 0px; } }
 
 .project-dropdown-element {
   width: 100%;
   height: 60px;
   background-color: #4dd6fc;
-  color: white; }
+  color: white;
+  margin: 0px; }
 
 .project-dropdown-element:hover {
   background-color: white;
@@ -138,49 +139,6 @@
 
 #projects-dropdown-container:hover #projects-dropdown {
   display: flex; }
-
-#secondary-dropdown-container {
-  width: 20%; }
-
-.scndry-dd {
-  display: flex;
-  position: absolute;
-  flex-direction: column;
-  width: 100%;
-  top: 0%;
-  left: 100%; }
-
-.scndry-dd:hover {
-  display: flex; }
-
-.scndry-dd-elem {
-  background: #dadada; }
-
-.btn-div {
-  cursor: pointer; }
-
-@media only screen and (max-width: 1400px) {
-  .nav-left-element {
-    border-radius: 0px; }
-  #nav-right-element {
-    border-radius: 0px; } }
-
-@media only screen and (max-width: 1200px) {
-  .arrow {
-    display: none; } }
-
-@media only screen and (max-width: 400px) {
-  .nav-element {
-    font-size: 12px;
-    letter-spacing: 0px; } }
-
-#games-dropdown {
-  height: 120px;
-  width: 100%; }
-
-#games-dropout:hover #games-dropdown-div {
-  background: white;
-  color: #4dd6fc; }
 
 #she-town-text {
   font-family: "Press Start 2P", Arial, Helvetica, sans-serif;
@@ -208,6 +166,52 @@
   .nav-element {
     font-size: 12px;
     letter-spacing: 0px; } }
+
+.dropout-div {
+  height: 60px;
+  width: 100%;
+  margin: 0px; }
+
+.dropout-div:hover .dropout-entry-div {
+  background: white;
+  color: #4dd6fc; }
+
+.scndry-dd {
+  display: flex;
+  position: absolute;
+  flex-direction: column;
+  width: 100%;
+  top: 0%;
+  left: 100%; }
+
+.scndry-dd:hover {
+  display: flex; }
+
+.scndry-dd-elem {
+  background: #dadada; }
+
+#secondary-dropdown-container {
+  width: 20%; }
+
+.arrow-down {
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg); }
+
+.arrow-right {
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg); }
+
+.arrow {
+  border-color: #245866;
+  border-style: solid;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  position: absolute;
+  right: 15%;
+  padding: 3px;
+  -webkit-transition: border-color 0.5s;
+  /* Safari */
+  transition: border-color 0.5s; }
 
 #contacts-header-div {
   letter-spacing: 0.1rem;
@@ -412,3 +416,6 @@ body {
   margin: 0;
   padding: 0;
   font-family: sans-serif; }
+
+.btn-div {
+  cursor: pointer; }

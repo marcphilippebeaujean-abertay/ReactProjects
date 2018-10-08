@@ -5,12 +5,12 @@ import "../../css/style.css";
 import SheTownLogo from "../../media/she-town-player.png";
 import { Link } from "react-router-dom";
 
-const sidebarID = "games";
+const sidebarId = "games";
 
 class NavGamesDropdown extends Component {
   renderSidebar = () => {
-    return this.props.curSidebarHovered === sidebarID ? (
-      <div className="scndry-dd" id="games-dropdown">
+    return this.props.curSidebarHovered === sidebarId ? (
+      <div className="scndry-dd">
         <Link to="/she-town" style={{ textDecoration: "none" }}>
           <div
             className="nav-element project-dropdown-element scndry-dd-elem btn-div"
@@ -40,13 +40,13 @@ class NavGamesDropdown extends Component {
   render() {
     return (
       <div
-        id="games-dropout"
+        className="dropout-div"
         onMouseLeave={() => this.props.onBtnUnhovered()}
         onMouseEnter={() => this.props.onBtnHovered()}
       >
         <div
           className="nav-element project-dropdown-element"
-          id="games-dropdown-div"
+          id="dropout-entry-div"
           onClick={this.OnDropElemClicked}
         >
           <p>games</p>
@@ -75,12 +75,12 @@ const mapDispatchToProps = (dispatch, ownProps) => {
     onBtnHovered: () =>
       dispatch({
         type: "SIDEBAR_CATEGORY_HOVERED",
-        curSidebarHovered: sidebarID
+        curSidebarHovered: sidebarId
       }),
     onBtnUnhovered: () =>
       dispatch({
         type: "SIDEBAR_CATEGORY_UNHOVERED",
-        sidebarID: sidebarID
+        sidebarId: sidebarId
       })
   };
 };

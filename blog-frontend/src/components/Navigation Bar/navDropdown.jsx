@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import NavGamesDropdown from "./navGamesDropdown";
+import DropdownBlankSpace from "./dropdownBlankSpace";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import "../../css/style.css";
@@ -9,12 +10,7 @@ class NavDropDown extends Component {
     return this.props.dropdownShouldShow ? (
       <div className="dropdown-vertical" id="projects-dropdown">
         <NavGamesDropdown />
-        <div className="nav-element project-dropdown-element">
-          <p>web</p>
-        </div>
-        <div className="nav-element project-dropdown-element">
-          <p>software</p>
-        </div>
+        <DropdownBlankSpace />
       </div>
     ) : null;
   }

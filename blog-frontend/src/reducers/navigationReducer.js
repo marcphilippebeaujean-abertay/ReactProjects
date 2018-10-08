@@ -17,7 +17,7 @@ const navigationReducer = (previousState = defaultState, action) => {
       newState.exitedViaHover = true;
       break;
     case "SIDEBAR_CATEGORY_UNHOVERED":
-      if (previousState.curSidebarHovered === action.sidebarID) {
+      if (previousState.curSidebarHovered === action.sidebarId) {
         newState.curSidebarHovered = "";
       }
       break;

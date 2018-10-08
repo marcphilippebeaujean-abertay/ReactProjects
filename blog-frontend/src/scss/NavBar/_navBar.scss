@@ -1,16 +1,11 @@
 @import "varsMain";
 
 $nav-bg-colour: $main-colour;
-$nav-dropdown-colour: $secondry-colour; //$secondry-colour;
-$nav-arrow-colour: #245866;
 $nav-text-colour: white;
-$scndry-bg-colour: $outline-colour; //$outline-colour;
 $nav-border-radius: 25px;
 $nav-bar-height: 60px;
 $nav-bar-top-padding: 11px;
 $nav-element-width: 20%;
-$nr-of-project-dropdowns: 3;
-$games-dropdown-element-nr: 2;
 
 #nav-div {
   position: relative;
@@ -65,86 +60,10 @@ $games-dropdown-element-nr: 2;
   color: $nav-bg-colour; //rgb(139, 139, 139);
 }
 
-.arrow-down {
-  transform: rotate(45deg);
-  -webkit-transform: rotate(45deg);
-}
-
-.arrow-right {
-  transform: rotate(-45deg);
-  -webkit-transform: rotate(-45deg);
-}
-
-.arrow {
-  border-color: $nav-arrow-colour;
-  border-style: solid;
-  border-width: 0 3px 3px 0;
-  display: inline-block;
-  position: absolute;
-  right: 15%;
-  padding: 3px;
-  -webkit-transition: border-color $hover-transition-speed; /* Safari */
-  transition: border-color $hover-transition-speed;
-}
-
-.project-dropdown-element {
+.dropdown-blank-space {
+  height: 100%;
   width: 100%;
-  height: $nav-bar-height;
-  background-color: $nav-dropdown-colour;
-  color: $nav-text-colour;
-}
-
-.project-dropdown-element:hover {
-  background-color: $nav-text-colour;
-  color: $nav-dropdown-colour;
-}
-.dropdown-vertical {
-  position: absolute;
-  top: $nav-bar-height;
-  width: $nav-element-width;
-  letter-spacing: $widget-letter-spacing;
-  flex-direction: column;
-}
-
-.dropdown-container {
-  position: relative;
-  overflow: visible;
-}
-
-#projects-dropdown {
-  display: none;
-  color: $nav-text-colour;
-  width: 100%;
-  height: $nav-bar-height * $nr-of-project-dropdowns; // Adjust nav-dropdown-vertical height when adding elements
-}
-
-#projects-dropdown-container:hover #projects-dropdown {
-  display: flex;
-}
-
-#secondary-dropdown-container {
-  width: $nav-element-width;
-}
-
-.scndry-dd {
-  display: flex;
-  position: absolute;
-  flex-direction: column;
-  width: 100%;
-  top: 0%;
-  left: 100%;
-}
-
-.scndry-dd:hover {
-  display: flex;
-}
-
-.scndry-dd-elem {
-  background: $scndry-bg-colour;
-}
-
-.btn-div {
-  cursor: pointer;
+  background-color: red;
 }
 
 @media only screen and (max-width: 1400px) {
