@@ -17,7 +17,10 @@ export default class SecondaryDropdownLayout extends Component {
         <p>{this.props.sidebarId}</p>
         <i className="arrow arrow-right" />
       </div>
-      {this.props.IsSidebarHovered() ? props.children : null}
+      { this.props.IsSidebarHovered() ? 
+        <div className="scndry-dd"> 
+        {props.children}
+        </div> : null}
     </div>;
   }
 }

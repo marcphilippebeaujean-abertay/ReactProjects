@@ -60,12 +60,6 @@ $nav-element-width: 20%;
   color: $nav-bg-colour; //rgb(139, 139, 139);
 }
 
-.dropdown-blank-space {
-  height: 100%;
-  width: 100%;
-  background-color: red;
-}
-
 @media only screen and (max-width: 1400px) {
   .nav-left-element {
     border-radius: 0px;

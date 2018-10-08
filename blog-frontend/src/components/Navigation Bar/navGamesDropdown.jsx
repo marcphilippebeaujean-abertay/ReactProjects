@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import PropTypes from "prop-types";
+import DropdownButton from "./dropdownButton";
 import "../../css/style.css";
 import SheTownLogo from "../../media/she-town-player.png";
 import { Link } from "react-router-dom";
@@ -12,11 +13,7 @@ class NavGamesDropdown extends Component {
     return this.props.curSidebarHovered === sidebarId ? (
       <div className="scndry-dd">
         <Link to="/she-town" style={{ textDecoration: "none" }}>
-          <div
-            className="nav-element project-dropdown-element scndry-dd-elem btn-div"
-            id="she-town-dropdown"
-            onClick={() => this.props.onBtnClicked()}
-          >
+          <DropdownButton styleId="she-town-dropdown">
             <img
               src={SheTownLogo}
               alt="Character from She-Town"
@@ -24,15 +21,11 @@ class NavGamesDropdown extends Component {
               id="she-town-logo"
             />
             <p id="she-town-text">she-town</p>
-          </div>
+          </DropdownButton>
         </Link>
-        <div
-          className="nav-element project-dropdown-element scndry-dd-elem btn-div"
-          id="indestructible-dropdown"
-          onClick={() => this.props.onBtnClicked()}
-        >
+        <DropdownButton styleId="indestructible-dropdown">
           <p>indestructible</p>
-        </div>
+        </DropdownButton>
       </div>
     ) : null;
   };

@@ -1,6 +1,13 @@
 $nr-of-project-dropdowns: 8;
 $nav-dropdown-colour: $secondry-colour; //$secondry-colour;
 
+.dropdown-blank-space {
+  height: 100%;
+  width: 100%;
+  background-color: red;
+  //opacity: 0;
+}
+
 .project-dropdown-element {
   width: 100%;
   height: $nav-bar-height;
