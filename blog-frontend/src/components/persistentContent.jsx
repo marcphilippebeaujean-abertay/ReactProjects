@@ -8,6 +8,7 @@ export default class PersistentContentComponent extends Component {
     return (
       <div>
         <NavBar />
+        <div id="navbar-spacing" />
         <SocialMediaSidebar />
       </div>
     );
