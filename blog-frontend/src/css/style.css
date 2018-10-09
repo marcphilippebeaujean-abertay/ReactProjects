@@ -259,7 +259,12 @@
   cursor: pointer; }
 
 .about-list-keypoints {
+  padding-left: 15px;
   text-align: initial; }
+
+.flag {
+  height: 10px;
+  width: 20px; }
 
 #contacts-header-div {
   letter-spacing: 0.1rem;
