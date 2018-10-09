@@ -43,6 +43,13 @@ export default class AboutInfoBar extends Component {
               </li>
             </ul>
           </div>
+          <h3>About This Website</h3>
+          <div className="about-infotext-main">
+            <ul className="about-list-keypoints">
+              <li>Frontend Tech: JavaScript, ReactJS, Redux, Sass</li>
+              <li>Backend Tech: Python, Django, SQLite</li>
+            </ul>
+          </div>
         </ReadMoreToggle>
       </div>
     );
