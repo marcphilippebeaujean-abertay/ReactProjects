@@ -18,10 +18,6 @@
   box-sizing: border-box;
   margin: 0 10px; }
 
-#about-infotext-main {
-  font-size: 13px;
-  color: rgba(65, 64, 64, 0.692); }
-
 .page-main-text {
   text-align: justify; }
 
@@ -250,12 +246,20 @@
   .arrow {
     display: none; } }
 
+.about-infotext-main {
+  font-size: 13px;
+  color: rgba(65, 64, 64, 0.692); }
+
 .content-show-toggle-btn {
+  display: inline-block;
   color: blue; }
 
 .content-show-toggle-btn:hover {
   text-decoration: underline;
   cursor: pointer; }
+
+.about-list-keypoints {
+  text-align: initial; }
 
 #contacts-header-div {
   letter-spacing: 0.1rem;
@@ -301,7 +305,7 @@
   margin-right: 20px; }
 
 #contact-message {
-  height: 88%;
+  height: 89%;
   padding: 10px;
   box-sizing: border-box;
   resize: none; }
