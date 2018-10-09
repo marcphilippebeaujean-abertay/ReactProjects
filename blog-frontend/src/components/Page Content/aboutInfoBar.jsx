@@ -38,6 +38,9 @@ export default class AboutInfoBar extends Component {
                 University: Abertay University{" "}
                 <img src={ScottischFlag} alt="Scotland" className="flag" />
               </li>
+              <li>
+                Employment Status: <b>Looking for job!</b>
+              </li>
             </ul>
           </div>
         </ReadMoreToggle>
