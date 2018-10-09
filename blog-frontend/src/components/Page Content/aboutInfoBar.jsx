@@ -7,23 +7,16 @@ export default class AboutInfoBar extends Component {
       <div>
         <h2 className="blog-post-header">About</h2>
         <p id="about-infotext-main">
-          My name is Marc Philippe Beaujean, welcome to my web page and personal
-          blog (coded and depolyed from scratch with leading frameworks and
-          technologies like ReactJS, Redux and Django)! I am currently studying
-          at Abertay University in Scotland and looking for a job as a games,
-          web or software developer. <br />
-          <br /> I began my coding career as a game developer, by making games
-          at University and during a multitude of game jams. Since I began
-          programming in an education environment in 2015, I have learned and
-          mastered three distinct languages: C++, Python and JavaScript.
-          Nowadays, my skills are not only limited to game development, as I
-          have dabbled into various areas of computing, ranging from front and
-          back-end web development to machine learning (a topic I am very
-          passionate about and currently dedicating my dissertation to).
-          <br /> <br />
-          On my page, you will find information in the form of blog posts, links
-          to most of my projects, and a downloadable resume. I hope you enjoy
-          your stay!
+          Hi! My name is Marc Philippe Beaujean, welcome to my web page and
+          personal blog. I code things, like games, websites and software. I'm
+          also a huge fan of statistics and machine learning. <br />
+          <br /> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat. Duis aute irure dolor in
+          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+          culpa qui officia deserunt mollit anim id est laborum.
         </p>
       </div>
     );

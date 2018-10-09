@@ -14,9 +14,11 @@ class ContactFormElement extends Component {
           value={this.props.formValue}
           onChange={event => this.props.onFieldInput(event.target.value)}
         />
-        <p className="contact-form-error">
-          {this.props.showError ? this.props.errorMsg : ""}
-        </p>
+        {this.props.errorMsg !== "" ? (
+          <p className="contact-form-error">
+            {this.props.showError ? this.props.errorMsg : ""}
+          </p>
+        ) : null}
       </React.Fragment>
     );
   }
