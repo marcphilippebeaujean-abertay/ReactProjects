@@ -315,7 +315,7 @@
   margin-right: 20px; }
 
 #contact-message {
-  height: 89%;
+  height: 89.5%;
   padding: 10px;
   box-sizing: border-box;
   resize: none; }
@@ -362,9 +362,12 @@
     margin-bottom: 20px; }
   #contact-message {
     padding: 10px 0px;
+    padding-left: 5px;
     height: 300px; }
   .small-form-elem {
     padding: 10px 0px;
+    padding-left: 5px;
+    box-sizing: border-box;
     width: 100%; } }
 
 @media only screen and (max-width: 380px) {
