@@ -68,12 +68,6 @@ $nav-element-width: 20%;
   }
 }
 
-@media only screen and (max-width: 1200px) {
-  .arrow {
-    display: none;
-  }
-}
-
 @media only screen and (max-width: 400px) {
   .nav-element {
     font-size: 12px;

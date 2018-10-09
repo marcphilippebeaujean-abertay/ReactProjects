@@ -21,3 +21,9 @@ $nav-arrow-colour: #245866;
   -webkit-transition: border-color $hover-transition-speed; /* Safari */
   transition: border-color $hover-transition-speed;
 }
+
+@media only screen and (max-width: 1200px) {
+  .arrow {
+    display: none;
+  }
+}

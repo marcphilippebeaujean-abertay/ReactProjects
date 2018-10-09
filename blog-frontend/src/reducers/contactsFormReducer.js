@@ -30,7 +30,10 @@ const validInputCheck = previousState => {
       case "emailForm":
         newState.forms[form].showError = !emailRegex.test(formInput);
         break;
+      case "subjectForm":
+        break;
       default:
+        console.log(`undefined form during submit: ${form}`);
         break;
     }
     if (newState.forms[form].showError) {
@@ -54,7 +57,11 @@ const contactsFormReducer = (previousState = defaultState, action) => {
   let newState = { ...previousState };
   switch (action.type) {
     case "FORM_INPUT_UPDATE":
-      newState.forms[action.formId].formInput = action.formInput;
+      if (!newState.forms.hasOwnProperty(action.formId)) {
+        console.log(`undefined form input: ${action.formId}`);
+      } else {
+        newState.forms[action.formId].formInput = action.formInput;
+      }
       break;
     case "MESSAGE_FORM_UPDATE":
       newState.messageInput = action.data;

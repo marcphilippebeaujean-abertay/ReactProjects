@@ -33,7 +33,6 @@ const navigationReducer = (previousState = defaultState, action) => {
       newState.mountedDropdowns = newMountedDropdowns;
       break;
     default:
-      console.log("undefined action type called");
       break;
   }
   return newState;

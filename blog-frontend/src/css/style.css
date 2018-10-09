@@ -94,10 +94,6 @@
   #nav-right-element {
     border-radius: 0px; } }
 
-@media only screen and (max-width: 1200px) {
-  .arrow {
-    display: none; } }
-
 @media only screen and (max-width: 400px) {
   .nav-element {
     font-size: 12px;
@@ -249,6 +245,17 @@
   -webkit-transition: border-color 0.5s;
   /* Safari */
   transition: border-color 0.5s; }
+
+@media only screen and (max-width: 1200px) {
+  .arrow {
+    display: none; } }
+
+.content-show-toggle-btn {
+  color: blue; }
+
+.content-show-toggle-btn:hover {
+  text-decoration: underline;
+  cursor: pointer; }
 
 #contacts-header-div {
   letter-spacing: 0.1rem;
