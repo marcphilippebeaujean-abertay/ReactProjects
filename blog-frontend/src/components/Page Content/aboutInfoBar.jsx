@@ -9,7 +9,7 @@ export default class AboutInfoBar extends Component {
   render() {
     return (
       <div className="about-infotext-main">
-        <h2 className="blog-post-header about-header">About</h2>
+        <h1 className="blog-post-header about-header">About</h1>
         <p className="about-infotext-main">
           Hi! My name is Marc Philippe Beaujean, welcome to my web page and
           personal blog. I code things - more specifically: games, websites and
@@ -17,7 +17,7 @@ export default class AboutInfoBar extends Component {
           learning.{" "}
         </p>
         <ReadMoreToggle contentId="aboutInfo">
-          <h3 className="blog-post-header about-header">About Me</h3>
+          <h2 className="blog-post-header about-header">About Me</h2>
           <div>
             <ul className="about-list-keypoints">
               <li>
@@ -45,7 +45,7 @@ export default class AboutInfoBar extends Component {
               </li>
             </ul>
           </div>
-          <h3 className="blog-post-header about-header">About This Website</h3>
+          <h2 className="blog-post-header about-header">About This Website</h2>
           <div className="about-infotext-main">
             <ul className="about-list-keypoints">
               <li>Frontend Tech: JavaScript, ReactJS, Redux, Sass</li>

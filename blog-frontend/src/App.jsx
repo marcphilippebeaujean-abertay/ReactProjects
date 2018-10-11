@@ -25,12 +25,12 @@ class App extends Component {
                 <Route path="/she-town" component={SheTown} />
                 <Route path="/react-calculator" component={ReactCalculator} />
                 <Route path="/contact" component={ContactComponent} />
+                <div id="extra-space" />
               </div>
               <div id="right-info-sidebar">
                 <Route path="/" component={AboutInfoBar} />
               </div>
             </div>
-            <div id="extra-space" />
           </div>
         </BrowserRouter>
       </Provider>
