@@ -8,7 +8,7 @@ class ReadMoreToggle extends Component {
     return (
       <div>
         {this.props.shouldDisplayInfo ? (
-          <div>
+          <div className="on-load-fade-in">
             {this.props.children}
             <p
               className="content-show-toggle-btn"

@@ -8,9 +8,9 @@ export default class NavWebDropdown extends Component {
   render() {
     return (
       <SecondaryDropdownLayout sidebarId="web">
-        <Link to="/she-town" style={{ textDecoration: "none" }}>
+        <Link to="/react-calculator" style={{ textDecoration: "none" }}>
           <DropdownButton styleId="react-calculator">
-            <p id="she-town-text">React Calculator</p>
+            <p>React Calculator</p>
           </DropdownButton>
         </Link>
       </SecondaryDropdownLayout>

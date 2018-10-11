@@ -8,6 +8,7 @@ import { Provider } from "react-redux";
 import PersistentContentComponent from "./components/persistentContent";
 import MainBlogComponent from "./components/blogMain";
 import SheTown from "./components/Page Content/sheTown";
+import ReactCalculator from "./components/Page Content/react-calculator/calculator";
 import ContactComponent from "./components/Page Content/contact";
 import AboutInfoBar from "./components/Page Content/aboutInfoBar";
 
@@ -22,6 +23,7 @@ class App extends Component {
               <div className="page-content">
                 <Route path="/" exact component={MainBlogComponent} />
                 <Route path="/she-town" component={SheTown} />
+                <Route path="/react-calculator" component={ReactCalculator} />
                 <Route path="/contact" component={ContactComponent} />
               </div>
               <div id="right-info-sidebar">

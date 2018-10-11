@@ -256,11 +256,15 @@
 
 .content-show-toggle-btn {
   display: inline-block;
-  color: blue; }
+  color: blue;
+  letter-spacing: 0.1rem; }
 
 .content-show-toggle-btn:hover {
   text-decoration: underline;
   cursor: pointer; }
+
+.about-header {
+  color: black; }
 
 .about-list-keypoints {
   padding-left: 16px;
@@ -270,6 +274,51 @@
 .flag {
   height: 10px;
   width: 20px; }
+
+.on-load-fade-in {
+  -webkit-animation: fadein 1s;
+  /* Safari, Chrome and Opera > 12.1 */
+  -moz-animation: fadein 1s;
+  /* Firefox < 16 */
+  -ms-animation: fadein 1s;
+  /* Internet Explorer */
+  -o-animation: fadein 1s;
+  /* Opera < 12.1 */
+  animation: fadein 1s; }
+
+@keyframes fadein {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+
+/* Firefox < 16 */
+@-moz-keyframes fadein {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+
+/* Safari, Chrome and Opera > 12.1 */
+@-webkit-keyframes fadein {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+
+/* Internet Explorer */
+@-ms-keyframes fadein {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+
+/* Opera < 12.1 */
+@-o-keyframes fadein {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
 
 #contacts-header-div {
   letter-spacing: 0.1rem;
@@ -472,6 +521,46 @@
     width: 25px;
     height: 25px;
     left: -5%; } }
+
+#button-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(6, 1fr); }
+
+.button-text {
+  color: white;
+  font-family: "Press Start 2P", Arial, Helvetica, sans-serif;
+  font-size: 1.5rem; }
+
+.btn-calc {
+  border: 1px solid black;
+  padding: 20px 0; }
+
+.btn-calc:hover {
+  border: 1px solid white; }
+
+.interface-btn {
+  text-align: center; }
+
+#calculator {
+  width: 300px;
+  height: 391px;
+  background-color: black;
+  border-radius: 5px;
+  border-style: solid;
+  border-width: 2px;
+  border-color: #cccccc;
+  box-shadow: 2px 4px 3px 1px rgba(0, 0, 0, 0.4);
+  margin: 0px;
+  padding: 0px; }
+
+.calculation-display {
+  text-align: right;
+  margin: 7px 5px; }
+
+#prev-cal-display {
+  font-size: 1rem;
+  color: #f4853f; }
 
 body {
   margin: 0;

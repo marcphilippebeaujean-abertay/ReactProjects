@@ -1,0 +1,24 @@
+#button-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(6, 1fr);
+}
+
+.button-text {
+  color: white;
+  font-family: "Press Start 2P", Arial, Helvetica, sans-serif;
+  font-size: 1.5rem;
+}
+
+.btn-calc {
+  border: 1px solid black;
+  padding: 20px 0;
+}
+
+.btn-calc:hover {
+  border: 1px solid white;
+}
+
+.interface-btn {
+  text-align: center;
+}

@@ -1,0 +1,22 @@
+#calculator {
+  width: 300px;
+  height: 391px;
+  background-color: black;
+  border-radius: 5px;
+  border-style: solid;
+  border-width: 2px;
+  border-color: #cccccc;
+  box-shadow: 2px 4px 3px 1px rgba(0, 0, 0, 0.4);
+  margin: 0px;
+  padding: 0px;
+}
+
+.calculation-display {
+  text-align: right;
+  margin: 7px 5px;
+}
+
+#prev-cal-display {
+  font-size: 1rem;
+  color: #f4853f;
+}
