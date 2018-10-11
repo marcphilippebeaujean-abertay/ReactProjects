@@ -8,7 +8,7 @@ import { Provider } from "react-redux";
 import PersistentContentComponent from "./components/persistentContent";
 import MainBlogComponent from "./components/blogMain";
 import SheTown from "./components/Page Content/sheTown";
-import ReactCalculator from "./components/Page Content/react-calculator/calculator";
+import ReactCalculator from "./components/Page Content/react-calculator/calculatorLayoutComponent";
 import ContactComponent from "./components/Page Content/contact";
 import AboutInfoBar from "./components/Page Content/aboutInfoBar";
 
