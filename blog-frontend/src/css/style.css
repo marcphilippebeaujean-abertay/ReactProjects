@@ -212,10 +212,28 @@
 #indestructible-dropdown {
   color: #09a83e; }
 
+#tmf-logo {
+  margin: 2px 0px;
+  height: 50px;
+  width: 200px; }
+
+#tmf-dropdown {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-content: center; }
+
+@media only screen and (max-width: 1200px) {
+  #tmf-logo {
+    width: 100%; } }
+
 @media only screen and (max-width: 600px) {
   #she-town-text {
     font-size: 10px;
-    margin-left: 20px; } }
+    margin-left: 20px; }
+  #tmf-logo {
+    height: auto;
+    margin: auto 0px; } }
 
 @media only screen and (max-width: 400px) {
   #she-town-text {
@@ -277,7 +295,7 @@
 
 .content-show-toggle-btn {
   display: inline-block;
-  color: blue;
+  color: #2caccf;
   letter-spacing: 0.1rem; }
 
 .content-show-toggle-btn:hover {
