@@ -8,17 +8,16 @@ import EnglishFlag from "../../media/flags/great_britain.png";
 export default class AboutInfoBar extends Component {
   render() {
     return (
-      <div className="about-infotext-main">
-        <h1 className="blog-post-header about-header">About</h1>
+      <div>
         <p className="about-infotext-main">
           Hi! My name is Marc Philippe Beaujean, welcome to my web page and
           personal blog. I code things - more specifically: games, websites and
           software. I'm also interested in statistical analysis and machine
           learning.{" "}
         </p>
-        <ReadMoreToggle contentId="aboutInfo">
-          <h2 className="blog-post-header about-header">About Me</h2>
-          <div>
+        <div className="about-infotext-main">
+          <h3 className="blog-post-header about-header">About Me</h3>
+          <div className="about-infotext-main">
             <ul className="about-list-keypoints">
               <li>
                 Country of Origin:{" "}
@@ -45,14 +44,14 @@ export default class AboutInfoBar extends Component {
               </li>
             </ul>
           </div>
-          <h2 className="blog-post-header about-header">About This Website</h2>
+          <h3 className="blog-post-header about-header">About This Website</h3>
           <div className="about-infotext-main">
             <ul className="about-list-keypoints">
               <li>Frontend Tech: JavaScript, ReactJS, Redux, Sass</li>
               <li>Backend Tech: Python, Django, SQLite</li>
             </ul>
           </div>
-        </ReadMoreToggle>
+        </div>
       </div>
     );
   }

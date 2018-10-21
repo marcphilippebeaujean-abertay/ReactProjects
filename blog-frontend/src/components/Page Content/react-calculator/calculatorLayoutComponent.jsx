@@ -6,7 +6,10 @@ export default class CalculatorLayoutComponent extends Component {
   render() {
     return (
       <div id="calculator-layout">
-        <ReactCalculator />
+        <div className="align-vertically">
+          <h2 id="react-calculator-header">React Calculator</h2>
+          <ReactCalculator />
+        </div>
       </div>
     );
   }

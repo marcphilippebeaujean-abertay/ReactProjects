@@ -11,6 +11,7 @@ import SheTown from "./components/Page Content/sheTown";
 import ReactCalculator from "./components/Page Content/react-calculator/calculatorLayoutComponent";
 import ContactComponent from "./components/Page Content/contact";
 import AboutInfoBar from "./components/Page Content/aboutInfoBar";
+import Projects from "./components/Page Content/projects";
 
 class App extends Component {
   render() {
@@ -23,6 +24,7 @@ class App extends Component {
               <div className="page-content">
                 <Route path="/" exact component={MainBlogComponent} />
                 <Route path="/she-town" component={SheTown} />
+                <Route path="/projects" component={Projects} />
                 <Route path="/react-calculator" component={ReactCalculator} />
                 <Route path="/contact" component={ContactComponent} />
                 <div id="extra-space" />

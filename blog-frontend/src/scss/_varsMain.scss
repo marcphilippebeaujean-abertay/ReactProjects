@@ -1,5 +1,5 @@
 $main-colour: #2caccf;
-$secondry-colour: #00d8ff;
+$secondry-colour: #6ddbee;
 $outline-colour: #dadada;
 
 $secondary-text-colour: rgba(65, 64, 64, 0.692);
@@ -19,4 +19,9 @@ $phone-screen-size: 400px;
     color $hover-transition-speed; /* Safari */
   transition: background-color $hover-transition-speed,
     color $hover-transition-speed;
+}
+
+
+.main-header-style{
+  letter-spacing: $header-letter-spacing;
 }

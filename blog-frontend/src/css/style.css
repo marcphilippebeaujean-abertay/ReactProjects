@@ -1,3 +1,6 @@
+.main-header-style {
+  letter-spacing: 0.1rem; }
+
 .App {
   width: 1200px;
   margin: 0 auto; }
@@ -38,6 +41,9 @@
   .page-content {
     width: 90%;
     margin: 0px; } }
+
+.main-header-style {
+  letter-spacing: 0.1rem; }
 
 #nav-div {
   position: fixed;
@@ -111,12 +117,12 @@
 .project-dropdown-element {
   width: 100%;
   height: 60px;
-  background-color: #00d8ff;
+  background-color: #6ddbee;
   color: white; }
 
 .project-dropdown-element:hover {
   background-color: white;
-  color: #00d8ff; }
+  color: #6ddbee; }
 
 .dropdown-vertical {
   position: absolute;
@@ -144,7 +150,7 @@
 
 .dropout-div:hover .dropout-entry-div {
   background: white;
-  color: #00d8ff; }
+  color: #6ddbee; }
 
 .scndry-dd-top-padding-0 {
   top: 0px; }
@@ -215,7 +221,7 @@
 #tmf-logo {
   margin: 2px 0px;
   height: 50px;
-  width: 200px; }
+  width: 160px; }
 
 #tmf-dropdown {
   display: flex;
@@ -610,6 +616,13 @@
   width: 100%;
   height: 100%;
   margin: 17px 0px; }
+
+#react-calculator-header {
+  text-align: center;
+  font-size: 1.2rem;
+  font-family: "Press Start 2P", Arial, Helvetica, sans-serif;
+  color: black;
+  text-transform: uppercase; }
 
 body {
   margin: 0;

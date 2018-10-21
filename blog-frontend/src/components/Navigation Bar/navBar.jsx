@@ -20,27 +20,15 @@ class NavBar extends Component {
         <div className="nav-element nav-element-main btn-div">
           <p>Archive</p>
         </div>
-        <div
-          className="nav-element nav-element-main dropdown-container"
-          id="projects-dropdown-container"
-          onClick={() => {
-            if (this.props.exitedViaHover === false) {
-              this.props.onHover();
-            }
-          }}
-          onMouseEnter={() => {
-            this.props.onHover();
-          }}
-          onMouseLeave={() => {
-            this.props.onHoverEnded();
-          }}
+        <Link
+            to="/projects"
+            className="nav-element nav-element-main btn-div"
+            style={{ textDecoration: "none" }}
         >
           <p>
             Projects
-            <i className="arrow arrow-down" />
           </p>
-          <NavDropdown />
-        </div>
+        </Link>
         <div className="nav-element nav-element-main btn-div">
           <p>Resume</p>
         </div>
