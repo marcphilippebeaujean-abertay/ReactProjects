@@ -9,10 +9,6 @@ gulp.task("sass", () => {
     .src("./src/scss/*.scss") // get scss
     .pipe(plumber())
     .pipe(sass())
-    .on("error", error => {
-      // we have an error
-      done(error);
-    }) // convert files
     .pipe(gulp.dest("./src/css")); // convert to css
 });
 

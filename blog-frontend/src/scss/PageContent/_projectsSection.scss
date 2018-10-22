@@ -1,11 +1,37 @@
-.project-subsection-horizontal{
-  height: 50px;
+$project-container-dimension: 250px;
+
+.project-subsection{
+  width: 100%;
+
+  display: flex;
+  flex-direction: row;
+  flex-grow: 1;
+  align-content: center;
+  justify-content: center;
 }
 
-.project-subsection-vertical{
-  background-color: red;
-  width: 50px;
+.project-img-container{
+  margin: 0px 30px;
+  border-style: solid;
+  border-width: medium;
+  border-color: $outline-colour;
+  box-shadow: darkgray 1px 1px 1px 1px;
+  border-radius: 10px;
+  width: $project-container-dimension;
+  height: $project-container-dimension;
+}
+
+#she-town-logo{
+  padding-top: 50px;
+  padding-left: 30px;
+  height: 150px;
+  width: 150px;
 }
 
 .saas-test{
+}
+
+.project-header{
+  text-align: center;
+  cursor: default;
 }

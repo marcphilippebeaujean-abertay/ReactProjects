@@ -204,11 +204,8 @@
 
 #she-town-text {
   font-family: "Press Start 2P", Arial, Helvetica, sans-serif;
-  font-size: 15px;
-  position: relative;
-  line-height: 20px;
+  font-size: 25px;
   letter-spacing: 0.2rem;
-  margin-left: 35px;
   text-transform: uppercase;
   color: #8e35e0; }
 
@@ -482,12 +479,33 @@
   .blog-post-div {
     width: 80%; } }
 
-.project-subsection-horizontal {
-  height: 50px; }
+.project-subsection {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-grow: 1;
+  align-content: center;
+  justify-content: center; }
 
-.project-subsection-vertical {
-  background-color: red;
-  width: 50px; }
+.project-img-container {
+  margin: 0px 30px;
+  border-style: solid;
+  border-width: medium;
+  border-color: #dadada;
+  box-shadow: darkgray 1px 1px 1px 1px;
+  border-radius: 10px;
+  width: 250px;
+  height: 250px; }
+
+#she-town-logo {
+  padding-top: 50px;
+  padding-left: 30px;
+  height: 150px;
+  width: 150px; }
+
+.project-header {
+  text-align: center;
+  cursor: default; }
 
 #social-media-sidebar {
   position: fixed;
