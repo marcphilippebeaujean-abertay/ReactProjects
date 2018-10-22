@@ -1,13 +1,15 @@
 import React, {Component} from 'react';
 import ProjectDisplay from "./projectDisplay";
 import SheTownLogo from "../../media/she-town-player.png";
-
+import IndestructibleLogo from "../../media/indestructible.png"
+import ReactLogo from "../../media/react-logo.png";
+import TMFLogo from "../../media/tmf-logo.png";
 
 class Projects extends Component {
     render() {
         return (
             <div>
-                <h2 className="main-header-style saas-test">Projects</h2>
+                <div style={{height: "30px"}}/>
                 <div className="project-subsection">
                         <ProjectDisplay
                             projectImg={SheTownLogo}
@@ -15,7 +17,26 @@ class Projects extends Component {
                             textStyle={"she-town-text"}
                             imgStyle={'she-town-logo'}
                         />
-                        <ProjectDisplay projectImg={"none"} projectName={"none"}/>
+                        <ProjectDisplay
+                            projectImg={IndestructibleLogo}
+                            projectName={"Indestructible"}
+                            textStyle={"indestructible-text"}
+                            imgStyle={'indestructible-logo'}
+                        />
+                </div>
+                <div className="project-subsection">
+                    <ProjectDisplay
+                        projectImg={ReactLogo}
+                        projectName={"ReactCalc"}
+                        textStyle={"react-calc-text"}
+                        imgStyle={'react-calc-logo'}
+                    />
+                    <ProjectDisplay
+                        projectImg={TMFLogo}
+                        projectName={""}
+                        textStyle={"indestructible-text"}
+                        imgStyle={'tmf-logo'}
+                    />
                 </div>
             </div>
         );
