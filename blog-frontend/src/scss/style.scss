@@ -9,6 +9,7 @@
 @import "PageContent/about";
 @import "PageContent/contact";
 @import "PageContent/blogPost";
+@import "PageContent/projectsSection.scss";
 @import "socialMedia";
 @import "images";
 @import "PageContent/react-calculator/buttonInterface";
@@ -16,7 +17,7 @@
 
 body {
   margin: 0;
-  padding: 0;
+  padding: 0px;
   font-family: sans-serif;
 }
 

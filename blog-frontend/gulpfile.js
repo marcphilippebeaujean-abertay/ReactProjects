@@ -16,4 +16,7 @@ gulp.task("sass", () => {
     .pipe(gulp.dest("./src/css")); // convert to css
 });
 
-gulp.task("default", ["sass"], () => gulp.watch("./src/scss/*.scss", ["sass"]));
+gulp.task("default", ["sass"], () => {
+    gulp.watch("./src/scss/**/*.scss", ["sass"]);
+    gulp.watch('./src/scss/*.scss', ['sass']);
+});
