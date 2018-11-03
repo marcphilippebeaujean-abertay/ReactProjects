@@ -28,6 +28,14 @@ $project-container-dimension: 250px;
   width: 100px;
 }
 
+#she-town-text {
+  font-family: "Press Start 2P", Arial, Helvetica, sans-serif;
+  font-size: 25px;
+  letter-spacing: 0.2rem;
+  text-transform: uppercase;
+  color: #ba2ae2;
+}
+
 #indestructible-logo{
   height: 150px;
   width: 150px;
@@ -38,15 +46,15 @@ $project-container-dimension: 250px;
   font-family: "Press Start 2P", Arial, Helvetica, sans-serif;
   font-size: 20px;
   padding-top: 8px;
-  color: #2cab2d;
+  color: #58ab6b;
   font-stretch: 5%;
   letter-spacing: -0.2rem;
 }
 
 #react-calc-text{
-  color: #61dbfb;
+  color: #62d4e8;
   font-size: 30px;
-  bottom: 70px;
+  bottom: 90px;
   text-decoration: underline;
 }
 
@@ -72,4 +80,5 @@ $project-container-dimension: 250px;
   cursor: default;
   position: relative;
   bottom: 60px;
+  height: 0px;
 }

@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import NavDropdown from "./navDropdown";
+import MediaQuery from 'react-responsive';
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import "../../css/style.css";
@@ -10,36 +10,36 @@ class NavBar extends Component {
   render() {
     return (
       <nav id="nav-div">
-        <Link
-          to="/"
-          className="nav-element nav-element-main nav-left-element btn-div"
-          style={{ textDecoration: "none" }}
-        >
-          <p>Home</p>
-        </Link>
-        <div className="nav-element nav-element-main btn-div">
-          <p>Archive</p>
-        </div>
-        <Link
-            to="/projects"
-            className="nav-element nav-element-main btn-div"
-            style={{ textDecoration: "none" }}
-        >
-          <p>
-            Projects
-          </p>
-        </Link>
-        <div className="nav-element nav-element-main btn-div">
-          <p>Resume</p>
-        </div>
-        <Link
-          to="/contact"
-          className="nav-element nav-element-main btn-div"
-          id="nav-right-element"
-          style={{ textDecoration: "none" }}
-        >
-          <p>Contact</p>
-        </Link>
+            <Link
+              to="/"
+              className="nav-element nav-element-main nav-left-element btn-div"
+              style={{ textDecoration: "none" }}
+            >
+              <p>Home</p>
+            </Link>
+            <div className="nav-element nav-element-main btn-div">
+              <p>Archive</p>
+            </div>
+            <Link
+                to="/projects"
+                className="nav-element nav-element-main btn-div"
+                style={{ textDecoration: "none" }}
+            >
+              <p>
+                Projects
+              </p>
+            </Link>
+            <div className="nav-element nav-element-main btn-div">
+              <p>Resume</p>
+            </div>
+            <Link
+              to="/contact"
+              className="nav-element nav-element-main btn-div"
+              id="nav-right-element"
+              style={{ textDecoration: "none" }}
+            >
+              <p>Contact</p>
+            </Link>
       </nav>
     );
   }

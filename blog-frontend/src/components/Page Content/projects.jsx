@@ -19,7 +19,7 @@ class Projects extends Component {
                         />
                         <ProjectDisplay
                             projectImg={IndestructibleLogo}
-                            projectName={"Indestructible"}
+                            projectName={"indestructible"}
                             textStyle={"indestructible-text"}
                             imgStyle={'indestructible-logo'}
                         />
