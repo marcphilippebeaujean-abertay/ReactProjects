@@ -62,6 +62,17 @@ $nav-element-width: 20%;
   height: $nav-bar-height;
 }
 
+#three-line-btn{
+  display: none;
+}
+
+#mobile-nav-div{
+  position: relative;
+  display: none;
+  left: 80%;
+  top: 16%;
+}
+
 @media only screen and (max-width: 1400px) {
   #nav-div {
     width: 100%;
@@ -83,5 +94,17 @@ $nav-element-width: 20%;
     -webkit-border-radius: 0px;
     -moz-border-radius: 0px;
     border-radius: 0px;
+  }
+  #three-line-btn{
+    display: block;
+    position: relative;
+    height: 40px;
+    width: 60px;
+  }
+  #three-line-btn:hover{
+    cursor: pointer;
+  }
+  #mobile-nav-div{
+    display: block;
   }
 }
