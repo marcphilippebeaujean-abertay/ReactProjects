@@ -16,7 +16,7 @@ class Projects extends Component {
                             projectImg={SheTownLogo}
                             projectName={"She-Town"}
                             textStyle={"she-town-text"}
-                            imgStyle={'she-town-logo'}
+                            imgStyle={'she-town-lgo'}
                         />
                         <ProjectDisplay
                             projectImg={IndestructibleLogo}
