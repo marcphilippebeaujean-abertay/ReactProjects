@@ -12,6 +12,7 @@ import ReactCalculator from "./components/Page Content/react-calculator/calculat
 import ContactComponent from "./components/Page Content/contact";
 import AboutInfoBar from "./components/Page Content/aboutInfoBar";
 import Projects from "./components/Page Content/projects";
+import MobileNavOptionsOverlay from "./components/Navigation Bar/mobileNavOptionsMenu";
 
 class App extends Component {
   render() {
@@ -19,9 +20,11 @@ class App extends Component {
       <Provider store={store}>
         <BrowserRouter>
           <div className="App">
-            <Route path="/" component={PersistentContentComponent} />
             <div id="content-bg">
+              <Route path="/" component={PersistentContentComponent} />
               <div className="page-content">
+                <div id="nav-div-whitespace" />
+                <MobileNavOptionsOverlay />
                 <Route path="/" exact component={MainBlogComponent} />
                 <Route path="/she-town" component={SheTown} />
                 <Route path="/projects" component={Projects} />
@@ -30,6 +33,7 @@ class App extends Component {
                 <div id="extra-space" />
               </div>
               <div id="right-info-sidebar">
+                <div id="nav-div-whitespace" />
                 <Route path="/" component={AboutInfoBar} />
               </div>
             </div>

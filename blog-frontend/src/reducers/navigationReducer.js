@@ -2,7 +2,8 @@ const defaultState = {
   dropdownShouldShow: false,
   exitedViaHover: true,
   curSidebarHovered: "",
-  mountedDropdowns: []
+  mountedDropdowns: [],
+  phoneNavMenuShowing: false
 };
 
 const navigationReducer = (previousState = defaultState, action) => {
@@ -31,6 +32,9 @@ const navigationReducer = (previousState = defaultState, action) => {
         action.sidebarId
       ];
       newState.mountedDropdowns = newMountedDropdowns;
+      break;
+    case "TOGGLE_PHONE_NAV_MENU":
+      newState.phoneNavMenuShowing = !previousState.phoneNavMenuShowing;
       break;
     default:
       break;

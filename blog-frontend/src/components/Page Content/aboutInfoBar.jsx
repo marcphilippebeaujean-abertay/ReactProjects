@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import "../../css/style.css";
-import ReadMoreToggle from "../Tool Widgets/ReadMoreToggle";
 import ScottischFlag from "../../media/flags/scotland.jpg";
 import GermanyFlag from "../../media/flags/germany.png";
 import EnglishFlag from "../../media/flags/great_britain.png";
@@ -42,13 +41,6 @@ export default class AboutInfoBar extends Component {
               <li>
                 Employment Status: <b>Looking for job!</b>
               </li>
-            </ul>
-          </div>
-          <h3 className="blog-post-header about-header">About This Website</h3>
-          <div className="about-infotext-main">
-            <ul className="about-list-keypoints">
-              <li>Frontend Tech: JavaScript, ReactJS, Redux, Sass</li>
-              <li>Backend Tech: Python, Django, SQLite</li>
             </ul>
           </div>
         </div>

@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import MediaQuery from 'react-responsive';
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import "../../css/style.css";
@@ -18,9 +17,6 @@ class NavBar extends Component {
           >
             <p>Home</p>
           </Link>
-          <div className="nav-element nav-element-main btn-div">
-            <p>Archive</p>
-          </div>
           <Link
               to="/projects"
               className="nav-element nav-element-main btn-div"
