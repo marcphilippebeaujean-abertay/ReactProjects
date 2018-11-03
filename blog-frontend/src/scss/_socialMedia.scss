@@ -16,6 +16,7 @@ $social-media-position-switch-screen-size: 1400px;
   -webkit-animation: left-side-fade-in 1s normal forwards;
   -moz-animation: left-side-fade-in 1s normal forwards;
   -o-animation: left-side-fade-in 1s normal forwards;
+  z-index: 1;
 }
 
 @keyframes left-side-fade-in {

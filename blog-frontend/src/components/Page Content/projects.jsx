@@ -11,6 +11,7 @@ class Projects extends Component {
             <div>
                 <div style={{height: "30px"}}/>
                 <div className="project-subsection">
+                    <div className="projects-horizontal-center">
                         <ProjectDisplay
                             projectImg={SheTownLogo}
                             projectName={"She-Town"}
@@ -23,20 +24,23 @@ class Projects extends Component {
                             textStyle={"indestructible-text"}
                             imgStyle={'indestructible-logo'}
                         />
+                    </div>
                 </div>
                 <div className="project-subsection">
-                    <ProjectDisplay
-                        projectImg={ReactLogo}
-                        projectName={"ReactCalc"}
-                        textStyle={"react-calc-text"}
-                        imgStyle={'react-calc-logo'}
-                    />
-                    <ProjectDisplay
-                        projectImg={TMFLogo}
-                        projectName={""}
-                        textStyle={"indestructible-text"}
-                        imgStyle={'tmf-logo'}
-                    />
+                    <div className="projects-horizontal-center">
+                        <ProjectDisplay
+                            projectImg={ReactLogo}
+                            projectName={"ReactCalc"}
+                            textStyle={"react-calc-text"}
+                            imgStyle={'react-calc-logo'}
+                        />
+                        <ProjectDisplay
+                            projectImg={TMFLogo}
+                            projectName={""}
+                            textStyle={"indestructible-text"}
+                            imgStyle={'tmf-logo'}
+                        />
+                    </div>
                 </div>
             </div>
         );
