@@ -13,23 +13,32 @@ class Projects extends Component {
                 <div style={{height: "30px"}}/>
                 <div className="project-subsection">
                     <div className="projects-horizontal-center">
-                        <ProjectDisplay
-                            projectImg={SheTownLogo}
-                            projectName={"She-Town"}
-                            textStyle={"she-town-text"}
-                            imgStyle={'she-town-lgo'}
-                        />
-                        <ProjectDisplay
-                            projectImg={IndestructibleLogo}
-                            projectName={"indestructible"}
-                            textStyle={"indestructible-text"}
-                            imgStyle={'indestructible-logo'}
-                        />
+                        <a
+                        className="project-display-link">
+                            <ProjectDisplay
+                                projectImg={SheTownLogo}
+                                projectName={"She-Town"}
+                                textStyle={"she-town-text"}
+                                imgStyle={'she-town-lgo'}
+                            />
+                        </a>
+                        <a
+                            className="project-display-link">
+                            <ProjectDisplay
+                                projectImg={IndestructibleLogo}
+                                projectName={"indestructible"}
+                                textStyle={"indestructible-text"}
+                                imgStyle={'indestructible-logo'}
+                            />
+                        </a>
                     </div>
                 </div>
                 <div className="project-subsection">
                     <div className="projects-horizontal-center">
-                        <Link to="/react-calculator" style={{ textDecoration: "none" }}>
+                        <Link to="/react-calculator"
+                              style={{ textDecoration: "none" }}
+                              class="project-display-link"
+                        >
                             <ProjectDisplay
                                 projectImg={ReactLogo}
                                 projectName={"ReactCalc"}
@@ -41,6 +50,7 @@ class Projects extends Component {
                             href="https://www.themissingfew.com/"
                             rel="noreferrer noopener"
                             target="_blank"
+                            class="project-display-link"
                         >
                             <ProjectDisplay
                                 projectImg={TMFLogo}
@@ -49,6 +59,8 @@ class Projects extends Component {
                                 imgStyle={'tmf-logo'}
                             />
                         </a>
+                    </div>
+                    <div className="projects-horizontal-center">
                     </div>
                 </div>
             </div>

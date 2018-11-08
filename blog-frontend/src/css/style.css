@@ -499,7 +499,6 @@
 
 .project-img-container {
   background-color: #333337;
-  margin: 0px 30px;
   border-style: solid;
   border-width: medium;
   border-color: #dadada;
@@ -507,13 +506,19 @@
   border-radius: 10px;
   width: 250px;
   height: 250px;
-  -webkit-transition: background-color 0.2s;
+  -webkit-transition: filter 0.5s;
   /* Safari */
-  transition: background-color 0.2s; }
+  transition: filter 0.5s; }
+
+.project-display-link {
+  width: 250px;
+  height: 250px;
+  margin: 10px 30px;
+  background-color: red; }
 
 .project-img-container:hover {
   cursor: pointer;
-  background-color: #797982; }
+  filter: brightness(125%); }
 
 #she-town-lgo {
   padding-top: 70px;
@@ -542,7 +547,7 @@
   letter-spacing: -0.2rem; }
 
 #react-calc-text {
-  color: #62d4e8;
+  color: #5fd6ff;
   font-size: 30px;
   bottom: 90px;
   text-decoration: underline; }
