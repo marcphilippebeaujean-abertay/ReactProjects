@@ -513,8 +513,7 @@
 .project-display-link {
   width: 250px;
   height: 250px;
-  margin: 10px 30px;
-  background-color: red; }
+  margin: 10px 30px; }
 
 .project-img-container:hover {
   cursor: pointer;
@@ -547,14 +546,14 @@
   letter-spacing: -0.2rem; }
 
 #react-calc-text {
-  color: #5fd6ff;
+  color: #61dbfb;
   font-size: 30px;
   bottom: 90px;
   text-decoration: underline; }
 
 #react-calc-logo {
   padding-top: 35px;
-  padding-left: 23px;
+  padding-left: 16px;
   width: 210px;
   height: 150px; }
 
@@ -585,9 +584,10 @@
     margin: 0px auto;
     width: 100%; }
   .projects-horizontal-center {
-    margin: 0px auto;
     display: flex;
-    flex-direction: column; } }
+    flex-direction: column; }
+  .project-display-link {
+    margin: 10px 0px; } }
 
 #social-media-sidebar {
   position: fixed;
