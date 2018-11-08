@@ -4,6 +4,7 @@ import SheTownLogo from "../../media/she-town-player.png";
 import IndestructibleLogo from "../../media/indestructible.png"
 import ReactLogo from "../../media/react-logo.png";
 import TMFLogo from "../../media/tmf-logo.png";
+import {Link} from "react-router-dom";
 
 class Projects extends Component {
     render() {
@@ -28,18 +29,26 @@ class Projects extends Component {
                 </div>
                 <div className="project-subsection">
                     <div className="projects-horizontal-center">
-                        <ProjectDisplay
-                            projectImg={ReactLogo}
-                            projectName={"ReactCalc"}
-                            textStyle={"react-calc-text"}
-                            imgStyle={'react-calc-logo'}
-                        />
-                        <ProjectDisplay
-                            projectImg={TMFLogo}
-                            projectName={""}
-                            textStyle={"indestructible-text"}
-                            imgStyle={'tmf-logo'}
-                        />
+                        <Link to="/react-calculator" style={{ textDecoration: "none" }}>
+                            <ProjectDisplay
+                                projectImg={ReactLogo}
+                                projectName={"ReactCalc"}
+                                textStyle={"react-calc-text"}
+                                imgStyle={'react-calc-logo'}
+                            />
+                        </Link>
+                        <a
+                            href="https://www.themissingfew.com/"
+                            rel="noreferrer noopener"
+                            target="_blank"
+                        >
+                            <ProjectDisplay
+                                projectImg={TMFLogo}
+                                projectName={""}
+                                textStyle={"indestructible-text"}
+                                imgStyle={'tmf-logo'}
+                            />
+                        </a>
                     </div>
                 </div>
             </div>

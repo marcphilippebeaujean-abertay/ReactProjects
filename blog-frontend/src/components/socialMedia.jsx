@@ -12,38 +12,38 @@ export default class SocialMediaSidebar extends Component {
           href="https://twitter.com/marcbeaujean"
           rel="noreferrer noopener"
           target="_blank"
-        >
+          className="debug-bg-1"
+        />
           <img
-            src={TwitterLogo}
-            alt="Twitter logo"
-            className="social-media-logo"
-            id="twitter-logo"
+              src={TwitterLogo}
+              alt="Twitter logo"
+              className="social-media-logo-1"
+              id="twitter-logo"
           />
-        </a>
         <a
           href="https://github.com/marcphilippebeaujean-abertay"
           rel="noreferrer noopener"
           target="_blank"
-        >
-          <img
+          className="debug-bg-2"
+        />
+        <img
             src={GitLogo}
             alt="GitHub logo"
-            className="social-media-logo"
+            className="social-media-logo-2"
             id="github-logo"
-          />
-        </a>
+        />
         <a
           href="https://www.linkedin.com/in/marc-philippe-beaujean-5ab27815a/"
           rel="noreferrer noopener"
           target="_blank"
-        >
-          <img
+          className="debug-bg-3"
+        />
+        <img
             src={LinkedInLogo}
             alt="LinkedIn logo"
-            className="social-media-logo"
+            className="social-media-logo-3"
             id="linked-in-logo"
-          />
-        </a>
+        />
       </div>
     );
   }

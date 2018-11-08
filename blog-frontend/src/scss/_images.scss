@@ -1,36 +1,4 @@
-.logo-img {
-  position: absolute;
-  left: 0%;
-}
 
-.social-media-logo {
-  position: relative;
-  margin-top: 30px;
-  height: 60px;
-  width: 60px;
-  left: 5%;
-  -webkit-transition: left 0.3s bottom 0.3s; /* Safari */
-  transition: left 0.3s bottom 0.3s;
-}
-
-.social-media-logo:hover {
-  left: 10%;
-}
-
-@media only screen and (max-width: $social-media-position-switch-screen-size) {
-  .social-media-logo {
-    margin-top: 5px;
-    margin-right: 30px;
-    left: 36%;
-  }
-}
-
-@media only screen and (max-width: 1400px) {
-  .social-media-logo:hover {
-    left: 36%;
-    bottom: 10px;
-  }
-}
 
 @media only screen and (max-width: 600px) {
   #she-town-logo {

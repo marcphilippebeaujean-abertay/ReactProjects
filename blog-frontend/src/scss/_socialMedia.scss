@@ -19,6 +19,46 @@ $social-media-position-switch-screen-size: 1400px;
   z-index: 1;
 }
 
+@for $i from 1 through 3 {
+  .debug-bg-#{$i}  {
+    position: absolute;
+    //background-color: red;
+    height: 60px;
+    width: 60px;
+    left: 5px;
+    border-radius: 25px;
+    top: #{90*$i - 60}px;
+    z-index: 2;
+  }
+
+  .social-media-logo-#{$i} {
+    z-index: 1;
+    position: relative;
+    margin-top: 30px;
+    height: 60px;
+    width: 60px;
+    left: 5%;
+    -webkit-transition: left 0.3s bottom 0.3s; /* Safari */
+    transition: left 0.3s bottom 0.3s;
+  }
+
+  .debug-bg-#{$i}:hover ~ .social-media-logo-#{$i} {
+    left: 10%;
+  }
+}
+
+.logo-img {
+  position: absolute;
+  left: 0%;
+}
+
+@media only screen and (max-width: 1400px) {
+  .social-media-logo:hover {
+    left: 36%;
+    bottom: 10px;
+  }
+}
+
 @keyframes left-side-fade-in {
   from {
     left: -50px;
@@ -43,6 +83,23 @@ $social-media-position-switch-screen-size: 1400px;
     -webkit-animation: left-side-fade-in 1s normal forwards;
     -moz-animation: left-side-fade-in 1s normal forwards;
     -o-animation: left-side-fade-in 1s normal forwards;
+  }
+  @for $i from 1 through 3 {
+    .debug-bg-#{$i}  {
+      top: 5px;
+      left: #{90*$i - 56}px;
+    }
+
+    .social-media-logo-#{$i} {
+      margin-top: 5px;
+      margin-right: 30px;
+      left: 11%;
+    }
+
+    .debug-bg-#{$i}:hover ~  .social-media-logo-#{$i}{
+      left: 11%;
+      bottom: 10px;
+    }
   }
   @keyframes left-side-fade-in {
     from {
