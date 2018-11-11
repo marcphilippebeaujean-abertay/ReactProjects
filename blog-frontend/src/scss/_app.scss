@@ -15,7 +15,6 @@
 .page-content {
   margin: 0 10px;
   width: 100%;
-  //position: relative;
 }
 
 #right-info-sidebar {
@@ -31,6 +30,10 @@
 
 #extra-space {
   height: 100px;
+}
+
+.page-header-main {
+  letter-spacing: $header-letter-spacing;
 }
 
 @media only screen and (max-width: 1400px) {

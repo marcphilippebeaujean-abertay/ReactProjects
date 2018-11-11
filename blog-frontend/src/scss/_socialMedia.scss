@@ -20,15 +20,16 @@ $social-media-position-switch-screen-size: 1400px;
 }
 
 @for $i from 1 through 3 {
-  .debug-bg-#{$i}  {
+  .debug-bg-#{$i} {
     position: absolute;
     //background-color: red;
     height: 60px;
     width: 60px;
     left: 5px;
     border-radius: 25px;
-    top: #{90*$i - 60}px;
+    top: #{90 * $i - 60}px;
     z-index: 2;
+    font-size: 0px;
   }
 
   .social-media-logo-#{$i} {
@@ -85,9 +86,9 @@ $social-media-position-switch-screen-size: 1400px;
     -o-animation: left-side-fade-in 1s normal forwards;
   }
   @for $i from 1 through 3 {
-    .debug-bg-#{$i}  {
+    .debug-bg-#{$i} {
       top: 5px;
-      left: #{90*$i - 56}px;
+      left: #{90 * $i - 56}px;
     }
 
     .social-media-logo-#{$i} {
@@ -96,7 +97,7 @@ $social-media-position-switch-screen-size: 1400px;
       left: 11%;
     }
 
-    .debug-bg-#{$i}:hover ~  .social-media-logo-#{$i}{
+    .debug-bg-#{$i}:hover ~ .social-media-logo-#{$i} {
       left: 11%;
       bottom: 10px;
     }

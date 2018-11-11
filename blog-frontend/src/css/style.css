@@ -29,6 +29,9 @@
 #extra-space {
   height: 100px; }
 
+.page-header-main {
+  letter-spacing: 0.1rem; }
+
 @media only screen and (max-width: 1400px) {
   .App {
     width: 100%; }
@@ -603,6 +606,14 @@
   .project-display-link {
     margin: 10px 0px; } }
 
+.game-jam-splash {
+  width: 400px;
+  height: 300px; }
+
+.img-gallery-main {
+  width: 400px;
+  height: 300px; }
+
 #social-media-sidebar {
   position: fixed;
   background-color: #dadada;
@@ -628,7 +639,8 @@
   left: 5px;
   border-radius: 25px;
   top: 30px;
-  z-index: 2; }
+  z-index: 2;
+  font-size: 0px; }
 
 .social-media-logo-1 {
   z-index: 1;
@@ -651,7 +663,8 @@
   left: 5px;
   border-radius: 25px;
   top: 120px;
-  z-index: 2; }
+  z-index: 2;
+  font-size: 0px; }
 
 .social-media-logo-2 {
   z-index: 1;
@@ -674,7 +687,8 @@
   left: 5px;
   border-radius: 25px;
   top: 210px;
-  z-index: 2; }
+  z-index: 2;
+  font-size: 0px; }
 
 .social-media-logo-3 {
   z-index: 1;

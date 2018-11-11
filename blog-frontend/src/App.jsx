@@ -13,6 +13,7 @@ import ContactComponent from "./components/Page Content/contact";
 import AboutInfoBar from "./components/Page Content/aboutInfoBar";
 import Projects from "./components/Page Content/projects";
 import MobileNavOptionsOverlay from "./components/Navigation Bar/mobileNavOptionsMenu";
+import GameJamInfoPage from "./components/Page Content/gameJamPage";
 
 class App extends Component {
   render() {
@@ -30,6 +31,7 @@ class App extends Component {
                 <Route path="/projects" component={Projects} />
                 <Route path="/react-calculator" component={ReactCalculator} />
                 <Route path="/contact" component={ContactComponent} />
+                <Route path="/game-jams" component={GameJamInfoPage} />
                 <div id="extra-space" />
               </div>
               <div id="right-info-sidebar">
