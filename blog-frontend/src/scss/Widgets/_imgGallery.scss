@@ -1,4 +1,38 @@
-.img-gallery-main {
-  width: 400px;
+$main-img-width: 400px;
+
+.img-gallery-main-img {
+  width: $main-img-width;
   height: 300px;
+  margin-top: 20px;
+  border-radius: 5px;
+}
+
+.img-gallery-main-div {
+  background-color: #9b9b9b34;
+  width: 450px;
+  height: 440px;
+  border-radius: 5px;
+}
+
+.img-center-div {
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  justify-content: center;
+}
+
+.img-selector {
+  margin: 10px;
+  width: $main-img-width;
+  height: 90px;
+  display: flex;
+  flex-direction: row;
+  justify-content: baseline;
+}
+
+.img-gallery-selection {
+  width: 130px;
+  height: 100%;
+  border-radius: 0px;
+  margin-right: 5px;
 }
