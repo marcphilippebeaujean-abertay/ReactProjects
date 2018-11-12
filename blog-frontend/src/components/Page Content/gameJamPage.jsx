@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import DoomedTravellerSplash from "../../media/GameScreenshots/DoomedTraveller/doomed_traveller_3.png";
+import DoomedTravellerSplash from "../../media/GameScreenshots/DoomedTraveller/doomed_traveller.png";
 import ImageGallery from "../Tool Widgets/imageGallery";
 import "../../css/style.css";
 
@@ -20,13 +20,7 @@ export default class GameJamInfoPage extends Component {
         <p className="blog-date">
           Published <time>January 27, 2016</time>
         </p>
-        <ImageGallery
-          images={[
-            "/static/media/doomed_traveller.6f38371f.png",
-            "/static/media/doomed_traveller_2.ce99546d.png",
-            "/static/media/doomed_traveller_3.f73bbf93.png"
-          ]}
-        />
+        <img src={DoomedTravellerSplash} className="game-jam-splash" />
         <p>
           <b>Jam Title:</b> Global Game Jam 2016
         </p>
