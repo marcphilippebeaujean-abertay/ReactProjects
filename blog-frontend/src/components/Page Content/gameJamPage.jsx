@@ -36,7 +36,7 @@ export default class GameJamInfoPage extends Component {
         <p>
           <b>Genre:</b> Arcade Adventure
         </p>
-        <p>
+        <p className="jam-description">
           <b>Description:</b> Play as a wizard who is trying to assemble four
           artifacts that are required to complete a ritual, while evil cultists
           try to stop him. This was my first ever game jam and quite frankly,
