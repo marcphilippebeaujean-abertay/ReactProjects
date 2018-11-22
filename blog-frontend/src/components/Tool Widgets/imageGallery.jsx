@@ -6,7 +6,6 @@ export default class ImageGallery extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      mainImg: props.images[0],
       curImg: 0,
       imgSelected: false
     };
@@ -24,23 +23,36 @@ export default class ImageGallery extends Component {
       </div>
     ));
   };
+  toggleDisplayImg = increment => {
+    let state = this.state;
+    let curImgID = this.state.curImg;
+    curImgID = increment ? curImgID + 1 : curImgID - 1;
+    if (curImgID == this.props.images.length) {
+      curImgID = 0;
+    } else if (curImgID < 0) {
+      curImgID = this.props.images.length - 1;
+    }
+    this.setState({ ...state, curImg: curImgID });
+    console.log(this.state.curImg);
+  };
   showImageToggleArrows = () => {
-    return this.state.imgSelected ? (
+    return this.state.imgSelected && this.props.images.length > 0 ? (
       <React.Fragment>
         <img
           src={ImgToggleArrow}
-          alt="left arrow used to toggle between images"
+          alt="right arrow used to toggle between images"
           className="gallery-arrow gallery-arrow-right"
+          onClick={() => this.toggleDisplayImg(true)}
         />
         <img
           src={ImgToggleArrow}
           alt="left arrow used to toggle between images"
           className="gallery-arrow gallery-arrow-left"
+          onClick={() => this.toggleDisplayImg(false)}
         />
       </React.Fragment>
     ) : null;
   };
-
   render() {
     return (
       <div

@@ -1,7 +1,12 @@
 import React, { Component } from "react";
 import DoomedTravellerSplash from "../../media/GameScreenshots/doomed_traveller.png";
 import DamGGSplash from "../../media/GameScreenshots/dam_good_splash.png";
+import DamGood1 from "../../media/GameScreenshots/dam_good_1.png";
+import DamGood2 from "../../media/GameScreenshots/dam_good_2.png";
 import IndestructibleSplash from "../../media/GameScreenshots/indestructible.png";
+import Indestructible1 from "../../media/indestructible_1.png";
+import Indestructible2 from "../../media/indestructible_2.png";
+import Indestructible3 from "../../media/indestructible_3.png";
 import ImageGallery from "../Tool Widgets/imageGallery";
 import "../../css/style.css";
 
@@ -16,7 +21,14 @@ export default class GameJamInfoPage extends Component {
         <p className="blog-date">
           Published <time>Jan 28, 2018</time>
         </p>
-        <ImageGallery images={[IndestructibleSplash]} />
+        <ImageGallery
+          images={[
+            IndestructibleSplash,
+            Indestructible1,
+            Indestructible2,
+            Indestructible3
+          ]}
+        />
         <p>
           <b>Jam Title:</b> Global Game Jam 2018
         </p>
@@ -46,11 +58,7 @@ export default class GameJamInfoPage extends Component {
         <p className="blog-date">
           Published <time>March 17, 2018</time>
         </p>
-        <img
-          src={DamGGSplash}
-          className="game-jam-splash"
-          alt="Dam Good game splash screen"
-        />
+        <ImageGallery images={[DamGGSplash, DamGood1, DamGood2]} />
         <p>
           <b>Jam Title:</b> AGDS Jam
         </p>
