@@ -1,11 +1,14 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
+import ImgToggleArrow from "../../media/toggle-arrows.png";
 
 export default class ImageGallery extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      mainImg: props.images[0]
+      mainImg: props.images[0],
+      curImg: 0,
+      imgSelected: false
     };
   }
   listImageSelectors = () => {
@@ -21,19 +24,39 @@ export default class ImageGallery extends Component {
       </div>
     ));
   };
+  showImageToggleArrows = () => {
+    return this.state.imgSelected ? (
+      <React.Fragment>
+        <img
+          src={ImgToggleArrow}
+          alt="left arrow used to toggle between images"
+          className="gallery-arrow gallery-arrow-right"
+        />
+        <img
+          src={ImgToggleArrow}
+          alt="left arrow used to toggle between images"
+          className="gallery-arrow gallery-arrow-left"
+        />
+      </React.Fragment>
+    ) : null;
+  };
 
   render() {
     return (
-      <div className="img-gallery-main-div">
+      <div
+        className="img-gallery-main-div"
+        onMouseLeave={() =>
+          this.setState({ ...this.state, imgSelected: false })
+        }
+        onMouseEnter={() => this.setState({ ...this.state, imgSelected: true })}
+      >
         <div className="img-center-div">
           <img
-            src={this.state.mainImg}
-            alt={this.state.mainImg}
+            src={this.props.images[this.state.curImg]}
+            alt={this.props.images[this.state.curImg]}
             className="img-gallery-main-img"
           />
-        </div>
-        <div className="img-center-div">
-          <div className="img-selector">{this.listImageSelectors()}</div>
+          {this.showImageToggleArrows()}
         </div>
       </div>
     );

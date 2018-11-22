@@ -1,9 +1,10 @@
 import React, { Component } from "react";
-import DoomedTravellerSplash from "../../media/GameScreenshots/DoomedTraveller/doomed_traveller.png";
+import DoomedTravellerSplash from "../../media/GameScreenshots/doomed_traveller.png";
+import DamGGSplash from "../../media/GameScreenshots/dam_good_splash.png";
+import IndestructibleSplash from "../../media/GameScreenshots/indestructible.png";
 import ImageGallery from "../Tool Widgets/imageGallery";
 import "../../css/style.css";
 
-console.log(DoomedTravellerSplash);
 export default class GameJamInfoPage extends Component {
   render() {
     return (
@@ -11,16 +12,79 @@ export default class GameJamInfoPage extends Component {
         <div className="blog-post-header-div">
           <h2 className="page-header-main">Game Jams</h2>
         </div>
-
+        <h3 className="page-header-main">Indestructible</h3>
+        <p className="blog-date">
+          Published <time>Jan 28, 2018</time>
+        </p>
+        <ImageGallery images={[IndestructibleSplash]} />
+        <p>
+          <b>Jam Title:</b> Global Game Jam 2018
+        </p>
+        <p>
+          <b>Jame Theme:</b> Transmition
+        </p>
+        <p>
+          <b>Jam Duration:</b> 3 Days
+        </p>
+        <p>
+          <b>Genre:</b> Arcade
+        </p>
+        <p>
+          <b>Description:</b> Play with the Nokia on your smartphone! A game
+          where the player needs to press the button on the number pad,
+          corresponding to the letters coming down the screen at increasingly
+          faster speed.
+        </p>
+        <a
+          href="https://globalgamejam.org/2018/games/indestructible"
+          rel="noreferrer noopener"
+          target="_blank"
+        >
+          Source Code and Download
+        </a>
         <h3 className="page-header-main">Dam Good Game</h3>
         <p className="blog-date">
-          Published <time>Marc 17, 2018</time>
+          Published <time>March 17, 2018</time>
         </p>
+        <img
+          src={DamGGSplash}
+          className="game-jam-splash"
+          alt="Dam Good game splash screen"
+        />
+        <p>
+          <b>Jam Title:</b> AGDS Jam
+        </p>
+        <p>
+          <b>Jame Theme:</b> Waves
+        </p>
+        <p>
+          <b>Jam Duration:</b> 3 Days
+        </p>
+        <p>
+          <b>Genre:</b> Action
+        </p>
+        <p>
+          <b>Description:</b> A wacky arcade game where the player tries to lead
+          Squirrels on Jet-Skis to safety, whilst these are being attacked by
+          giant lazer beavers. The player can repell the beavers by creating
+          waves that push them away!{" "}
+        </p>
+        <a
+          href="https://github.com/JanekUchman/DamGoodGame/tree/master/Better%20Game"
+          rel="noreferrer noopener"
+          target="_blank"
+        >
+          Source Code
+        </a>
         <h3 className="page-header-main">Doomed Traveller</h3>
         <p className="blog-date">
           Published <time>January 27, 2016</time>
         </p>
-        <img src={DoomedTravellerSplash} className="game-jam-splash" />
+        <img
+          src={DoomedTravellerSplash}
+          className="game-jam-splash"
+          alt="Doomed Traveller Splash Screen"
+        />
         <p>
           <b>Jam Title:</b> Global Game Jam 2016
         </p>
@@ -28,7 +92,10 @@ export default class GameJamInfoPage extends Component {
           <b>Jam Theme:</b> Ritual
         </p>
         <p>
-          <b>Genre:</b> Arcade Adventure
+          <b>Jam Duration:</b> 3 Days
+        </p>
+        <p>
+          <b>Genre:</b> Adventure
         </p>
         <p className="jam-description">
           <b>Description:</b> Play as a wizard who is trying to assemble four
@@ -37,6 +104,13 @@ export default class GameJamInfoPage extends Component {
           this is reflected by the clunky controlls..- a testimony to how far
           I've come since then!
         </p>
+        <a
+          href="https://globalgamejam.org/2016/games/doom-traveler"
+          rel="noreferrer noopener"
+          target="_blank"
+        >
+          Source Code and Download
+        </a>
       </div>
     );
   }

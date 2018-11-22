@@ -1,18 +1,18 @@
-$main-img-width: 400px;
+$main-img-width: 450px;
 $main-img-phone-width: 350px;
 
 .img-gallery-main-img {
   width: $main-img-width;
   height: 300px;
-  margin-top: 20px;
   border-radius: 5px;
 }
 
 .img-gallery-main-div {
-  background-color: #9b9b9b34;
-  width: 450px;
-  height: 440px;
+  position: relative;
+  width: $main-img-width;
+  height: auto;
   border-radius: 5px;
+  background-color: green;
 }
 
 .img-center-div {
@@ -22,6 +22,22 @@ $main-img-phone-width: 350px;
   justify-content: center;
 }
 
+.gallery-arrow {
+  position: absolute;
+  top: 200px;
+  height: 80px;
+  width: 80px;
+}
+
+.gallery-arrow-right {
+  margin: 0px 30%;
+}
+
+.gallery-arrow-left {
+  margin: 0px -30%;
+  transform: rotateZ(180deg);
+}
+
 .img-gallery-selection {
   width: 130px;
   height: 100%;
@@ -29,20 +45,19 @@ $main-img-phone-width: 350px;
   margin-right: 5px;
 }
 
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 700px) {
+  .gallery-arrow {
+    top: 150px;
+  }
   .img-gallery-main-div {
-    width: 370px;
-    height: 370px;
+    width: 100%;
   }
 
   .img-gallery-main-img {
-    width: $main-img-phone-width;
-    height: 250px;
-    margin-top: 10px;
+    height: auto;
     border-radius: 5px;
   }
   .img-selector {
-    margin: 10px;
     width: $main-img-phone-width;
     height: 90px;
     display: flex;
@@ -51,7 +66,6 @@ $main-img-phone-width: 350px;
   }
   .img-gallery-selection {
     width: 113px;
-    height: 100%;
     border-radius: 0px;
     margin-right: 5px;
   }
