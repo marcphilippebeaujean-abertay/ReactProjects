@@ -27,13 +27,12 @@ export default class ImageGallery extends Component {
     let state = this.state;
     let curImgID = this.state.curImg;
     curImgID = increment ? curImgID + 1 : curImgID - 1;
-    if (curImgID == this.props.images.length) {
+    if (curImgID >= this.props.images.length) {
       curImgID = 0;
     } else if (curImgID < 0) {
       curImgID = this.props.images.length - 1;
     }
     this.setState({ ...state, curImg: curImgID });
-    console.log(this.state.curImg);
   };
   showImageToggleArrows = () => {
     return this.state.imgSelected && this.props.images.length > 0 ? (

@@ -1,5 +1,8 @@
 import React, { Component } from "react";
 import DoomedTravellerSplash from "../../media/GameScreenshots/doomed_traveller.png";
+import dt1 from "../../media/GameScreenshots/doomed_traveller_1.png";
+import dt2 from "../../media/GameScreenshots/doomed_traveller_2.png";
+import dt3 from "../../media/GameScreenshots/doomed_traveller_3.png";
 import DamGGSplash from "../../media/GameScreenshots/dam_good_splash.png";
 import DamGood1 from "../../media/GameScreenshots/dam_good_1.png";
 import DamGood2 from "../../media/GameScreenshots/dam_good_2.png";
@@ -88,11 +91,7 @@ export default class GameJamInfoPage extends Component {
         <p className="blog-date">
           Published <time>January 27, 2016</time>
         </p>
-        <img
-          src={DoomedTravellerSplash}
-          className="game-jam-splash"
-          alt="Doomed Traveller Splash Screen"
-        />
+        <ImageGallery images={[DoomedTravellerSplash, dt1, dt2, dt3]} />
         <p>
           <b>Jam Title:</b> Global Game Jam 2016
         </p>

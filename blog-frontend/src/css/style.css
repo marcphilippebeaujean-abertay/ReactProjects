@@ -659,13 +659,14 @@
   border-radius: 0px;
   margin-right: 5px; }
 
-@media only screen and (max-width: 700px) {
+@media only screen and (max-width: 500px) {
   .gallery-arrow {
     top: 170px; }
   .img-gallery-main-div {
     width: 100%; }
   .img-gallery-main-img {
-    height: auto;
+    height: 230px;
+    width: 100%;
     border-radius: 5px; }
   .img-selector {
     width: 350px;
