@@ -49,6 +49,9 @@ export default class ImageGallery extends Component {
           className="gallery-arrow gallery-arrow-left"
           onClick={() => this.toggleDisplayImg(false)}
         />
+        <p className="gallery-img-id-display">
+          {`${this.state.curImg + 1} / ${this.props.images.length}`}
+        </p>
       </React.Fragment>
     ) : null;
   };

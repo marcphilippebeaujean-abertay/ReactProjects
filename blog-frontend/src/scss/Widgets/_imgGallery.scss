@@ -12,7 +12,6 @@ $main-img-phone-width: 350px;
   width: $main-img-width;
   height: auto;
   border-radius: 5px;
-  background-color: green;
 }
 
 .img-center-div {
@@ -20,6 +19,13 @@ $main-img-phone-width: 350px;
   flex-direction: row;
   align-content: center;
   justify-content: center;
+}
+
+.gallery-img-id-display {
+  top: 205px;
+  font-size: 30px;
+  position: absolute;
+  color: white;
 }
 
 .gallery-arrow {

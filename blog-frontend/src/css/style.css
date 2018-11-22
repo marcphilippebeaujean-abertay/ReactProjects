@@ -628,14 +628,19 @@
   position: relative;
   width: 450px;
   height: auto;
-  border-radius: 5px;
-  background-color: green; }
+  border-radius: 5px; }
 
 .img-center-div {
   display: flex;
   flex-direction: row;
   align-content: center;
   justify-content: center; }
+
+.gallery-img-id-display {
+  top: 205px;
+  font-size: 30px;
+  position: absolute;
+  color: white; }
 
 .gallery-arrow {
   position: absolute;
