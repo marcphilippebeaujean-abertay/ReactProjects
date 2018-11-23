@@ -10,6 +10,7 @@ import IndestructibleSplash from "../../media/GameScreenshots/indestructible.png
 import Indestructible1 from "../../media/indestructible_1.png";
 import Indestructible2 from "../../media/indestructible_2.png";
 import Indestructible3 from "../../media/indestructible_3.png";
+import transbit from "../../media/GameScreenshots/transbit.png";
 import ImageGallery from "../Tool Widgets/imageGallery";
 import "../../css/style.css";
 
@@ -117,6 +118,35 @@ export default class GameJamInfoPage extends Component {
           target="_blank"
         >
           Source Code and Download
+        </a>
+        <h3 className="page-header-main">Transbit</h3>
+        <p className="blog-date">
+          Published <time>May 25th, 2018</time>
+        </p>
+        <ImageGallery images={[transbit]} />
+        <p>
+          <b>Jam Title:</b> De Space Jam!
+        </p>
+        <p>
+          <b>Jam Theme:</b> Multiple Dimensions
+        </p>
+        <p>
+          <b>Jam Duration:</b> 5 Days
+        </p>
+        <p>
+          <b>Genre:</b> Rogue-Lite
+        </p>
+        <p className="jam-description">
+          <b>Description:</b> Transcend into another dimension - in this
+          rogue-lite, the player needs to fight himself through each room and
+          use powerups to become stronger, as the amount of enemies increases!
+        </p>
+        <a
+          href="https://borzi.itch.io/transbit"
+          rel="noreferrer noopener"
+          target="_blank"
+        >
+          Download
         </a>
       </div>
     );

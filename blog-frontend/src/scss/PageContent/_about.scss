@@ -3,6 +3,17 @@
   color: $secondary-text-colour;
 }
 
+.personal-img {
+  height: auto;
+  width: 100%;
+}
+
+.about-info-bar {
+  margin-top: 25px;
+  position: fixed;
+  width: 210px;
+}
+
 .content-show-toggle-btn {
   display: inline-block;
   color: $main-colour;
@@ -83,5 +94,12 @@
   }
   to {
     opacity: 1;
+  }
+}
+
+@media only screen and (max-width: 1400px) {
+  .about-info-bar {
+    position: fixed;
+    width: 23%;
   }
 }

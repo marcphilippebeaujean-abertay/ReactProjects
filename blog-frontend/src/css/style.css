@@ -21,7 +21,8 @@
   width: 25%;
   text-align: justify;
   box-sizing: border-box;
-  margin: 0 10px; }
+  margin: 0 10px;
+  position: relative; }
 
 .page-main-text {
   text-align: justify; }
@@ -306,6 +307,15 @@
   font-size: 13px;
   color: rgba(65, 64, 64, 0.692); }
 
+.personal-img {
+  height: auto;
+  width: 100%; }
+
+.about-info-bar {
+  margin-top: 25px;
+  position: fixed;
+  width: 210px; }
+
 .content-show-toggle-btn {
   display: inline-block;
   color: #2caccf;
@@ -371,6 +381,11 @@
     opacity: 0; }
   to {
     opacity: 1; } }
+
+@media only screen and (max-width: 1400px) {
+  .about-info-bar {
+    position: fixed;
+    width: 23%; } }
 
 #contacts-header-div {
   letter-spacing: 0.1rem;
@@ -669,6 +684,8 @@
     top: 170px; }
   .img-gallery-main-div {
     width: 100%; }
+  .gallery-img-id-display {
+    top: 144px; }
   .img-gallery-main-img {
     height: 230px;
     width: 100%;
