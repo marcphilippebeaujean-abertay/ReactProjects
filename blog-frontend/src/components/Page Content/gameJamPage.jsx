@@ -15,6 +15,10 @@ import ImageGallery from "../Tool Widgets/imageGallery";
 import "../../css/style.css";
 
 export default class GameJamInfoPage extends Component {
+  componentWillMount() {
+    window.scrollTo(0, 0);
+  }
+
   render() {
     return (
       <div>
